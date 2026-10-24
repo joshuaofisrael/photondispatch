@@ -1,0 +1,232 @@
+[
+ {
+  "slug": "quantinuum-helios-99-9995-logical-fidelity-color-code",
+  "date": "2026-10-19",
+  "updated": "2026-10-24",
+  "cat": "hardware",
+  "title": "Quantinuum says Helios hit 99.9995% logical fidelity, a tenfold error-correction record",
+  "summary": "Quantinuum says its Helios trapped-ion computer reached 99.9995% logical fidelity with a color code, about five errors per million operations.",
+  "body": [
+   "<strong>Short answer:</strong> Quantinuum announced on 19 October 2026 that its Helios commercial quantum computer achieved a logical fidelity of 99.9995%, which the company says equals about five errors in a million operations. Quantinuum calls it a world record for quantum error correction.",
+   "According to the company, the error rate is 10 times lower than the record Quantinuum itself set in September 2026 and 100 times lower than the best published result on any other hardware type, which it says was reported by Google Quantum AI on a superconducting system.",
+   "The result used a well-known error-correcting scheme called a color code. Quantinuum says logical errors fell exponentially as it increased the code distance, with each tested step cutting the remaining errors by what it calls a record factor of 12.",
+   "The trade-off is qubit overhead. On Helios, Quantinuum says its earlier Helix code used 10 physical qubits per logical qubit, while the color code used up to 37, in exchange for lower logical error rates. Both studies ran on the same hardware.",
+   "Quantinuum says the accuracy is now within the target range for Apollo, its planned universal fault-tolerant quantum computer, which it expects to be available by 2029."
+  ],
+  "analysis": [
+   "Comparisons of logical fidelity across companies depend on the codes, operations and benchmarks used. The figures here are Quantinuum's own and have not been independently replicated."
+  ],
+  "disclaimer": "Figures and timelines are Quantinuum's own claims as stated in its press release and have not been independently verified. Quantinuum is a listed company (NASDAQ: QNT); this is not investment advice.",
+  "sources": [
+   {
+    "title": "Quantinuum: Quantinuum Breaks Error-Correction World Record by 10x (press release, 19 Oct 2026)",
+    "url": "https://www.quantinuum.com/press-releases/quantinuum-breaks-error-correction-world-record-by-10x-validating-its-leading-path-to-fault-tolerant-quantum-computing-by-2029"
+   },
+   {
+    "title": "Quantinuum Investor Relations: release details",
+    "url": "https://ir.quantinuum.com/news-releases/news-release-details/quantinuum-breaks-error-correction-world-record-10x-validating"
+   }
+  ],
+  "image": {
+   "src": "src-img/helios-hero.jpg",
+   "crop": [
+    0,
+    0.02,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Stainless steel vacuum chamber on an optical table with blue and violet laser beams passing through glass viewports",
+   "note": "Generic AI-generated ion-trap lab scene; not a photo of Quantinuum's Helios."
+  },
+  "inline_images": [
+   {
+    "file": "helios-1.jpg",
+    "alt": "Gold-electrode microchip under a microscope objective lit by a faint blue glow",
+    "caption": "Illustration: a generic surface ion-trap chip",
+    "insert_after_paragraph": 2,
+    "note": "Generic illustration; not Quantinuum hardware."
+   }
+  ]
+ },
+ {
+  "slug": "google-magic-state-cultivation-willow-science",
+  "date": "2026-10-15",
+  "updated": "2026-10-24",
+  "cat": "research",
+  "title": "Google shows magic state cultivation on Willow, cutting errors about 40x",
+  "summary": "Google Quantum AI says magic state cultivation worked on its Willow chip, cutting errors about 40-fold and yielding T-states at 99.99% logical fidelity.",
+  "body": [
+   "<strong>Short answer:</strong> Google Quantum AI said on 15 October 2026 that it has demonstrated \"magic state cultivation\" on its Willow processor, reducing errors about 40 times compared with uncultivated states and producing T-states with a logical fidelity of 99.99%, which it calls a record. The work was published in Science the same day, according to Google.",
+   "Magic states are special quantum states needed to run the full set of operations that make a quantum computer universal. Google says producing high-quality, error-corrected magic states is so costly that some estimates put up to 95% of a machine's capacity into making them, and each one can only be used once.",
+   "Cultivation, developed in a 2024 theory paper by Google researchers Craig Gidney, Noah Shutty and Cody Jones, works like a filter: a noisy state is injected into a small patch of the chip and checked with coordinated measurements, and flawed attempts are thrown away, according to Google's description.",
+   "Google says the team also had to invent a new benchmarking method after lab noise from equipment drift and temperature changes undermined its usual measurement technique. It also moved purified states from a distance-3 color code into a distance-5 surface code, showing the states can survive the transfer on its hardware.",
+   "Google says cultivation still has to be shown at a larger scale and that plenty of technical challenges remain before it is practical."
+  ],
+  "sources": [
+   {
+    "title": "Google: Bringing the magic: Google breaks open a bottleneck in quantum computing (15 Oct 2026)",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/quantum-computing/magic-state-cultivation-quantum-computing/"
+   }
+  ],
+  "image": {
+   "src": "src-img/magic-hero.jpg",
+   "crop": [
+    0,
+    0.02,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Blue square superconducting chip wire-bonded into a gold sample holder",
+   "note": "Generic AI-generated chip; not a photo of Google's Willow processor."
+  },
+  "inline_images": [
+   {
+    "file": "magic-1.jpg",
+    "alt": "Rows of gold coaxial connectors and cables between copper plates inside a cryostat",
+    "caption": "Illustration: wiring inside a generic dilution refrigerator",
+    "insert_after_paragraph": 2,
+    "note": "Generic illustration; not Google hardware."
+   }
+  ]
+ },
+ {
+  "slug": "iceberg-quantum-pinnacle-1-2-rsa-2048-estimate",
+  "date": "2026-10-22",
+  "updated": "2026-10-24",
+  "cat": "algorithms",
+  "title": "Iceberg Quantum cuts its RSA-2048 factoring estimate to about 48,000 qubits in simulations",
+  "summary": "Iceberg Quantum's Pinnacle 1.2 says simulations show RSA-2048 factoring could need about 48,000 physical qubits and roughly a day under its best assumptions.",
+  "body": [
+   "<strong>Short answer:</strong> Iceberg Quantum published Pinnacle 1.2 on 22 October 2026, saying direct circuit-level simulations show its Pinnacle architecture can reach logical error rates low enough to factor a 2048-bit RSA key, at a spacetime cost about an order of magnitude lower than its Pinnacle 1.0 estimate. Under its most favourable assumptions (physical error rate of 10<sup>-4</sup> and a 1 microsecond code cycle), the company estimates about 48,000 physical qubits and an expected runtime of 0.98 days.",
+   "The result rests on a new decoder for QLDPC error-correcting codes called Crevasse, which Iceberg says takes four microseconds on average per round of error correction. Using it, the company says it processed trillions of simulated error-correction instances and directly observed a logical error rate below one error per trillion logical qubit-cycles, without extrapolation.",
+   "Iceberg says smaller codes than it previously assumed are enough, cutting space overhead by about 40% and time overhead by about 30% versus Pinnacle 1.0. It also says it compiled and verified a complete modular exponentiation circuit, the core of Shor's factoring algorithm, and counted the operations directly.",
+   "The estimates vary widely with hardware speed and quality. Iceberg's table gives 72,000 qubits and 3.7 days at a 10<sup>-3</sup> error rate with a 1 microsecond cycle, and 714,000 qubits (29 days) to 2.1 million qubits (32 days) with a 1 millisecond cycle. For fixed-connectivity superconducting systems, its Frozen Pinnacle variant comes to about 99,000 qubits and 5.0 days, the company says."
+  ],
+  "analysis": [
+   "These are simulations and resource estimates, not a demonstration on hardware. No machine of this size exists today. The figures are best read as one more input to post-quantum cryptography migration planning."
+  ],
+  "sources": [
+   {
+    "title": "Iceberg Quantum: Pinnacle 1.2 (22 Oct 2026)",
+    "url": "https://www.iceberg-quantum.com/blog/releases/pinnacle-1-2/"
+   }
+  ],
+  "image": {
+   "src": "src-img/rsa-hero.jpg",
+   "crop": [
+    0,
+    0.02,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Dark data centre aisle of servers with blue lights and a translucent padlock reflected in glass",
+   "note": "Generic AI-generated scene representing encryption; not a real facility."
+  },
+  "inline_images": [
+   {
+    "file": "rsa-1.jpg",
+    "alt": "Monitor in a dark office showing a glowing network lattice of blue and orange dots",
+    "caption": "Illustration: an abstract error-correction simulation",
+    "insert_after_paragraph": 2,
+    "note": "Generic illustration."
+   }
+  ]
+ },
+ {
+  "slug": "qilimanjaro-19-6m-series-a-first-close-indra-sett",
+  "date": "2026-10-14",
+  "updated": "2026-10-24",
+  "cat": "industry",
+  "title": "Qilimanjaro raises €19.6 million Series A first close led by Indra Group",
+  "summary": "Barcelona's Qilimanjaro Quantum Tech says it closed €19.6 million, with €10 million from Indra Group via IndraMind and €9.6 million from Spain's SETT.",
+  "body": [
+   "<strong>Short answer:</strong> Qilimanjaro Quantum Tech, a Barcelona quantum computing company, announced on 14 October 2026 a €19.6 million first close of its Series A round. Indra Group led with €10 million through IndraMind, and Spain's public technology investor SETT added €9.6 million, according to the company.",
+   "Qilimanjaro says it expects to complete the round in the fourth quarter of 2026 with Avançsa and other existing investors. It says the money will go towards scaling and industrialising its quantum computers, developing new generations of chips and expanding manufacturing and deployment capacity.",
+   "Founded in 2019, Qilimanjaro describes itself as Spain's only full-stack quantum computing company. It builds digital and analog processors based on superconducting fluxonium qubits and combines them with classical high-performance computing in what it calls multimodal systems for optimisation, simulation and AI problems.",
+   "Indra Group framed the investment as a way to speed up the application of quantum technology in physics and robotics. SETT is part of Spain's Ministry for Digital Transformation and Public Administration, according to the Qilimanjaro announcement."
+  ],
+  "analysis": [
+   "The announcement is a financing milestone. It does not include qubit counts, error rates or benchmark results, so it says nothing new about the performance of Qilimanjaro's processors."
+  ],
+  "disclaimer": "Funding amounts and plans are the companies' own statements and have not been independently verified. This is not investment advice.",
+  "sources": [
+   {
+    "title": "Qilimanjaro: nearly €20 million first close of its Series A, led by Indra Group (14 Oct 2026)",
+    "url": "https://qilimanjaro.tech/qilimanjaro-quantum-tech-announces-a-nearly-e20-million-first-close-of-its-series-a-led-by-indra-group/"
+   },
+   {
+    "title": "Indra Group: Indra Group acquires a holding in Qilimanjaro",
+    "url": "https://www.indragroup.com/en/news/indra-group-acquires-a-holding-in-the-company-qilimanjaro-to-speed-up-the-application-of-quantum-physics-in-physics-and-robotics"
+   },
+   {
+    "title": "SETT: La SETT invierte 9,6 millones en Qilimanjaro (Spanish)",
+    "url": "https://sett.gob.es/la-sett-invierte-96-millones-en-la-empresa-espanola-qilimanjaro-quantum-tech-experta-en-tecnologia-cuantica/"
+   }
+  ],
+  "image": {
+   "src": "src-img/qili-hero.jpg",
+   "crop": [
+    0,
+    0.02,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Cleanroom with a wafer carrier under yellow light and a coastal city skyline at dusk through the window",
+   "note": "Generic AI-generated scene; not Qilimanjaro's facility."
+  },
+  "inline_images": [
+   {
+    "file": "qili-1.jpg",
+    "alt": "Silicon wafer with a grid of small chip dies on a steel cleanroom bench",
+    "caption": "Illustration: chip dies on a wafer",
+    "insert_after_paragraph": 2,
+    "note": "Generic illustration; not Qilimanjaro chips."
+   }
+  ]
+ },
+ {
+  "slug": "uk-78m-quantum-sensing-networking-quest-apprentices",
+  "date": "2026-10-13",
+  "updated": "2026-10-24",
+  "cat": "policy",
+  "title": "UK puts £78 million into quantum sensing, networking and apprenticeships",
+  "summary": "The UK government announced £78 million for quantum: £50 million for sensing and navigation projects, £20 million for networking and £8 million for apprentices.",
+  "body": [
+   "<strong>Short answer:</strong> The UK government announced a £78 million quantum package on 13 October 2026: £50 million for businesses building quantum sensing and positioning, navigation and timing products, £20 million for quantum networking components, and an £8 million expansion of the QuEST apprenticeship programme, according to the Department for Science, Innovation and Technology (DSIT) and UK Research and Innovation (UKRI).",
+   "The £50 million is delivered through UKRI's Sensing and Positioning, Navigation and Timing competition. The government says winning projects include railway fault detectors, portable eye scanners and navigation systems that work when GPS fails.",
+   "UKRI's £20 million Enabling Commercial Quantum Networking competition will help UK companies build components such as lasers and photonic chips, and the government names Sheffield-based Aegiq as one company it will support.",
+   "The QuEST Apprentices expansion aims to equip 150 engineering apprentices with quantum skills by 2030, UKRI says. It includes QuEST North, which extends the programme from businesses incubated at Harwell in Oxfordshire to the North West.",
+   "UKRI says the funding is part of the government's mission to make the UK a world leader in quantum sensing by 2030, which it says is backed by up to £2 billion of investment announced earlier this year."
+  ],
+  "sources": [
+   {
+    "title": "GOV.UK: Quantum firms backed to keep railways running and cut waiting lists (13 Oct 2026)",
+    "url": "https://www.gov.uk/government/news/quantum-firms-backed-to-keep-railways-running-and-cut-waiting-lists-as-uk-harnesses-potential-of-future-tech"
+   },
+   {
+    "title": "UKRI: UKRI backs quantum breakthroughs supported by training (16 Oct 2026)",
+    "url": "https://www.ukri.org/news/ukri-backs-quantum-breakthroughs-supported-by-training/"
+   }
+  ],
+  "image": {
+   "src": "src-img/uk-hero.jpg",
+   "crop": [
+    0,
+    0.02,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Railway track at misty dawn with a small grey sensor box on a post beside the rails",
+   "note": "Generic AI-generated scene; not a funded project's device."
+  },
+  "inline_images": [
+   {
+    "file": "uk-1.jpg",
+    "alt": "Workshop bench with a small laser, optics, yellow fibre spools, screwdrivers and an oscilloscope",
+    "caption": "Illustration: a technician training bench",
+    "insert_after_paragraph": 3,
+    "note": "Generic illustration."
+   }
+  ]
+ }
+]

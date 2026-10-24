@@ -1,0 +1,17 @@
+# PhotonDispatch
+
+> Independent, answer-first quantum computing and quantum technology news: hardware, algorithms, industry and funding, research and policy.
+
+## Articles
+- [Iceberg Quantum cuts its RSA-2048 factoring estimate to about 48,000 qubits in simulations](https://photondispatch.com/news/iceberg-quantum-pinnacle-1-2-rsa-2048-estimate.html): Iceberg Quantum's Pinnacle 1.2 says simulations show RSA-2048 factoring could need about 48,000 physical qubits and roughly a day under its best assumptions.
+- [Quantinuum says Helios hit 99.9995% logical fidelity, a tenfold error-correction record](https://photondispatch.com/news/quantinuum-helios-99-9995-logical-fidelity-color-code.html): Quantinuum says its Helios trapped-ion computer reached 99.9995% logical fidelity with a color code, about five errors per million operations.
+- [Google shows magic state cultivation on Willow, cutting errors about 40x](https://photondispatch.com/news/google-magic-state-cultivation-willow-science.html): Google Quantum AI says magic state cultivation worked on its Willow chip, cutting errors about 40-fold and yielding T-states at 99.99% logical fidelity.
+- [Qilimanjaro raises €19.6 million Series A first close led by Indra Group](https://photondispatch.com/news/qilimanjaro-19-6m-series-a-first-close-indra-sett.html): Barcelona's Qilimanjaro Quantum Tech says it closed €19.6 million, with €10 million from Indra Group via IndraMind and €9.6 million from Spain's SETT.
+- [UK puts £78 million into quantum sensing, networking and apprenticeships](https://photondispatch.com/news/uk-78m-quantum-sensing-networking-quest-apprentices.html): The UK government announced £78 million for quantum: £50 million for sensing and navigation projects, £20 million for networking and £8 million for apprentices.
+
+## About
+- [About](https://photondispatch.com/about.html)
+- [Editorial standards](https://photondispatch.com/standards.html)
+- [Corrections](https://photondispatch.com/corrections.html)
+- [Contact](https://photondispatch.com/contact.html)
+- [RSS](https://photondispatch.com/feed.xml)
