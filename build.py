@@ -5,7 +5,7 @@ Run:  python3 build.py        (needs Pillow; cairosvg only for the site icons)
 Content: content/articles.json   Source images: src-img/   Output: docs/ (GitHub Pages)
 See README.md for the daily routine (adding articles, images, 'why it's trending' posts).
 """
-import json, os, html, datetime, shutil, re
+import sys, json, os, html, datetime, shutil, re
 
 # ---------------------------------------------------------------- config
 SITE_URL = "https://photondispatch.com"  # <-- ONLY place to change the domain
@@ -22,6 +22,15 @@ TODO_IMAGES = []
 CATS = [("hardware","Hardware"),("algorithms","Algorithms"),("industry","Industry & Funding"),("research","Research"),("policy","Policy")]
 CATN = dict(CATS)
 A = json.load(open("content/articles.json", encoding="utf-8"))
+# Legal-hold gate: held articles are never rendered (approved exact versions pass).
+sys.path.insert(0, "review"); import check_content as _cc
+_ok = _cc.approvals(); _keep = []
+for _a in A:
+    _f = _cc.check(_a)
+    if _f and (_a.get("slug"), _cc.version_hash(_a)) not in _ok:
+        print(f"  [HOLD_REVIEW] {_a.get('slug')} not built: rules {sorted({x[0] for x in _f})}"); _cc.queue(_a, _f, "content/articles.json")
+    else: _keep.append(_a)
+A = _keep
 A.sort(key=lambda a: a["date"], reverse=True)
 PUB = {"@type": "Organization", "name": "PhotonDispatch", "url": SITE_URL + "/", "parentOrganization": {"@type": "Organization", "name": "Joshua Israel Ventures LLC"}, "logo": {"@type": "ImageObject", "url": SITE_URL + "/logo.png", "width": 512, "height": 512}}
 
