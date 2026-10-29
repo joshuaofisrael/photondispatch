@@ -1,0 +1,55 @@
+{
+ "slug": "quantum-error-correction-basics",
+ "date": "2026-10-31",
+ "updated": "2026-10-31",
+ "publish_at": "2026-10-31T09:00:00+00:00",
+ "cat": "research",
+ "title": "Quantum error correction basics: syndromes, thresholds and why overhead matters",
+ "summary": "Quantum error correction detects errors through parity-check measurements and, below a hardware threshold, makes encoded qubits more reliable as codes grow, according to the research literature.",
+ "body": [
+  "<strong>Short answer:</strong> Quantum error correction protects quantum information by encoding it redundantly across many qubits, repeatedly measuring parity checks that reveal errors without revealing the data, and using a classical decoder to work out and undo the most likely errors. It only helps if the hardware's error rate is below a threshold, and it costs many physical qubits per protected qubit.",
+  "Quantum computers suffer two basic kinds of error: bit flips, which swap 0 and 1, and phase flips, which change the sign relationship in a superposition. Real noise is continuous, but measuring a code's parity checks forces it into one of a discrete set of outcomes, so correcting bit flips and phase flips is enough to handle general errors. Gottesman's introduction to the field sets out this 'discretisation of errors' and the stabilizer formalism most codes are built on.",
+  "The pattern of parity-check results is called the syndrome. In each round of error correction, helper qubits interact with groups of data qubits and are measured; a change in the syndrome flags an error nearby. A decoder, which is ordinary classical software or hardware, takes the stream of syndromes and decides which correction to apply. It has to keep pace with the machine. Google Quantum AI's 2024 Nature paper reported an average decoder latency of 63 microseconds at distance 5 with a 1.1-microsecond cycle time, running for up to a million cycles.",
+  "The threshold theorem is what makes the approach worthwhile. In the 1990s Dorit Aharonov and Michael Ben-Or, among others, showed that if each component's error probability is below some constant threshold, arbitrarily long quantum computations can be made reliable with only polylogarithmic overhead, by using codes within codes. Modern surface-code estimates put the threshold for realistic noise near 1% per operation, according to Fowler and colleagues' 2012 review.",
+  "Overhead is the catch. Fowler's review estimated that useful fault-tolerant machines would need very large numbers of physical qubits, because each logical qubit uses hundreds to thousands of them and some operations need extra resources, such as 'magic states', to complete a universal gate set. Lower physical error rates, better decoders and more efficient codes all shrink that overhead, which is why researchers track the logical error rate per cycle and how fast it falls as codes grow.",
+  "Experiments have begun to show the expected behaviour. Google reported in 2024 that its distance-7 surface-code memory on the Willow chip had an error rate of 0.143% per cycle, and that each increase of two in code distance cut the logical error rate by a factor of 2.14. The same paper noted that rare correlated error events, roughly once an hour, limited its longest repetition-code runs."
+ ],
+ "analysis": [
+  "Error correction has moved from theory to engineering, but the open questions are practical: how to handle correlated errors, how to decode fast enough at scale, and how many physical qubits a useful machine will really need. Resource estimates differ widely depending on hardware assumptions, so a single number for 'qubits needed' should be read with its assumptions attached."
+ ],
+ "disclaimer": "This explainer summarises published research for a general audience. It is not investment advice.",
+ "sources": [
+  {
+   "title": "Gottesman, 'An Introduction to Quantum Error Correction and Fault-Tolerant Quantum Computation' (arXiv:0904.2557)",
+   "url": "https://arxiv.org/abs/0904.2557",
+   "retrieved": "2026-10-29T22:50:00Z"
+  },
+  {
+   "title": "Aharonov and Ben-Or, 'Fault-Tolerant Quantum Computation With Constant Error' (arXiv:quant-ph/9611025)",
+   "url": "https://arxiv.org/abs/quant-ph/9611025",
+   "retrieved": "2026-10-29T22:50:00Z"
+  },
+  {
+   "title": "Fowler, Mariantoni, Martinis and Cleland, 'Surface codes: Towards practical large-scale quantum computation' (arXiv:1208.0928)",
+   "url": "https://arxiv.org/abs/1208.0928",
+   "retrieved": "2026-10-29T22:50:00Z"
+  },
+  {
+   "title": "Google Quantum AI and collaborators, 'Quantum error correction below the surface code threshold', Nature (2024)",
+   "url": "https://www.nature.com/articles/s41586-024-08449-y",
+   "retrieved": "2026-10-29T22:50:00Z"
+  }
+ ],
+ "image": {
+  "src": "src-img/qec-basics-hero.jpg",
+  "crop": [
+   0,
+   0.02,
+   1.0
+  ],
+  "ai": true,
+  "alt": "Gold-plated stages of a dilution refrigerator with rows of coaxial cables",
+  "note": "Generic AI-generated cryostat; not a photo of any company's system.",
+  "licence": "generated; rights held by the site owner (see terms.html)"
+ }
+}
