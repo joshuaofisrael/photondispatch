@@ -3,6 +3,8 @@
 > Independent, answer-first quantum computing and quantum technology news: hardware, algorithms, industry and funding, research and policy.
 
 ## Articles
+- [IQM says Emerald entangled all 54 qubits, with a GHZ fidelity of 0.516](https://photondispatch.com/news/iqm-emerald-54-qubit-ghz-fidelity.html): IQM says its Emerald cloud system prepared a 54-qubit GHZ state at fidelity 0.516 with readout-error mitigation, just above 0.5.
+- [NIST says quantum-vulnerable public-key algorithms are deprecated after 2030 and disallowed after 2035](https://photondispatch.com/news/nist-ir-8547-public-key-2030-2035.html): According to NIST IR 8547, published 27 October 2026, quantum-vulnerable public-key algorithms are deprecated after 2030 and disallowed after 2035.
 - [Iceberg Quantum cuts its RSA-2048 factoring estimate to about 48,000 qubits in simulations](https://photondispatch.com/news/iceberg-quantum-pinnacle-1-2-rsa-2048-estimate.html): Iceberg Quantum's Pinnacle 1.2 says simulations show RSA-2048 factoring could need about 48,000 physical qubits and roughly a day under its best assumptions.
 - [Quantinuum says Helios hit 99.9995% logical fidelity, a tenfold error-correction record](https://photondispatch.com/news/quantinuum-helios-99-9995-logical-fidelity-color-code.html): Quantinuum says its Helios trapped-ion computer reached 99.9995% logical fidelity with a color code, about five errors per million operations.
 - [Google shows magic state cultivation on Willow, cutting errors about 40x](https://photondispatch.com/news/google-magic-state-cultivation-willow-science.html): Google Quantum AI says magic state cultivation worked on its Willow chip, cutting errors about 40-fold and yielding T-states at 99.99% logical fidelity.
