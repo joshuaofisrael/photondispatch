@@ -11,7 +11,7 @@ import sys, json, os, html, datetime, shutil, re
 SITE_URL = "https://photondispatch.com"  # <-- ONLY place to change the domain
 NAME = "PhotonDispatch"; LLC = "Joshua Israel Ventures LLC"; EMAIL = ""  # set a real address here when available; while empty the site shows the GitHub issues link instead
 FORM_TO = "4497ee41a1200e746e967998473d21da"  # FormSubmit random alias (activated 23 Oct 2026); used ONLY on contact.html
-ISSUES = "https://github.com/joshuaofisrael/photondispatch/issues"; BUILD_DATE = "2026-10-24"
+ISSUES = "https://github.com/joshuaofisrael/photondispatch/issues"; BUILD_DATE = "2026-10-29"
 CF_BEACON_TOKEN = os.environ.get("CF_BEACON_TOKEN", "")  # Cloudflare Web Analytics token; "" = disabled
 INDEXNOW_KEY = "8cb05bd1e79a50594f6726934d66a801"
 DESC = "Independent, answer-first quantum computing and quantum technology news: hardware, algorithms, industry and funding, research and policy."
@@ -21,6 +21,27 @@ OUT = "docs"; ASSET_VER = "4"
 TODO_IMAGES = []
 CATS = [("hardware","Hardware"),("algorithms","Algorithms"),("industry","Industry & Funding"),("research","Research"),("policy","Policy")]
 CATN = dict(CATS)
+
+def now_utc():
+    """Clock for publish_at. PHOTON_NOW=ISO-8601 overrides it (tests and dry runs)."""
+    raw = os.environ.get("PHOTON_NOW")
+    if raw:
+        dt = datetime.datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=datetime.timezone.utc)
+        return dt
+    return datetime.datetime.now(datetime.timezone.utc)
+
+def is_due(a, now):
+    """Articles without publish_at go out immediately. Future publish_at stays off the site."""
+    raw = a.get("publish_at")
+    if not raw:
+        return True
+    dt = datetime.datetime.fromisoformat(str(raw).replace("Z", "+00:00"))
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=datetime.timezone.utc)
+    return dt <= now
+
 A = json.load(open("content/articles.json", encoding="utf-8"))
 # Legal-hold gate: held articles are never rendered (approved exact versions pass).
 sys.path.insert(0, "review"); import check_content as _cc
@@ -30,7 +51,13 @@ for _a in A:
     if _f and (_a.get("slug"), _cc.version_hash(_a)) not in _ok:
         print(f"  [HOLD_REVIEW] {_a.get('slug')} not built: rules {sorted({x[0] for x in _f})}"); _cc.queue(_a, _f, "content/articles.json")
     else: _keep.append(_a)
-A = _keep
+_now = now_utc()
+A = []
+for _a in _keep:
+    if is_due(_a, _now):
+        A.append(_a)
+    else:
+        print(f"  [scheduled] {_a.get('slug')} not built until {_a.get('publish_at')}")
 A.sort(key=lambda a: a["date"], reverse=True)
 PUB = {"@type": "Organization", "name": "PhotonDispatch", "url": SITE_URL + "/", "parentOrganization": {"@type": "Organization", "name": "Joshua Israel Ventures LLC"}, "logo": {"@type": "ImageObject", "url": SITE_URL + "/logo.png", "width": 512, "height": 512}}
 

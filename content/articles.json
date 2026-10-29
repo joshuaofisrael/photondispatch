@@ -1,5 +1,177 @@
 [
  {
+  "slug": "nist-ir-8547-public-key-2030-2035",
+  "date": "2026-10-27",
+  "updated": "2026-10-29",
+  "publish_at": "2026-10-29T11:00:00+00:00",
+  "cat": "policy",
+  "title": "NIST says quantum-vulnerable public-key algorithms are deprecated after 2030 and disallowed after 2035",
+  "summary": "According to NIST IR 8547, published 27 October 2026, quantum-vulnerable public-key algorithms are deprecated after 2030 and disallowed after 2035.",
+  "body": [
+   "<strong>Short answer:</strong> On 27 October 2026 the US National Institute of Standards and Technology published NIST IR 8547, Transition to Post-Quantum Cryptography Standards. NIST says it will deprecate quantum-vulnerable public-key cryptography after 2030 and disallow its use under NIST standards and guidelines after 2035.",
+   "The report is dated October 2026. Its publication history says the NIST Editorial Review Board approved it on 21 October 2026, and both NIST's news post and the Computer Security Resource Center list 27 October 2026. It is the agency's plan for moving off public-key methods that a cryptanalytically relevant quantum computer could break, toward the post-quantum standards NIST finished in 2024: FIPS 203 (ML-KEM) for key establishment, and FIPS 204 (ML-DSA) and FIPS 205 (SLH-DSA) for signatures. Dustin Moody, the NIST mathematician who leads the project, said there is \"not one strategy that fits all use cases\".",
+   "For signatures, NIST's table covers ECDSA, EdDSA and RSA as specified in FIPS 186, at the parameter sets it still treats as approved: at least 112 bits of classical security for ECDSA and RSA, and at least 128 bits for EdDSA. Each is marked deprecated after 2030 and disallowed after 2035. The same window applies to quantum-vulnerable key establishment in Special Publications 800-56A and 800-56B: finite-field and elliptic-curve Diffie-Hellman and MQV, and RSA key establishment, again from 112 bits of classical security upward. NIST says this replaces an older plan, in SP 800-57 Part 1, to disallow public-key schemes offering 112 bits of security on 1 January 2031.",
+   "National Security Memorandum 10 still names 2035 as the target for finishing the migration across federal systems, the report says. Executive Order 14412 and OMB Memorandum M-26-15, as the report describes them, pull the most sensitive systems forward: high-value assets and high-impact systems are to adopt post-quantum key establishment by 31 December 2030 and post-quantum digital signatures by 31 December 2031. NIST says the broader 2030-2035 window does not relax those earlier deadlines. The report also says Executive Order 14306 and the same OMB memo require agencies to support TLS 1.3 no later than 2 January 2030.",
+   "NIST says ML-KEM, specified in FIPS 203, is at present the only approved post-quantum key-establishment scheme based on public-key cryptography, and it recommends the ML-KEM-768 parameter set as the default. HQC has been chosen for a future standard; NIST says it becomes an approved scheme after that standard is published. Symmetric cryptography is on a different footing: the report says approved symmetric primitives with at least 128 bits of classical security are believed to meet at least Category 1 on NIST's post-quantum scale, while a few symmetric standards at the 112-bit level are to be disallowed in 2030."
+  ],
+  "analysis": [
+   "In the report's own glossary, a deprecated algorithm may still be used if the data owner accepts the risk, while a disallowed algorithm is no longer allowed for the stated purpose. The December 2030 and December 2031 dates apply to the sensitive federal systems the report names. They are not, on the text of IR 8547, an automatic cutoff for every deployment of RSA."
+  ],
+  "disclaimer": "Dates and requirements are NIST's, as stated in IR 8547 and the agency's 27 October 2026 news post. This is not legal advice, and it is not a finding about any particular system.",
+  "sources": [
+   {
+    "title": "NIST: Report provides guidelines for the transition to post-quantum cryptography standards (27 Oct 2026)",
+    "url": "https://www.nist.gov/news-events/news/2026/10/nist-report-provides-guidelines-transition-post-quantum-cryptography",
+    "retrieved": "2026-10-29T08:00:00Z"
+   },
+   {
+    "title": "NIST CSRC: Transition to Post-Quantum Cryptography Standards, NIST IR 8547 (27 Oct 2026)",
+    "url": "https://csrc.nist.gov/News/2026/transition-to-pqc-standards-nist-ir-8547",
+    "retrieved": "2026-10-29T08:00:00Z"
+   },
+   {
+    "title": "NIST IR 8547 PDF: Transition to Post-Quantum Cryptography Standards (October 2026)",
+    "url": "https://nvlpubs.nist.gov/nistpubs/ir/2026/NIST.IR.8547.pdf",
+    "retrieved": "2026-10-29T08:00:00Z"
+   }
+  ],
+  "image": {
+   "src": "src-img/nist-ir-hero.jpg",
+   "crop": [
+    0,
+    0.02,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Stainless equipment safe on a wheeled cart in a dark aisle of server racks",
+   "note": "Generic AI-generated scene; not a NIST facility or a real key-management device.",
+   "licence": "generated; rights held by the site owner (see terms.html)"
+  },
+  "inline_images": [
+   {
+    "file": "nist-ir-1.jpg",
+    "alt": "Brass padlock on a metal rack door beside blue and yellow network cables",
+    "caption": "Illustration: a locked network cabinet",
+    "insert_after_paragraph": 2,
+    "note": "Generic illustration; not a photograph of a specific system.",
+    "licence": "generated; rights held by the site owner (see terms.html)"
+   }
+  ]
+ },
+ {
+  "slug": "iqm-emerald-54-qubit-ghz-fidelity",
+  "date": "2026-10-29",
+  "updated": "2026-10-29",
+  "publish_at": "2026-10-29T15:00:00+00:00",
+  "cat": "hardware",
+  "title": "IQM says Emerald entangled all 54 qubits, with a GHZ fidelity of 0.516",
+  "summary": "IQM says its Emerald cloud system prepared a 54-qubit GHZ state at fidelity 0.516 with readout-error mitigation, just above 0.5.",
+  "body": [
+   "<strong>Short answer:</strong> IQM Quantum Computers said on 29 October 2026 that its cloud-accessible Emerald processor had entangled all 54 qubits on the chip at the same time. IQM measured a Greenberger-Horne-Zeilinger fidelity of 0.516 for the full chip when readout-error mitigation was applied, and 0.515 for a 40-qubit version of the same test without that mitigation. The company says both numbers sit above 0.500, the line it uses to separate genuine multipartite entanglement from noise.",
+   "The state was prepared across the whole Emerald chip, IQM says, by an automated routine that picks two-qubit gates and the order they run in, weighing gate quality against how long other qubits sit idle. Craig Ciesla, IQM's chief technology officer, said the result \"came down to being smarter about how we prepare the state\".",
+   "IQM says the demonstration follows about a year of hardware and calibration work: a revised calibration method, an updated gate set, and continued use of dynamical decoupling and qubit selection. The company says those changes cut the error rate of quantum operations in the processor by up to 50 percent. It also says that, before this run, a comparable demonstration on Emerald could reliably use on the order of 30 qubits inside a single algorithm, and that cloud customers can now call on that same full-chip performance.",
+   "The announcement was issued through Business Wire at 3:00 a.m. US Eastern time and datelined Espoo, Finland. IQM describes itself as a superconducting quantum-computing company founded in 2018 and listed on Nasdaq under the symbol IQMX.",
+   "IQM says the preparation routine is part of a wider effort to automate how its machines are operated and tuned, including calibration work the company describes as AI-driven."
+  ],
+  "analysis": [
+   "The 54-qubit fidelity includes readout-error mitigation and the 40-qubit figure does not, so the two results are not a like-for-like picture of scaling. A fidelity of 0.516 is only slightly above the 0.5 line IQM cites. The figures are the company's, given in a press release rather than in a paper linked from that release."
+  ],
+  "disclaimer": "Fidelity figures, the error-rate claim and the comparison with earlier Emerald runs are IQM's own statements and have not been independently verified. IQM Quantum Computers is listed on Nasdaq (IQMX). This is not investment advice.",
+  "sources": [
+   {
+    "title": "Business Wire release, as carried by FinancialContent: IQM demonstrates entanglement across a 54-qubit processor (29 Oct 2026, 3:00 a.m. ET)",
+    "url": "https://markets.financialcontent.com/stocks/article/bizwire-2026-10-29-iqm-demonstrates-entanglement-across-a-complete-54-qubit-processor-bringing-full-chip-performance-to-cloud-users",
+    "retrieved": "2026-10-29T08:00:00Z"
+   },
+   {
+    "title": "Business Wire release, as carried by StockTitan: IQM demonstrates entanglement across a 54-qubit processor (29 Oct 2026)",
+    "url": "https://www.stocktitan.net/news/IQMX/iqm-demonstrates-entanglement-across-a-complete-54-qubit-processor-4ka9gj1jwrao.html",
+    "retrieved": "2026-10-29T08:00:00Z"
+   }
+  ],
+  "image": {
+   "src": "src-img/iqm-emerald-hero.jpg",
+   "crop": [
+    0,
+    0.02,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Square microchip in a gold package with wire bonds, on a steel bench",
+   "note": "Generic AI-generated chip; not a photo of IQM Emerald or any IQM product.",
+   "licence": "generated; rights held by the site owner (see terms.html)"
+  },
+  "inline_images": [
+   {
+    "file": "iqm-emerald-1.jpg",
+    "alt": "Wafer probe station with a metal needle above a round silicon wafer",
+    "caption": "Illustration: a generic wafer probe station",
+    "insert_after_paragraph": 2,
+    "note": "Generic illustration; not IQM's lab or Emerald hardware.",
+    "licence": "generated; rights held by the site owner (see terms.html)"
+   }
+  ]
+ },
+ {
+  "slug": "ml-kem-ml-dsa-slh-dsa-what-they-do",
+  "date": "2026-10-29",
+  "updated": "2026-10-29",
+  "publish_at": "2026-10-29T19:00:00+00:00",
+  "cat": "algorithms",
+  "title": "What ML-KEM, ML-DSA and SLH-DSA each do in NIST's post-quantum standards",
+  "summary": "According to NIST, FIPS 203, 204 and 205, effective 14 August 2024, cover key establishment (ML-KEM) and two signature methods (ML-DSA and SLH-DSA).",
+  "body": [
+   "<strong>Short answer:</strong> The three post-quantum standards NIST finalized in August 2024 do different jobs. FIPS 203, ML-KEM, is for agreeing a shared secret key. FIPS 204, ML-DSA, is the primary standard for digital signatures. FIPS 205, SLH-DSA, is a second signature method, built on different mathematics, which NIST describes as a backup.",
+   "A key-encapsulation mechanism lets two parties derive a shared secret over a public network. NIST says ML-KEM, taken from the CRYSTALS-Kyber submission, is the main standard for general encryption, citing comparatively small keys and speed. ML-DSA, from CRYSTALS-Dilithium, is for signatures that tie a message to a signer and show whether it was changed. SLH-DSA, from SPHINCS+, is also a signature scheme. NIST says it uses a different mathematical approach from ML-DSA and is there as a backup should a weakness in ML-DSA turn up.",
+   "The Secretary of Commerce approved FIPS 203, 204 and 205, and the Federal Register notice (89 FR 66052) makes them effective on 14 August 2024. NIST's news post of 13 August 2024 said the documents include the algorithms, instructions for implementing them and the uses they are meant for, and that they were ready to use. Dustin Moody, who leads the project, said \"full integration will take time.\"",
+   "In 2022 NIST selected four algorithms to standardize: CRYSTALS-Kyber, CRYSTALS-Dilithium, SPHINCS+ and FALCON. The August 2024 post said a draft based on FALCON, to be named FN-DSA, was still planned. NIST IR 8547, published in October 2026, says the agency is still developing a FIPS for a signature algorithm derived from FALCON, as a further alternative, and it recommends ML-KEM-768 as the default parameter set for FIPS 203. The 2030 and 2035 transition dates are set out in <a href=\"nist-ir-8547-public-key-2030-2035.html\">PhotonDispatch's report on that roadmap</a>.",
+   "NIST says the new algorithms rest on math problems intended to resist both conventional computers and quantum computers, unlike factoring and discrete logarithms, which underlie widely used schemes such as RSA and elliptic-curve signatures. The agency describes the three 2024 standards as the primary tools for general encryption and for signatures, and says further algorithms are backups rather than a reason to wait."
+  ],
+  "analysis": [
+   "Publishing a standard is not the same thing as finishing a migration, and it is not evidence that a quantum computer can break public-key encryption today. NIST's August 2024 announcement described a machine with that capability as a future possibility. Describing SLH-DSA as a backup was a design choice NIST stated at the time, not a report that ML-DSA had failed."
+  ],
+  "disclaimer": "This article describes standards NIST has published. It is not legal advice and not a configuration guide for any particular system.",
+  "sources": [
+   {
+    "title": "NIST: NIST releases first 3 finalized post-quantum encryption standards (13 Aug 2024)",
+    "url": "https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards",
+    "retrieved": "2026-10-29T08:00:00Z"
+   },
+   {
+    "title": "Federal Register notice 89 FR 66052, as published by thefederalregister.org: FIPS 203, 204 and 205 effective 14 Aug 2024",
+    "url": "https://thefederalregister.org/documents/2024-17956/announcing-issuance-of-federal-information-processing-standards-fips-fips-203-module-lattice-based-key-encapsulation-mec",
+    "retrieved": "2026-10-29T08:00:00Z"
+   },
+   {
+    "title": "NIST IR 8547 PDF: Transition to Post-Quantum Cryptography Standards (October 2026)",
+    "url": "https://nvlpubs.nist.gov/nistpubs/ir/2026/NIST.IR.8547.pdf",
+    "retrieved": "2026-10-29T08:00:00Z"
+   }
+  ],
+  "image": {
+   "src": "src-img/pqc-standards-hero.jpg",
+   "crop": [
+    0,
+    0.02,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Gold chip package, a clear glass block and a coil of yellow wire on a black perforated table",
+   "note": "Generic AI-generated still life; not NIST hardware and not a picture of the standards.",
+   "licence": "generated; rights held by the site owner (see terms.html)"
+  },
+  "inline_images": [
+   {
+    "file": "pqc-standards-1.jpg",
+    "alt": "Black honeycomb tile and a clear gridded tile side by side on grey fabric",
+    "caption": "Illustration: two different patterns, standing in for two signature methods",
+    "insert_after_paragraph": 2,
+    "note": "Generic illustration; not a depiction of ML-DSA or SLH-DSA.",
+    "licence": "generated; rights held by the site owner (see terms.html)"
+   }
+  ]
+ },
+ {
   "slug": "quantinuum-helios-99-9995-logical-fidelity-color-code",
   "date": "2026-10-19",
   "updated": "2026-10-24",

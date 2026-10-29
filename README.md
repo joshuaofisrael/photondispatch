@@ -46,6 +46,8 @@ Append an object to `content/articles.json` (newest order is handled automatical
 9. Contact: `contact.html` has a working contact form (name, email, message; honeypot `_honeypot`; `_captcha=false`; subject "PhotonDispatch contact"; AJAX submit with on-page thank-you, plain POST + `_next` fallback), plus the GitHub-issues link. Never remove the form, the honeypot, or the privacy line; don't add the form address to other pages.
 10. Before pushing, re-read the article against its sources one last time. Remove anything you cannot trace.
 
+To hold an article for a clock time, add `"publish_at": "2026-10-29T11:00:00+00:00"` (UTC). `build.py` leaves it out of the pages, sitemap, RSS and homepage until that instant. `.github/workflows/publish-scheduled.yml` runs at 11:00, 15:00 and 19:00 UTC, with a second pass 20 minutes later, rebuilds the site and commits `docs/` when a scheduled article is due and its page is not on `main` yet. GitHub only runs that schedule from the default branch. `PHOTON_NOW=2026-10-29T15:30:00+00:00 python3 build.py` previews a later slot without waiting.
+
 ### 2. Add a "why it's trending" post
 Same as an article plus two fields:
 ```json

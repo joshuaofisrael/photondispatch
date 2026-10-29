@@ -1,0 +1,107 @@
+# Publishes articles whose publish_at has passed by rebuilding docs/ and committing it.
+# GitHub runs schedule events only on the default branch, in UTC.
+# On 29 Oct 2026 London is GMT (UTC+0): 11:00, 15:00 and 19:00 local.
+# The :20 runs are a second chance if the top-of-hour cron is delayed or skipped.
+name: Publish scheduled articles
+
+on:
+  schedule:
+    - cron: "0 11 * * *"
+    - cron: "20 11 * * *"
+    - cron: "0 15 * * *"
+    - cron: "20 15 * * *"
+    - cron: "0 19 * * *"
+    - cron: "20 19 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-scheduled
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Pillow
+        run: pip install pillow
+
+      - name: See which scheduled articles are due and not yet on the site
+        id: due
+        run: |
+          python3 - << 'PY'
+          import json, os, datetime
+          now = datetime.datetime.now(datetime.timezone.utc)
+          arts = json.load(open("content/articles.json", encoding="utf-8"))
+          due = []
+          for a in arts:
+              raw = a.get("publish_at")
+              if not raw:
+                  continue
+              dt = datetime.datetime.fromisoformat(str(raw).replace("Z", "+00:00"))
+              if dt.tzinfo is None:
+                  dt = dt.replace(tzinfo=datetime.timezone.utc)
+              page = f"docs/news/{a['slug']}.html"
+              if dt <= now and not os.path.exists(page):
+                  due.append(a["slug"])
+          out = os.environ["GITHUB_OUTPUT"]
+          with open(out, "a", encoding="utf-8") as fh:
+              fh.write("due=" + ("true" if due else "false") + "\n")
+              fh.write("slugs=" + " ".join(due) + "\n")
+          print("due:", ", ".join(due) or "(none)")
+          PY
+
+      - name: Build
+        if: steps.due.outputs.due == 'true'
+        run: python3 build.py
+
+      - name: Commit published pages
+        if: steps.due.outputs.due == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs images.md
+          if git diff --cached --quiet; then
+            echo "Build produced no changes"
+            exit 0
+          fi
+          git commit -m "Publish articles that reached their scheduled time"
+          git push
+
+      - name: Ping IndexNow for the new URLs
+        if: steps.due.outputs.due == 'true'
+        env:
+          SLUGS: ${{ steps.due.outputs.slugs }}
+        run: |
+          python3 - << 'PY'
+          import json, os, urllib.request
+          slugs = os.environ.get("SLUGS", "").split()
+          if not slugs:
+              raise SystemExit(0)
+          key = "8cb05bd1e79a50594f6726934d66a801"
+          urls = [f"https://photondispatch.com/news/{s}.html" for s in slugs]
+          body = json.dumps({
+              "host": "photondispatch.com",
+              "key": key,
+              "keyLocation": f"https://photondispatch.com/{key}.txt",
+              "urlList": urls,
+          }).encode()
+          req = urllib.request.Request(
+              "https://api.indexnow.org/indexnow",
+              data=body,
+              headers={"Content-Type": "application/json"},
+          )
+          try:
+              with urllib.request.urlopen(req, timeout=30) as resp:
+                  print("IndexNow", resp.status, " ".join(urls))
+          except Exception as exc:
+              print("IndexNow skipped:", exc)
+          PY
