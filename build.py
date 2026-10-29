@@ -49,9 +49,9 @@ A = json.load(open("content/articles.json", encoding="utf-8"))
 sys.path.insert(0, "review"); import check_content as _cc
 _ok = _cc.approvals(); _keep = []
 for _a in A:
-    _f = _cc.check(_a)
-    if _f and (_a.get("slug"), _cc.version_hash(_a)) not in _ok:
-        print(f"  [HOLD_REVIEW] {_a.get('slug')} not built: rules {sorted({x[0] for x in _f})}"); _cc.queue(_a, _f, "content/articles.json")
+    _b, _f, _why = _cc.blocked(_a, _ok)
+    if _b:
+        print(f"  [HOLD_REVIEW {_why}] {_a.get('slug')} not built: rules {sorted({x[0] for x in _f})}"); _cc.queue(_a, _f, "content/articles.json")
     else: _keep.append(_a)
 _now = now_utc()
 A = []

@@ -8,6 +8,13 @@ X/social posts and retries. Exit code 0 = all items PASS, 2 = at least one HOLD_
   python3 review/check_content.py --item x.json    # check one draft article / social post
   python3 review/check_content.py --docs           # also verify every docs/news page is a passing article
   add --queue to append held items to /workspace/content-review/queue.jsonl
+Severity tiers (AMENDMENT 1+2, 27 Oct 2026):
+  HIGH (rules 0, 1, 2, 6, 8 and HIGH review_flags) -> HOLD_REVIEW for Joshua only, never self-cleared.
+  MODERATE (rules 3, 4, 5, 7) -> bot fixes properly, then:
+  python3 review/check_content.py --item draft.json --clear-moderate "<rule + fix made>"
+  runs /workspace/content-review/bin/chatgpt_review.py (one round per call, max 3 rounds per slug).
+  SAFE -> clearance for that exact sha256 logged to moderate-clearances.jsonl -> publishes.
+  After 3 non-SAFE rounds: stays held, report to Personal assistant.
 Approval = Joshua's approval of the exact version (sha256) in approvals.jsonl. This script never writes approvals.
 """
 import json, re, sys, os, hashlib, datetime, argparse, glob
@@ -15,6 +22,9 @@ import json, re, sys, os, hashlib, datetime, argparse, glob
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QUEUE = "/workspace/content-review/queue.jsonl"
 APPROVALS = ["/workspace/content-review/approvals.jsonl", os.path.join(ROOT, "review/approvals.jsonl")]
+CLEAR_LOGS = ["/workspace/content-review/moderate-clearances.jsonl", os.path.join(ROOT, "review/moderate-clearances.jsonl")]
+REVIEWER = "/workspace/content-review/bin/chatgpt_review.py"
+HIGH_RULES = {0, 1, 2, 6, 8}; MAX_ROUNDS = 3
 SITE, BOT = "photondispatch.com", "Quantum News Bot"
 
 def w(*words): return re.compile(r"\b(" + "|".join(words) + r")\b", re.I)
@@ -104,6 +114,58 @@ def check(item, img_record=None):
         f.append((8, ", ".join(h) or "legal_notice", "Legal/rights issue: block republication and alert Personal assistant (priority)."))
     return f
 
+def is_high(flags): return any(r in HIGH_RULES for r, _, _ in flags)
+
+def _log_lines():
+    out = []
+    for p in CLEAR_LOGS:
+        if os.path.exists(p):
+            for line in open(p, encoding="utf-8"):
+                try: out.append(json.loads(line))
+                except Exception: pass
+    return out
+
+def moderate_cleared(item, flags=None):
+    """True only if every flag is MODERATE and this exact version has a SAFE ChatGPT clearance."""
+    flags = check(item) if flags is None else flags
+    if is_high(flags): return False
+    vh = version_hash(item)
+    return any(r.get("sha256") == vh and r.get("chatgpt_verdict") == "SAFE" and r.get("site") == SITE for r in _log_lines())
+
+def blocked(item, ok=None):
+    """Publish-gate decision used by build.py / CI. Returns (blocked?, flags, reason)."""
+    fl = check(item)
+    if not fl: return False, fl, "PASS"
+    ok = approvals() if ok is None else ok
+    if ((item.get("slug") or item.get("title")), version_hash(item)) in ok: return False, fl, "APPROVED"
+    if moderate_cleared(item, fl): return False, fl, "MODERATE_CLEARED"
+    return True, fl, ("HIGH" if is_high(fl) else "MODERATE_PENDING")
+
+def clear_moderate(item, path, fix):
+    import subprocess
+    fl = check(item); key = item.get("slug") or item.get("title"); vh = version_hash(item)
+    if not fl: print(f"PASS  {key} (nothing to clear)"); return 0
+    if is_high(fl): print(f"HOLD_REVIEW  {key}: HIGH-tier rule(s) {sorted({r for r,_,_ in fl if r in HIGH_RULES})}; Joshua only."); return 2
+    if moderate_cleared(item, fl): print(f"MODERATE_CLEARED  {key} (already cleared {vh[:12]})"); return 0
+    rounds = sum(1 for r in _log_lines() if r.get("site") == SITE and (r.get("slug") or r.get("title")) == key)
+    if rounds >= MAX_ROUNDS: print(f"HOLD_REVIEW  {key}: {rounds} review rounds used; keep held and report to Personal assistant."); return 2
+    rules = sorted({r for r, _, _ in fl})
+    ctx = f"Rules {rules} flagged: " + "; ".join(f"rule {r}: {t}" for r, t, _ in fl) + f". Fix made: {fix}"
+    p = subprocess.run([sys.executable, REVIEWER, path, ctx], capture_output=True, text=True)
+    try: v = json.loads(p.stdout.strip().splitlines()[-1])
+    except Exception: v = {"verdict": "UNSURE", "reasons": [p.stdout[-300:] + p.stderr[-300:]]}
+    verdict = v.get("verdict") if p.returncode == 0 and v.get("verdict") == "SAFE" else (v.get("verdict") or "UNSURE")
+    if verdict == "SAFE" and p.returncode != 0: verdict = "UNSURE"
+    rec = {"ts": datetime.datetime.now().astimezone().isoformat(timespec="seconds"), "site": SITE, "bot": BOT, "slug": key,
+           "title": item.get("title") or item.get("text", "")[:120], "rule": rules, "fix": fix, "round": rounds + 1,
+           "chatgpt_verdict": verdict, "chatgpt_summary": "; ".join(map(str, v.get("reasons", [])))[:600], "sha256": vh}
+    for lp in CLEAR_LOGS:
+        os.makedirs(os.path.dirname(lp), exist_ok=True)
+        with open(lp, "a", encoding="utf-8") as fh: fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
+    print(f"{'MODERATE_CLEARED' if verdict == 'SAFE' else 'HOLD_REVIEW'}  {key}: ChatGPT {verdict} (round {rounds + 1}/{MAX_ROUNDS}) {rec['chatgpt_summary'][:200]}")
+    if verdict != "SAFE" and rounds + 1 >= MAX_ROUNDS: print("   3 rounds failed: keep held, report to Personal assistant.")
+    return 0 if verdict == "SAFE" else 2
+
 def queue(item, flags, draft_path):
     os.makedirs(os.path.dirname(QUEUE), exist_ok=True)
     vh = version_hash(item)
@@ -119,12 +181,14 @@ def evaluate(items, src_label, do_queue):
     ok, held = approvals(), []
     for it in items:
         key = it.get("slug") or it.get("title")
-        fl = check(it)
+        b, fl, why = blocked(it, ok)
         vh = version_hash(it)
-        if fl and (key, vh) in ok:
+        if fl and why == "APPROVED":
             print(f"APPROVED  {key} (Joshua approved sha256 {vh[:12]})"); continue
-        if fl:
-            held.append(key); print(f"HOLD_REVIEW  {key}")
+        if why == "MODERATE_CLEARED":
+            print(f"MODERATE_CLEARED  {key} (ChatGPT SAFE for sha256 {vh[:12]})"); continue
+        if b:
+            held.append(key); print(f"HOLD_REVIEW  {key} [{'HIGH: Joshua only' if why == 'HIGH' else 'MODERATE: fix + --clear-moderate'}]")
             for r, t, s in fl: print(f"   rule {r}: {t}")
             if do_queue: queue(it, fl, src_label)
         else:
@@ -134,7 +198,11 @@ def evaluate(items, src_label, do_queue):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--item"); ap.add_argument("--queue", action="store_true"); ap.add_argument("--docs", action="store_true")
+    ap.add_argument("--clear-moderate", metavar="FIX", help="with --item: ChatGPT review round for a fixed MODERATE item")
     a = ap.parse_args()
+    if a.clear_moderate:
+        if not a.item: sys.exit("--clear-moderate needs --item")
+        it = json.load(open(a.item, encoding="utf-8")); sys.exit(clear_moderate(it, a.item, a.clear_moderate))
     if a.item:
         it = json.load(open(a.item, encoding="utf-8")); items = it if isinstance(it, list) else [it]; label = os.path.abspath(a.item)
     else:
