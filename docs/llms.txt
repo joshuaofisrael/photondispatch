@@ -3,6 +3,7 @@
 > Independent, answer-first quantum computing and quantum technology news: hardware, algorithms, industry and funding, research and policy.
 
 ## Articles
+- [Quantum error correction basics: syndromes, thresholds and why overhead matters](https://photondispatch.com/news/quantum-error-correction-basics.html): Quantum error correction detects errors through parity-check measurements and, below a hardware threshold, makes encoded qubits more reliable as codes grow, according to the research literature.
 - [What is a logical qubit, and why do quantum computers need them?](https://photondispatch.com/news/what-is-a-logical-qubit.html): A logical qubit is one unit of quantum information spread across many physical qubits so that errors can be detected and corrected, as described in surface-code research.
 - [IQM says Emerald entangled all 54 qubits, with a GHZ fidelity of 0.516](https://photondispatch.com/news/iqm-emerald-54-qubit-ghz-fidelity.html): IQM says its Emerald cloud system prepared a 54-qubit GHZ state at fidelity 0.516 with readout-error mitigation, just above 0.5.
 - [What ML-KEM, ML-DSA and SLH-DSA each do in NIST's post-quantum standards](https://photondispatch.com/news/ml-kem-ml-dsa-slh-dsa-what-they-do.html): According to NIST, FIPS 203, 204 and 205, effective 14 August 2024, cover key establishment (ML-KEM) and two signature methods (ML-DSA and SLH-DSA).
