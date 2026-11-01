@@ -1,5 +1,50 @@
 [
  {
+  "slug": "harvest-now-decrypt-later-explained",
+  "date": "2026-11-03",
+  "updated": "2026-11-03",
+  "publish_at": "2026-11-03T11:00:00+00:00",
+  "cat": "algorithms",
+  "title": "Harvest now, decrypt later: why encrypted data is already at risk from quantum computers",
+  "summary": "Harvest now, decrypt later means recording encrypted traffic today and breaking it once a large quantum computer exists. Here is how the threat works and why it sets the migration clock.",
+  "body": [
+   "<strong>Short answer:</strong> \"Harvest now, decrypt later\" describes an attacker who copies encrypted data today, stores it, and waits until a large enough quantum computer can break the public key cryptography that protected it. The data does not need to be decrypted now to be at risk now. That is why governments ask organisations to move to post-quantum cryptography years before such a machine exists.",
+   "Most internet encryption uses two layers. A public key method such as RSA or elliptic curve Diffie Hellman agrees a shared secret, and a symmetric cipher such as AES then encrypts the actual data with that secret. A sufficiently large quantum computer running Shor's algorithm could recover the secret from the recorded key exchange, and with it the data. Symmetric ciphers are much less exposed; the main defence there is using adequately long keys.",
+   "The risk depends on how long the data must stay secret. If information will still matter in ten or fifteen years, such as health records, state secrets, long term contracts or intellectual property, then traffic captured today could become readable within its useful life. Short lived data, such as a one time login code, matters far less.",
+   "The answer is to change the key exchange, not to wait. NIST published FIPS 203 in August 2024, which standardises ML-KEM, a key encapsulation mechanism designed to resist quantum attack. Our guide to <a href=\"ml-kem-ml-dsa-slh-dsa-what-they-do.html\">ML-KEM, ML-DSA and SLH-DSA</a> explains what each standard does. Many deployments use a hybrid approach that combines a classical exchange with ML-KEM, so the connection stays secure if either one holds.",
+   "Official timelines reflect this. NIST's draft report IR 8547 proposes deprecating quantum vulnerable public key algorithms at the 112 bit security level after 2030 and disallowing them after 2035; we covered it in <a href=\"nist-ir-8547-public-key-2030-2035.html\">our report on the draft</a>. The UK's NCSC sets milestones of 2028 for discovery and planning, 2031 for priority migrations and 2035 for completing migration."
+  ],
+  "analysis": [
+   "Opinion: Nobody can say when a cryptographically relevant quantum computer will arrive, and estimates have moved repeatedly. Harvest now, decrypt later turns that uncertainty into a simple planning question: how long must this data stay private, and how long will migration take? If the sum reaches past the earliest plausible date, the work should already be under way."
+  ],
+  "disclaimer": "This is a general explainer, not security advice for any specific system. Dates are from the NIST and NCSC documents linked below.",
+  "sources": [
+   {
+    "title": "NIST IR 8547 (initial public draft): Transition to Post-Quantum Cryptography Standards",
+    "url": "https://csrc.nist.gov/pubs/ir/8547/ipd"
+   },
+   {
+    "title": "NCSC: Timelines for migration to post-quantum cryptography",
+    "url": "https://www.ncsc.gov.uk/guidance/pqc-migration-timelines"
+   },
+   {
+    "title": "NIST FIPS 203: Module-Lattice-Based Key-Encapsulation Mechanism Standard",
+    "url": "https://csrc.nist.gov/pubs/fips/203/final"
+   }
+  ],
+  "image": {
+   "src": "src-img/hndl-hero.jpg",
+   "crop": [
+    0,
+    0.0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Shelves of black storage cartridges in a dim archive room with a brass padlock on one cartridge",
+   "note": "Generic AI-generated scene; not a real facility."
+  }
+ },
+ {
   "slug": "quantum-error-correction-basics",
   "date": "2026-10-31",
   "updated": "2026-10-31",
