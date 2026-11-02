@@ -140,7 +140,7 @@ def page(path, title, desc, content, depth=0, ld=None, typ="website", image=None
     robots = "noindex" if path == "404.html" else "index,follow,max-image-preview:large,max-snippet:-1"
     h = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><link rel="canonical" href="{url}">
-<meta name="robots" content="{robots}"><meta name="theme-color" content="#0a0e14">
+<meta name="robots" content="{robots}"><meta name="theme-color" content="#0a0e14"><meta name="msvalidate.01" content="942EB99DB458637348E2ADBDEBDAA7AE">
 <meta property="og:type" content="{typ}"><meta property="og:site_name" content="{NAME}"><meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{url}">
 <meta property="og:image" content="{og['url']}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{esc(og['alt'])}">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og['url']}"><meta name="twitter:image:alt" content="{esc(og['alt'])}">
