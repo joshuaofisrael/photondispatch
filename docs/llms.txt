@@ -3,6 +3,7 @@
 > Independent, answer-first quantum computing and quantum technology news: hardware, algorithms, industry and funding, research and policy.
 
 ## Articles
+- [What is FN-DSA? NIST's Falcon signature standard, and why FIPS 206 isn't published yet](https://photondispatch.com/news/what-is-fn-dsa-fips-206.html): Checked on csrc.nist.gov on 2 November 2026, FIPS 206 for FN-DSA, NIST's planned Falcon-based signature standard, still has no public draft.
 - [What is HQC? NIST's backup to ML-KEM, explained](https://photondispatch.com/news/what-is-hqc-nist-backup-kem.html): According to NIST, HQC is a code-based encryption algorithm chosen in March 2025 as a backup to ML-KEM, with a final standard expected in 2027.
 - [Quantum error correction basics: syndromes, thresholds and why overhead matters](https://photondispatch.com/news/quantum-error-correction-basics.html): Quantum error correction detects errors through parity-check measurements and, below a hardware threshold, makes encoded qubits more reliable as codes grow, according to the research literature.
 - [What is a logical qubit, and why do quantum computers need them?](https://photondispatch.com/news/what-is-a-logical-qubit.html): A logical qubit is one unit of quantum information spread across many physical qubits so that errors can be detected and corrected, as described in surface-code research.
