@@ -1,5 +1,70 @@
 [
  {
+  "slug": "alice-bob-22593-cat-qubits-rsa-2048-estimate",
+  "date": "2026-11-03",
+  "updated": "2026-11-03",
+  "cat": "algorithms",
+  "title": "Alice & Bob says 22,593 cat qubits could factor RSA-2048 in 3.14 days, in a new estimate",
+  "summary": "Alice & Bob's new preprint estimates that a fault-tolerant machine built from its cat qubits could factor RSA-2048 with 22,593 physical qubits in 3.14 days. It is a resource estimate on paper, not a demonstration, and it assumes hardware no one has built yet.",
+  "body": [
+   "<strong>Short answer:</strong> Alice &amp; Bob, the Paris- and Boston-based company building superconducting \"cat qubit\" processors, estimates that a machine on its architecture could factor a 2048-bit RSA number with 22,593 physical qubits running for 3.14 days. The figure comes from a ten-author preprint posted to the IACR Cryptology ePrint Archive (2026/2665) on 28 October, which the company described in a <a href=\"https://alice-bob.com/blog/our-estimate-for-factoring-rsa-2048-with-cat-qubits-pushing-the-frontier-between-size-and-speed/\">blog post</a> as \"about 23 000 physical qubits and about three days to break RSA-2048.\" It is a resource estimate, not an attack run on real hardware.",
+   "A cat qubit stores information in a superconducting resonator holding many photons. Alice &amp; Bob's design suppresses bit flips, where a qubit's 0 turns into 1 or the reverse, in the hardware itself, so the error-correcting code layered on top only has to catch phase flips. That is why the company can claim far fewer physical qubits per logical qubit than designs that must correct both kinds of error. For the difference between the two, see our explainer on <a href=\"what-is-a-logical-qubit.html\">what a logical qubit is</a>.",
+   "According to <a href=\"https://quantum-brief.com/blog/news-2026-10-30-alice-bob-rsa-2048-cat-qubits/\">Quantum Brief</a>, the company credits three changes for the lower count: the cat qubits themselves, LDPC-cat codes published in 2024 that replace the repetition code used in its 2023 estimate, and a rebuilt adder that runs at a steady clock instead of pausing to wait on error-correction results. The switch to LDPC-cat codes alone took the RSA-2048 count from 49,649 to 22,593, according to Alice &amp; Bob's release.",
+   "The headline number rests on four stated assumptions: an error-correction cycle of 1 microsecond, a 10-microsecond reaction time for the classical decoder, a phase-flip probability of 5×10<sup>-4</sup>, and no bit flips at all. Alice &amp; Bob's notes to editors say zero bit flips is equivalent to a bit-flip time of about a century, and that if bit flips arrived about once an hour, RSA-2048 would need roughly 45,000 qubits.",
+   "The design can also trade size for speed. Spread across 610,530 cat qubits in ten machines, the RSA-2048 job would take about 1.25 hours, while 21,188 qubits would stretch it to 8.08 days, according to the paper's trade-off table as reported by <a href=\"https://quantum-brief.com/blog/news-2026-10-30-alice-bob-rsa-2048-cat-qubits/\">Quantum Brief</a>. The same paper puts the 256-bit elliptic-curve discrete logarithm, which underpins ECDSA signatures and ECDH key exchange, at no more than 29,588 physical qubits and 61.8 minutes.",
+   "For context, Craig Gidney and Martin Ekerå put RSA-2048 at about 20 million physical qubits in 2019, and Gidney, at Google Quantum AI, brought it below one million in 2025, figures Alice &amp; Bob cites in its own post. The company says its new figure needs about 40 times fewer physical qubits than Gidney's 2025 estimate, under different hardware assumptions. In October Iceberg Quantum put the figure at about 48,000 physical qubits for its own architecture; see <a href=\"iceberg-quantum-pinnacle-1-2-rsa-2048-estimate.html\">our report on Pinnacle 1.2</a>. <a href=\"https://thequantuminsider.com/2026/10/29/alice-bob-22593-qubits-break-rsa-2048/\">The Quantum Insider</a> also covered the estimate."
+  ],
+  "analysis": [
+   "The estimate is detailed engineering on paper, but the gap between paper and hardware is the whole story. The largest chip Alice &amp; Bob described in its 20 October results from France's PROQCIMA programme had 12 qubits, and the company itself reported \"a logical error rate not yet below threshold,\" as <a href=\"https://quantum-brief.com/blog/news-2026-10-30-alice-bob-rsa-2048-cat-qubits/\">Quantum Brief</a> notes. The no-bit-flip assumption is also well beyond what the company has measured on a single cat qubit. Estimates from different companies rest on different hardware assumptions, so a lower number is not directly comparable to a surface-code figure from Google.",
+   "What the trend does support is the advice that already exists. Each new estimate has cut the projected machine size, which strengthens the case for the timetable in <a href=\"nist-ir-8547-public-key-2030-2035.html\">NIST IR 8547</a>: RSA and elliptic-curve public-key algorithms deprecated after 2030 and disallowed after 2035. Organisations planning that move can start with the standards that already exist; our explainer covers <a href=\"ml-kem-ml-dsa-slh-dsa-what-they-do.html\">what ML-KEM, ML-DSA and SLH-DSA each do</a>. Nothing in this paper means RSA-2048 can be broken today."
+  ],
+  "disclaimer": "Figures are Alice & Bob's own resource estimates from a preprint that has not been peer reviewed, and they have not been independently verified. This is not a security assessment of any particular system.",
+  "sources": [
+   {
+    "title": "Alice & Bob: Our estimate for factoring RSA-2048 with cat qubits: pushing the frontier between size and speed",
+    "url": "https://alice-bob.com/blog/our-estimate-for-factoring-rsa-2048-with-cat-qubits-pushing-the-frontier-between-size-and-speed/",
+    "retrieved": "2026-11-03T08:20:00Z"
+   },
+   {
+    "title": "Quantum Brief: Alice & Bob's 22,593-qubit RSA-2048 estimate, and what it assumes (30 Oct 2026)",
+    "url": "https://quantum-brief.com/blog/news-2026-10-30-alice-bob-rsa-2048-cat-qubits/",
+    "retrieved": "2026-11-03T08:20:00Z"
+   },
+   {
+    "title": "The Quantum Insider: Alice & Bob Estimates 22,593 Qubits to Break RSA-2048 (29 Oct 2026)",
+    "url": "https://thequantuminsider.com/2026/10/29/alice-bob-22593-qubits-break-rsa-2048/",
+    "retrieved": "2026-11-03T08:20:00Z"
+   },
+   {
+    "title": "IACR Cryptology ePrint Archive 2026/2665: Shor's algorithm compiled on cat qubits: 22 593 qubits for RSA-2048 in 3.14 days",
+    "url": "https://eprint.iacr.org/2026/2665",
+    "retrieved": "2026-11-03T08:20:00Z"
+   }
+  ],
+  "image": {
+   "src": "src-img/alice-bob-rsa-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "A dim server room with glowing blue light across rows of equipment, suggesting encrypted data under threat, with no people, logos or text",
+   "note": "Generic AI-generated scene representing encryption; not Alice & Bob hardware or a real facility.",
+   "licence": "generated; rights held by the site owner (see terms.html)"
+  },
+  "inline_images": [
+   {
+    "file": "alice-bob-cat-qubits-1.jpg",
+    "alt": "A gold-plated dilution refrigerator hanging in a lab, the kind of cryostat superconducting qubits run in, with no people, logos or text",
+    "caption": "Illustration: a cryostat of the kind superconducting qubits operate in",
+    "insert_after_paragraph": 2,
+    "note": "Generic illustration; not Alice & Bob's hardware.",
+    "licence": "generated; rights held by the site owner (see terms.html)"
+   }
+  ]
+ },
+ {
   "slug": "what-is-fn-dsa-fips-206",
   "date": "2026-11-02",
   "updated": "2026-11-02",
