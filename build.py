@@ -12,7 +12,7 @@ SITE_URL = "https://photondispatch.com"  # <-- ONLY place to change the domain
 NAME = "PhotonDispatch"; LLC = "Joshua Israel Ventures LLC"; EMAIL = ""  # set a real address here when available; while empty the site shows the GitHub issues link instead
 FORM_TO = "4497ee41a1200e746e967998473d21da"  # FormSubmit random alias (activated 23 Oct 2026); used ONLY on contact.html
 ISSUES = "https://github.com/joshuaofisrael/photondispatch/issues"; BUILD_DATE = "2026-10-29"
-CF_BEACON_TOKEN = os.environ.get("CF_BEACON_TOKEN", "")  # Cloudflare Web Analytics token; "" = disabled
+CF_BEACON_TOKEN = os.environ.get("CF_BEACON_TOKEN", "eac63f2b5dbc4539a2d95249baab6472")  # Cloudflare Web Analytics token; "" = disabled
 GA_ID = "G-RSKRTQEZNW"  # GA4, consent-gated (Consent Mode default denied; assets/consent.js loads gtag after Accept)
 GA_HEAD = ("<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});window.GA_ID='" + GA_ID + "';</script>\n<script defer src=\"/assets/consent.js?v=1\"></script>\n")
 INDEXNOW_KEY = "8cb05bd1e79a50594f6726934d66a801"
