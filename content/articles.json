@@ -1,5 +1,50 @@
 [
  {
+  "slug": "ionq-completes-elisity-acquisition",
+  "date": "2026-11-04",
+  "updated": "2026-11-04",
+  "cat": "industry",
+  "title": "IonQ Completes $1.15 Billion All-Stock Acquisition of Elisity",
+  "summary": "IonQ has closed its all-stock purchase of Zero Trust security company Elisity, issuing $1.15 billion in common stock, with up to $150 million more tied to revenue milestones.",
+  "body": [
+   "IonQ has completed its acquisition of Elisity, a Zero Trust network security company, in an all-stock deal, the quantum computing company said on 4 November. IonQ <a href=\"https://x.com/IonQ_Inc/status/2117983601123885367\">announced the closing on X</a>: \"Today, IonQ completed its acquisition of @ElisityInc. Security has always been about protecting what matters most, and quantum makes that more urgent.\"",
+   "<strong>The terms.</strong> According to <a href=\"https://investors.ionq.com/news/news-details/2026/IonQ-Completes-Acquisition-of-Elisity-Extending-Quantum-Security-for-Enterprises-and-Government/default.aspx\">IonQ's press release</a>, IonQ issued $1.15 billion of consideration in common stock at closing under the merger agreement. The sellers may earn up to a further $150 million based on Elisity's performance against revenue milestones through January 2028. That extra amount is contingent and was not paid at closing.",
+   "<strong>What Elisity does.</strong> Elisity helps organisations discover the devices connected to their networks, understand network risk and enforce identity-based Zero Trust policies, an approach that does not automatically trust anything just because it is inside the network. IonQ says it will combine this with its post-quantum cryptography (PQC) and quantum key distribution (QKD) products, so customers can use Elisity's view of their networks to decide where to deploy quantum-safe protection first.",
+   "The pitch targets \"Harvest Now, Decrypt Later\" attacks, where encrypted data is stolen today in the hope that a future quantum computer can break it. \"Enterprise and government organizations will now be able to draw on one security architecture to contain attacks operating at machine speed today, and protect sensitive information against future quantum threats,\" IonQ chairman and CEO Niccolo de Masi said in the release.",
+   "<strong>Customers and leadership.</strong> The release says Elisity has more than 100 established enterprise deployments and will continue to serve customers under its current leadership, with existing deployments and identity policies carried forward. Elisity CEO James Winebrenner said the company would \"extend the Elisity platform customers already use to help them prepare for post-quantum cryptography.\"",
+   "<strong>What to watch.</strong> The deal pushes IonQ further into security, alongside its computing and networking businesses. Whether the combined products win new customers, and whether Elisity hits the revenue milestones behind the $150 million earnout, will become clearer over the next two years."
+  ],
+  "sources": [
+   {
+    "title": "IonQ on X: Today, IonQ completed its acquisition of @ElisityInc",
+    "url": "https://x.com/IonQ_Inc/status/2117983601123885367"
+   },
+   {
+    "title": "IonQ: IonQ Completes Acquisition of Elisity, Extending Quantum Security for Enterprises and Government",
+    "url": "https://investors.ionq.com/news/news-details/2026/IonQ-Completes-Acquisition-of-Elisity-Extending-Quantum-Security-for-Enterprises-and-Government/default.aspx"
+   }
+  ],
+  "image": {
+   "src": "src-img/ionq-completes-elisity-acquisition-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "A network switch with glowing ports and fibre cables in a server cabinet, with a small padlock resting on top",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (Grok Bot GenerateImage, 4 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: a glowing network switch with fibre optic cables in a server cabinet, a small metal padlock resting on top, soft teal and violet light suggesting quantum-secure networking. No people, no faces, no logos, no readable text.",
+    "sha256": "753743f12d0a7dc37a4130e5ac6e0a5354dbc78ac46aecca30fb264bb9779d78",
+    "recorded": "2026-11-04",
+    "approved_by": "Joshua 2026-11-04 10:24 EST: 'Of course replace the images with our own images'"
+   }
+  }
+ },
+ {
   "slug": "alice-bob-22593-cat-qubits-rsa-2048-estimate",
   "date": "2026-11-03",
   "updated": "2026-11-03",
