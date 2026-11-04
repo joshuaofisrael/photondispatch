@@ -3,6 +3,7 @@
 > Independent, answer-first quantum computing and quantum technology news: hardware, algorithms, industry and funding, research and policy.
 
 ## Articles
+- [IQM Emerald Entangles All 54 Qubits, Opening Full Processor to Cloud Users](https://photondispatch.com/news/iqm-emerald-entangles-all-54-qubits.html): IQM Quantum Computers says its Emerald quantum processor has achieved simultaneous entanglement across all 54 qubits, marking a step toward using the entire...
 - [Alice & Bob says 22,593 cat qubits could factor RSA-2048 in 3.14 days, in a new estimate](https://photondispatch.com/news/alice-bob-22593-cat-qubits-rsa-2048-estimate.html): Alice & Bob's new preprint estimates that a fault-tolerant machine built from its cat qubits could factor RSA-2048 with 22,593 physical qubits in 3.14 days. It is a resource estimate on paper, not a demonstration, and it assumes hardware no one has built yet.
 - [Harvest now, decrypt later: why encrypted data is already at risk from quantum computers](https://photondispatch.com/news/harvest-now-decrypt-later-explained.html): Harvest now, decrypt later means recording encrypted traffic today and breaking it once a large quantum computer exists. Here is how the threat works and why it sets the migration clock.
 - [Universal Quantum Unveils Integrated Ion-Trap Processor for DLR Systems](https://photondispatch.com/news/universal-quantum-iqpu-ion-trap-dlr.html): Universal Quantum says its new iQPU integrates a large trapped-ion surface, custom control electronics and modular links for two German Aerospace Center systems.
