@@ -789,7 +789,15 @@
    ],
    "ai": true,
    "alt": "A gold ion-trap chip inside a vacuum chamber with a blue laser beam crossing it",
-   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware."
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (Grok Bot GenerateImage, 4 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Hyper-realistic photo: a generic gold ion-trap chip inside a stainless steel vacuum chamber viewed through a window, thin blue laser beam crossing it, dark lab, no logos, no text",
+    "sha256": "21ada7b8ea4751a2336ff12a84ef405d72d9a9778fccae1263eb9ae87ce0ade3",
+    "recorded": "2026-11-04",
+    "approved_by": "Joshua 2026-11-04 10:24 EST: 'Of course replace the images with our own images'"
+   }
   }
  },
  {
@@ -825,7 +833,15 @@
    ],
    "ai": true,
    "alt": "Tweezers holding a small gold-patterned quantum processor chip in a cleanroom",
-   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware."
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (Grok Bot GenerateImage, 4 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Hyper-realistic photo: gloved hand with tweezers holding a small generic gold-patterned superconducting quantum chip in a cleanroom with amber lighting, shallow depth of field, no logos, no text",
+    "sha256": "131bbec14412a9f6b7baae6b4b8991d1a273c680192edb1f48c0e27608486d1d",
+    "recorded": "2026-11-04",
+    "approved_by": "Joshua 2026-11-04 10:24 EST: 'Of course replace the images with our own images'"
+   }
   }
  },
  {
@@ -861,7 +877,15 @@
    ],
    "ai": true,
    "alt": "A gold dilution refrigerator with coaxial cables hanging in a quantum lab",
-   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware."
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (Grok Bot GenerateImage, 4 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Hyper-realistic photo: a generic gold dilution refrigerator chandelier with coiled coaxial cables hanging in a quiet quantum physics lab, cool blue background, no logos, no text",
+    "sha256": "a55f4b51219a6bd7584e21b01cbd415c2e2d4dcf4d559a0c401398a0cb106036",
+    "recorded": "2026-11-04",
+    "approved_by": "Joshua 2026-11-04 10:24 EST: 'Of course replace the images with our own images'"
+   }
   }
  },
  {
@@ -907,7 +931,14 @@
    "ai": true,
    "alt": "A gold superconducting quantum computer cryostat with coaxial cables above a processor chip",
    "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
-   "licence": "Original AI-generated image; rights held by the site owner (see terms.html)"
+   "licence": "Own AI-generated image (Grok Bot GenerateImage, 4 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Hyper-realistic macro photo: a generic square superconducting quantum processor chip with a grid of many tiny qubit pads and wire bonds on a copper sample mount, green-teal lighting, no logos, no text",
+    "sha256": "2ecf8074ce231c59c88920bd7c4178e8ca2b6a44007fbedd14e309c2630c1a73",
+    "recorded": "2026-11-04",
+    "approved_by": "Joshua 2026-11-04 10:24 EST: 'Of course replace the images with our own images'"
+   }
   }
  }
 ]
