@@ -863,5 +863,51 @@
    "alt": "A gold dilution refrigerator with coaxial cables hanging in a quantum lab",
    "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware."
   }
+ },
+ {
+  "slug": "iqm-emerald-entangles-all-54-qubits",
+  "date": "2026-11-04",
+  "updated": "2026-11-04",
+  "cat": "hardware",
+  "title": "IQM Emerald Entangles All 54 Qubits, Opening Full Processor to Cloud Users",
+  "summary": "IQM Quantum Computers says its Emerald quantum processor has achieved simultaneous entanglement across all 54 qubits, marking a step toward using the entire...",
+  "body": [
+   "IQM Quantum Computers says its Emerald quantum processor has achieved simultaneous entanglement across all 54 qubits, marking a step toward using the entire chip in a single quantum computation. The company says the performance demonstrated in the test is now available to customers accessing Emerald through the cloud, rather than being confined to a smaller portion of the processor.",
+   "The announcement, reported by <a href=\"https://quantumspectator.com/iqm-announces-entanglement-across-54-qubit-processor/\">Quantum Spectator on November 3</a>, concerns a challenge that extends beyond the number of qubits installed on a chip: whether those qubits can operate together while preserving the quantum correlations required for a particular experiment.",
+   "<strong>A Full-Chip Entanglement Test.</strong> IQM used a Greenberger–Horne–Zeilinger, or GHZ, state to assess entanglement across Emerald. This benchmark tests whether a collection of qubits can be prepared in a shared quantum state. IQM reported a fidelity of <strong>0.516 across all 54 qubits</strong>, with readout error mitigation applied. Fidelity measures how closely the prepared state matches the intended quantum state.",
+   "The company also reported a <strong>0.515 fidelity at 40 qubits</strong> without readout error mitigation. Both results exceeded the <strong>0.500 threshold</strong> cited for establishing genuine multipartite entanglement. The distinction between the measurements matters: the 54-qubit figure includes mitigation of measurement errors, while the 40-qubit result does not. They should not be treated as identical testing conditions.",
+   "IQM characterized the measurements as among the strongest reported for a commercially available quantum computer. That ranking is the company's assessment, not an independently established conclusion in the <a href=\"https://quantumspectator.com/iqm-announces-entanglement-across-54-qubit-processor/\">Quantum Spectator report</a>.",
+   "<strong>Why the Whole Processor Matters.</strong> According to IQM, users previously conducting a comparable demonstration on Emerald could reliably incorporate approximately <strong>30 qubits</strong> into one algorithm. The latest demonstration shows that the processor can sustain the benchmark across its full 54-qubit complement.",
+   "That difference is important because an advertised qubit count does not automatically indicate how many qubits can participate successfully in the same circuit. As more qubits and operations are included, the processor must manage errors associated with quantum gates and time spent waiting between operations.",
+   "IQM credits an automated state-preparation routine for helping overcome those constraints. The routine evaluates available two-qubit gates and their fidelity, while also considering how long qubits remain idle. It then chooses the qubits and operation sequence intended to reduce unnecessary waiting as the entangled state is assembled.",
+   "<strong>Calibration and Error Reduction.</strong> The result follows roughly a year of hardware and calibration improvements, according to IQM. Those efforts included revised calibration methods, an improved gate set and continued use of error-reduction techniques such as dynamical decoupling.",
+   "IQM says the combined changes reduced error rates for quantum operations on the processor by <strong>up to 50%</strong>. That figure describes the company's reported improvement; it does not mean Emerald is error-free or that every quantum algorithm will see an equivalent performance gain.",
+   "The automated preparation work also fits into IQM's broader effort to make quantum-system operation less dependent on manual tuning. The company has described additional work on AI-driven calibration as part of that direction.",
+   "<strong>What Comes Next for Cloud Researchers.</strong> For customers, the immediate development is access to full-chip performance through IQM's cloud offering. Researchers can now investigate experiments that involve all 54 qubits, rather than working within the smaller usable portion previously described by the company.",
+   "The milestone should nevertheless be read precisely. Demonstrating a GHZ state across an entire chip establishes a specific kind of coordinated quantum behavior; it does not, by itself, establish an advantage over classical computers on practical workloads. Future applications will still depend on how well the processor performs across other circuits and tasks.",
+   "For now, Emerald's achievement links a measurable laboratory benchmark with expanded access for cloud users—a significant distinction in an industry where available hardware capacity and usable computational capacity are not always the same."
+  ],
+  "sources": [
+   {
+    "title": "Quantum Spectator: IQM Emerald Entangles All 54 Qubits, Opening Full Processor to Cloud Users",
+    "url": "https://quantumspectator.com/iqm-announces-entanglement-across-54-qubit-processor/"
+   },
+   {
+    "title": "IQM: IQM Emerald Entangles All 54 Qubits, Opening Full Processor to Cloud Users",
+    "url": "https://iqm.gcs-web.com/news-releases/news-release-details/iqm-demonstrates-entanglement-across-complete-54-qubit-processor"
+   }
+  ],
+  "image": {
+   "src": "src-img/iqm-emerald-entangles-all-54-qubits-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "A gold superconducting quantum computer cryostat with coaxial cables above a processor chip",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Original AI-generated image; rights held by the site owner (see terms.html)"
+  }
  }
 ]
