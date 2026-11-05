@@ -1,5 +1,69 @@
 [
  {
+  "slug": "ornl-ibm-amd-quantum-error-correction-platform",
+  "date": "2026-11-05",
+  "updated": "2026-11-05",
+  "cat": "industry",
+  "title": "ORNL, IBM and AMD Launch Co-Design Platform for Quantum Error Correction",
+  "summary": "IBM, Oak Ridge’s Quantum Science Center and AMD unveiled a co-design platform on 5 Nov 2026 pairing IBM’s 120-qubit Nighthawk with ORNL’s Umbra HPC system (AMD Instinct MI355X GPUs and 5th Gen EPYC CPUs) for quantum error-correction research aimed at DOE’s 2028 goals.",
+  "body": [
+   "IBM, the Department of Energy-funded Quantum Science Center at Oak Ridge National Laboratory (ORNL) and AMD <a href=\"https://newsroom.ibm.com/2026-11-05-oak-ridge-national-lab,-ibm,-and-amd-launch-new-co-design-platform-for-quantum-error-correction\">announced on 5 November 2026</a> a co-design platform for quantum error correction that integrates quantum processors with high-performance classical computing. Matching posts from <a href=\"https://www.ornl.gov/news/ornl-ibm-and-amd-launch-new-co-design-platform-for-quantum-error-correction/\">ORNL</a> and <a href=\"https://newsroom.amd.com/news/amd-builds-classical-foundation-quantum-future/\">AMD</a> describe the same launch.",
+   "<strong>What is being co-located.</strong> According to the partners, the first deployment puts IBM quantum computers—including the 120-qubit IBM Quantum Nighthawk—beside ORNL’s Umbra HPC system, powered by AMD Instinct MI355X GPUs and 5th Gen AMD EPYC CPUs. AMD’s compute is described as the classical foundation for error-correction research, decoder optimisation and software orchestration. The Quantum Insider <a href=\"https://x.com/QuantumDaily/status/2118377826197901662\">flagged the launch on X</a> with a link to its write-up.",
+   "<strong>DOE context the partners cite.</strong> The releases tie the work to DOE’s Quantum Genesis Mission and the Q Competition target of 100 logical qubits running 100,000 hard operations by late 2028. IBM says its current published progress on the Quantum Advantage Tracker includes experiments with up to 70 logical qubits and 438 hard operations, so closing the gap would require roughly a 230-fold increase in hard-operation count. Those figures are IBM’s stated tracker numbers, not an independent audit for this article.",
+   "<strong>What the platform is for.</strong> IBM says Nighthawk’s square-lattice connectivity, circuit throughput and real-time pulse control let researchers compare error-correction methods by qubits, time, samples and classical resources, and see where GPU nodes on Umbra help most. The partners say the platform will connect with the Oak Ridge Leadership Computing Facility so quantum work can sit inside a broader AI and scientific computing stack. Planned research themes listed in the releases include concatenated and space-time codes, algorithm-aware decoders, hardware-aware circuit optimisation and compilation, and software orchestration.",
+   "<strong>Caveats.</strong> This is a research testbed announcement, not a claim that fault-tolerant quantum computing has been achieved. No new logical-error rates, decoder latencies or end-to-end QEC benchmarks from the co-located Nighthawk–Umbra stack were published in the launch notes reviewed here. Treat hardware specs, DOE targets and IBM’s tracker figures as attributed partner statements pending peer-reviewed results from the platform."
+  ],
+  "analysis": [
+   "Hybrid QEC stacks that put classical GPUs next to superconducting processors are the path most large vendors describe for scaling beyond NISQ demos. ORNL’s Umbra + IBM Nighthawk pairing is notable because it is framed explicitly around DOE’s 2028 hard-operation goal rather than a consumer product launch—but the useful science still depends on decoder and code results that have not shipped with this announcement."
+  ],
+  "disclaimer": "Photon Dispatch reports attributed partner claims. It does not independently verify IBM’s Quantum Advantage Tracker figures or DOE programme timelines.",
+  "sources": [
+   {
+    "title": "IBM Newsroom: Oak Ridge National Lab, IBM, and AMD Launch New Co-Design Platform for Quantum Error Correction",
+    "url": "https://newsroom.ibm.com/2026-11-05-oak-ridge-national-lab,-ibm,-and-amd-launch-new-co-design-platform-for-quantum-error-correction"
+   },
+   {
+    "title": "ORNL: ORNL, IBM and AMD launch new co-design platform for quantum error correction",
+    "url": "https://www.ornl.gov/news/ornl-ibm-and-amd-launch-new-co-design-platform-for-quantum-error-correction/"
+   },
+   {
+    "title": "AMD Newsroom: AMD Builds the Classical Foundation for Quantum’s Future",
+    "url": "https://newsroom.amd.com/news/amd-builds-classical-foundation-quantum-future/"
+   },
+   {
+    "title": "IBM Quantum blog: ORNL, IBM, and AMD launch co-design platform for quantum error correction",
+    "url": "https://www.ibm.com/quantum/blog/ornl-amd-error-correction-co-design-platform"
+   },
+   {
+    "title": "The Quantum Insider on X",
+    "url": "https://x.com/QuantumDaily/status/2118377826197901662"
+   },
+   {
+    "title": "The Quantum Insider article",
+    "url": "https://thequantuminsider.com/2026/11/05/oak-ridge-national-laboratory-ibm-and-amd-launch-new-co-design-platform-for-quantum-error-correction"
+   }
+  ],
+  "image": {
+   "src": "src-img/ornl-ibm-amd-quantum-error-correction-platform-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Gold-plated dilution refrigerator cryostat open in a physics lab, no people logos or readable text",
+   "note": "Generic AI-generated scene from the site image bank; not a photo of Nighthawk, Umbra, ORNL, IBM or AMD facilities.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 5 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: gold-plated dilution refrigerator cryostat open in a physics lab, no people, no faces, no logos, no readable text.",
+    "sha256": "dc4b981483247f43097275c7f16ddc545d7d961fc7aeb7b1031705dcd7f6807c",
+    "recorded": "2026-11-05",
+    "approved_by": "Joshua X scout 2026-11-05-1414ET: bank dilution-fridge.png"
+   }
+  }
+ },
+ {
   "slug": "nasa-glenn-air-to-ground-quantum-photons",
   "date": "2026-11-05",
   "updated": "2026-11-05",
