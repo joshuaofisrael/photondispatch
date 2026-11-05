@@ -1,5 +1,54 @@
 [
  {
+  "slug": "nasa-glenn-air-to-ground-quantum-photons",
+  "date": "2026-11-05",
+  "updated": "2026-11-05",
+  "cat": "research",
+  "title": "NASA Glenn Says Researchers Sent Photons Air-to-Ground Over a Quantum Channel in the US",
+  "summary": "NASA Glenn Research Center posted on 4 Nov 2026 that researchers sent photons between an aircraft and a ground station over a quantum channel, calling it a US first; a 22 Oct LinkedIn post by Carolyn Mercer described witnessing an air-to-ground quantum entanglement demonstration at Glenn. No nasa.gov press release for this claim was found.",
+  "body": [
+   "NASA’s Glenn Research Center <a href=\"https://x.com/NASAglenn/status/2117995323104666087\">posted on X on 4 November 2026</a>: \"We’re taking quantum communications to new heights! ✈️ Late last month, @NASA researchers made history when they successfully sent tiny light particles, or photons, between an aircraft and a ground station over a quantum channel, the first time this has been achieved in the U.S.\" The post does not name the aircraft type, the ground-station location beyond the Glenn context, or publish a link to a formal nasa.gov release.",
+   "<strong>LinkedIn corroboration, carefully attributed.</strong> On 22 October 2026, Carolyn Mercer wrote on <a href=\"https://www.linkedin.com/posts/carolyn-mercer-0aa81462_what-a-great-day-got-to-witness-nasas-first-activity-7519152068486598656-RpRX\">LinkedIn</a> that she \"Got to witness NASA’s first air-to-ground quantum entanglement demonstration this afternoon at the NASA Glenn Research Center. This technology is fundamental to future science missions that will explore the universe via entangled sensor networks.\" Mercer’s post credits Margaret Nazario’s team and Azlin Biaggi-Labiosa for funding vision. Note the wording difference: Glenn’s X post says photons were sent \"over a quantum channel\"; Mercer calls what she witnessed a \"quantum entanglement demonstration.\" This desk is not treating those two phrases as interchangeable quotes.",
+   "<strong>No nasa.gov press release found.</strong> A search for a matching November 2026 nasa.gov news release describing this specific air-to-ground quantum photon / entanglement flight did not turn up a public press page at the time of writing. Until NASA publishes a formal release with methods, dates, aircraft, link distance and measured metrics, the primary public claims remain Glenn’s X post and Mercer’s LinkedIn note. Readers should treat performance numbers that may circulate second-hand as unverified unless they appear in a NASA document.",
+   "<strong>Programme context, not this flight’s proof.</strong> Glenn maintains a <a href=\"https://www.nasa.gov/glenn/research/quantum-information-systems-for-networking-and-sensing/\">Quantum Information Systems for Networking and Sensing</a> research page that describes the centre’s broader QIS work. Earlier Twin Otter quantum-key-distribution flight experiments and classical PC-12 4K laser video demos toward the ISS are separate, older or different programmes. Do not read this November X claim as a re-announcement of those classical optical or earlier QKD flights.",
+   "<strong>Analysis.</strong> If independently documented, an air-to-ground quantum optical link from a US aircraft would matter for future entangled sensing and space-networking roadmaps Glenn has discussed in general terms. What is public today does not yet include peer-reviewed results, a nasa.gov release, bit-error or entanglement-fidelity figures, or a clear statement that the November X \"quantum channel\" flight is identical to the October LinkedIn \"entanglement demonstration.\" Photon Dispatch is reporting the attributed claims and the documentation gap—not confirming a completed NASA milestone beyond those sources.",
+   "<strong>What to watch.</strong> A formal Glenn or NASA HQ release, flight-test paper, or dataset naming the aircraft, range, wavelength and measured quantum metrics would let outsiders evaluate the claim. Until then, the story rests on NASA Glenn’s X wording about photons over a quantum channel and Mercer’s LinkedIn description of an air-to-ground quantum entanglement demonstration at Glenn."
+  ],
+  "sources": [
+   {
+    "title": "NASA Glenn on X: air-to-ground photons over a quantum channel",
+    "url": "https://x.com/NASAglenn/status/2117995323104666087"
+   },
+   {
+    "title": "Carolyn Mercer on LinkedIn: air-to-ground quantum entanglement demonstration at Glenn",
+    "url": "https://www.linkedin.com/posts/carolyn-mercer-0aa81462_what-a-great-day-got-to-witness-nasas-first-activity-7519152068486598656-RpRX"
+   },
+   {
+    "title": "NASA Glenn: Quantum Information Systems for Networking and Sensing",
+    "url": "https://www.nasa.gov/glenn/research/quantum-information-systems-for-networking-and-sensing/"
+   }
+  ],
+  "image": {
+   "src": "src-img/nasa-glenn-air-to-ground-quantum-photons-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Optical breadboard with yellow fiber patch cords in an empty lab, no people, logos or readable text",
+   "note": "Generic AI-generated scene from the site image bank; not a photo of the NASA Glenn flight test, aircraft, ground station or any named hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 5 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: optical breadboard with yellow fiber patch cords in an empty lab, no people, no faces, no logos, no readable text.",
+    "sha256": "b4d49f4645cb6cbd6f0c0f1ce7f6c918f93dde7b91b1ce61d13d56868304cfc3",
+    "recorded": "2026-11-05",
+    "approved_by": "Joshua X scout brief 2026-11-05-1120ET: use bank optical-lab-table.png"
+   }
+  }
+ },
+ {
   "slug": "ionq-quantumct-partnership-150-hours-cloud-access",
   "date": "2026-11-05",
   "updated": "2026-11-05",
