@@ -3,6 +3,7 @@
 > Independent, answer-first quantum computing and quantum technology news: hardware, algorithms, industry and funding, research and policy.
 
 ## Articles
+- [IonQ Partners with QuantumCT for 150+ Hours of Trapped-Ion Cloud Access in Connecticut](https://photondispatch.com/news/ionq-quantumct-partnership-150-hours-cloud-access.html): IonQ announced a partnership with QuantumCT on 4 Nov 2026 that provides more than 150 hours of cloud runtime on IonQ trapped-ion systems for Connecticut universities, labs, startups and enterprises.
 - [IonQ Completes $1.15 Billion All-Stock Acquisition of Elisity](https://photondispatch.com/news/ionq-completes-elisity-acquisition.html): IonQ has closed its all-stock purchase of Zero Trust security company Elisity, issuing $1.15 billion in common stock, with up to $150 million more tied to revenue milestones.
 - [IQM Emerald Entangles All 54 Qubits, Opening Full Processor to Cloud Users](https://photondispatch.com/news/iqm-emerald-entangles-all-54-qubits.html): IQM Quantum Computers says its Emerald quantum processor has achieved simultaneous entanglement across all 54 qubits, marking a step toward using the entire...
 - [Harvest now, decrypt later: why encrypted data is already at risk from quantum computers](https://photondispatch.com/news/harvest-now-decrypt-later-explained.html): Harvest now, decrypt later means recording encrypted traffic today and breaking it once a large quantum computer exists. Here is how the threat works and why it sets the migration clock.
