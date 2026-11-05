@@ -60,7 +60,16 @@ for _a in _keep:
         A.append(_a)
     else:
         print(f"  [scheduled] {_a.get('slug')} not built until {_a.get('publish_at')}")
-A.sort(key=lambda a: a["date"], reverse=True)
+def article_sort_key(a):
+    raw = (a.get("publish_at") or "").strip() or a.get("date") or ""
+    raw = str(raw).replace("Z", "+00:00")
+    if "T" not in raw:
+        raw = f"{raw}T00:00:00+00:00"
+    dt = datetime.datetime.fromisoformat(raw)
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=datetime.timezone.utc)
+    return dt
+A.sort(key=article_sort_key, reverse=True)
 PUB = {"@type": "Organization", "name": "PhotonDispatch", "url": SITE_URL + "/", "parentOrganization": {"@type": "Organization", "name": "Joshua Israel Ventures LLC"}, "logo": {"@type": "ImageObject", "url": SITE_URL + "/logo.png", "width": 512, "height": 512}}
 
 def esc(s): return html.escape(s, quote=True)
@@ -194,8 +203,8 @@ def card(a, feat=False, eager=False):
 trend = [a for a in A if a.get("kind") == "trending"][:4]
 rest = [a for a in A if a not in trend]
 sections = ""
-if trend: sections += '<section class="sec"><div class="w"><h2 class="sh">Why it\'s trending</h2><div class="grid">' + "".join(card(a) for a in trend) + '</div></div></section>'
 sections += '<section class="sec" id="latest"><div class="w"><h2 class="sh">Latest news</h2><div class="grid">' + "".join(card(a, feat=(i == 0), eager=(i == 0)) for i, a in enumerate(rest)) + '</div></div></section>'
+if trend: sections += '<section class="sec"><div class="w"><h2 class="sh">Why it\'s trending</h2><div class="grid">' + "".join(card(a) for a in trend) + '</div></div></section>'
 cos = ["IBM", "Google Quantum AI", "Quantinuum", "IonQ", "Rigetti", "D-Wave", "PsiQuantum", "Pasqal", "IQM", "Microsoft", "NVIDIA CUDA-Q", "Post-quantum cryptography"]
 sections += '<section class="sec"><div class="w"><h2 class="sh">What we cover</h2><ul class="chips">' + "".join(f"<li>{c}</li>" for c in cos) + "</ul></div></section>"
 hero = (f'<section class="hero hero-photo"><picture><source type="image/webp" srcset="img/hero-1200.webp 1200w, img/hero-1920.webp 1920w" sizes="100vw">'
