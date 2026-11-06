@@ -1,5 +1,100 @@
 [
  {
+  "slug": "quantinuum-nexus-fault-tolerant-roadmap",
+  "date": "2026-11-06",
+  "updated": "2026-11-06",
+  "cat": "industry",
+  "title": "Quantinuum maps Nexus developer platform path towards fault tolerant computing",
+  "summary": "Quantinuum has outlined a multi generation Nexus roadmap designed to connect application development with successive quantum hardware systems, including Apollo, which it plans for 2029.",
+  "body": [
+   "Quantinuum has unveiled a roadmap for its Nexus developer platform, setting out how the software is intended to evolve alongside the company’s quantum hardware towards a fault tolerant computing era.",
+   "The company announced the plan on 5 November. It describes Nexus as a platform that brings together programming, validation, compilation and execution, with a roadmap intended to automate more of the work involved in building and deploying quantum applications.",
+   "The plan is aligned with successive generations of Quantinuum hardware, including Apollo, which the company says is planned as its first universal, fully fault tolerant quantum computer in 2029. That timing is a company target, not a guarantee of delivery.",
+   "Quantinuum divides the platform’s intended development into three broad stages: develop, optimise and deploy. The develop stage is expected to include pre built primitives, fault tolerant libraries and domain specific tools, with increasing automation of error correction encoding, compilation and resource management.",
+   "The optimise stage is intended to provide tools for analysing runtime behaviour, resource requirements and application performance. Future releases are expected to add further error suppression, real time monitoring and more automated error recovery.",
+   "The deploy stage is designed to coordinate quantum and classical computing across Quantinuum processors, high performance computing systems, cloud infrastructure and third party tools. The aim is to let organisations integrate quantum workflows into existing computing environments.",
+   "The company says Nexus already supports more than 200 organisations, up 45 per cent in 2026. It also reports that job submissions increased tenfold in the 12 months through August 2026 compared with the preceding 12 month period.",
+   "Quantinuum says developers can already apply supported error correction techniques to programs and run supported programs on its Helios system. A further release planned for December is expected to expand hybrid workflows, add supported error correction codes and provide execution analytics.",
+   "The roadmap is a statement of intended product development. Its future capabilities, adoption and hardware milestones remain subject to delivery and should be read as company plans."
+  ],
+  "disclaimer": "Figures and roadmaps are from company announcements. This is not investment advice.",
+  "sources": [
+   {
+    "title": "Quantinuum unveils Nexus roadmap to deliver the first developer platform designed for the fault tolerant quantum era",
+    "url": "https://www.quantinuum.com/press-releases/quantinuum-unveils-nexus-roadmap-to-deliver-the-first-developer-platform-designed-for-the-fault-tolerant-quantum-era"
+   }
+  ],
+  "image": {
+   "src": "src-img/quantinuum-nexus-fault-tolerant-roadmap-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Gold-plated tiers and copper cables of a quantum computer cryostat",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 5 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Gold-plated tiers and copper cables of a quantum computer cryostat, no people faces logos or text",
+    "sha256": "af54cc367dc8f47da5985518b6141b3b12f6a243c0e082700cfa116dcc8ae576",
+    "recorded": "2026-11-06",
+    "approved_by": "Joshua publish brief 2026-11-06: use provided bank PNG"
+   }
+  }
+ },
+ {
+  "slug": "ionq-q3-2026-record-revenue-guidance",
+  "date": "2026-11-06",
+  "updated": "2026-11-06",
+  "cat": "industry",
+  "title": "IonQ posts record Q3 revenue of $173.8 million and raises 2026 guidance to $505 to $515 million",
+  "summary": "IonQ reported GAAP revenue of $173.8 million for Q3 2026, up 336% year over year, raised full year revenue guidance to $505 to $515 million, and said remaining performance obligations reached $1.2 billion.",
+  "body": [
+   "<strong>Short answer:</strong> IonQ said third quarter 2026 GAAP revenue was $173.8 million, up 336% from a year earlier, and raised full year 2026 revenue guidance to between $505 million and $515 million as remaining performance obligations rose to $1.2 billion. Figures below are taken only from the company's <a href=\"https://investors.ionq.com/news/news-details/2026/IonQ-Announces-Record-3Q26-Revenues-and-Raises-FY2026-Guidance-to-505---515-Million-as-Backlog-Grows-to-1-2-Billion/\">5 November 2026 investor release</a> and the matching <a href=\"https://x.com/IonQ_Inc/status/2118452917363491091\">X post</a>.",
+   "<h2>Headline results from the IR release</h2>",
+   "IonQ called the quarter its sixth consecutive record and the strongest in company history. GAAP revenue of $173.8 million compared with $39.9 million in the year ago quarter on the face of the release's statements of operations. The IonQ Platform segment contributed $90.3 million, up 127%, which the company tied to global Tempo quantum computer deployments. SkyWater Foundry Services contributed $83.5 million.",
+   "Net income attributable to IonQ was $564.0 million, or $1.42 of GAAP EPS, reflecting a large non cash mark to market impact from warrants. Adjusted EBITDA loss was $133.6 million and Adjusted EPS was a loss of $0.29; those adjusted figures are IonQ's non GAAP measures as defined in the release.",
+   "Cash, cash equivalents, and investments were $1.7 billion as of 30 September 2026, and $3.7 billion on a pro forma basis including a $2.0 billion equity offering that closed on 16 October 2026. Remaining performance obligations more than doubled to $1.2 billion, the company said.",
+   "<h2>Guidance and other IR bullets</h2>",
+   "For full year 2026, IonQ raised revenue guidance to $505 million to $515 million and said it expects 110% year over year growth in quantum computing revenue. Other items listed in the release include advancing as the only trapped ion company to Stage C of DARPA's Quantum Benchmarking Initiative, with a potential programme value of up to $300 million; plans for a Superion 256 system as the first on premise quantum computer at NVIDIA's Accelerated Quantum Research Center; and an agreement to acquire Elisity to extend the quantum security platform.",
+   "<h2>How Photon Dispatch reads it</h2>",
+   "This is a booked revenue and guidance update from a public company, not a new qubit fidelity claim. Readers should separate the GAAP profit, which IonQ itself links heavily to warrant accounting, from the still large adjusted operating loss. Contract backlog at $1.2 billion is the commercial demand signal IonQ chose to stress alongside the guidance raise.",
+   "<strong>Disclaimer:</strong> Figures are from IonQ's unaudited release. This is not investment advice."
+  ],
+  "disclaimer": "Figures and roadmaps are from company announcements. This is not investment advice.",
+  "sources": [
+   {
+    "title": "IonQ on X: Q3 2026 financial results",
+    "url": "https://x.com/IonQ_Inc/status/2118452917363491091"
+   },
+   {
+    "title": "IonQ Announces Record 3Q26 Revenues and Raises FY2026 Guidance to $505 - $515 Million as Backlog Grows to $1.2 Billion",
+    "url": "https://investors.ionq.com/news/news-details/2026/IonQ-Announces-Record-3Q26-Revenues-and-Raises-FY2026-Guidance-to-505---515-Million-as-Backlog-Grows-to-1-2-Billion/"
+   }
+  ],
+  "image": {
+   "src": "src-img/ionq-q3-2026-record-revenue-guidance-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Laser optics table for a trapped-ion quantum experiment",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 5 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Laser optics table for a trapped-ion quantum experiment, no people faces logos or text",
+    "sha256": "3495c5cb01850c7a33583312b2346cc5ab3d59f161821b5b51e48b58b337428f",
+    "recorded": "2026-11-06",
+    "approved_by": "Joshua publish brief 2026-11-06: use provided bank PNG"
+   }
+  }
+ },
+ {
   "slug": "ornl-ibm-amd-quantum-error-correction-platform",
   "date": "2026-11-05",
   "updated": "2026-11-05",
