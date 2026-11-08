@@ -1,5 +1,53 @@
 [
  {
+  "slug": "fca-quantum-experimentation-group-financial-crime",
+  "date": "2026-11-08",
+  "updated": "2026-11-08",
+  "cat": "policy",
+  "title": "UK FCA launches regulator-led quantum experimentation group to tackle financial crime",
+  "summary": "The UK Financial Conduct Authority will launch a Quantum Experimentation Group in Q1 2027 to test whether quantum machine learning can help detect money laundering and fraud, using an FCA synthetic dataset. Registration closes 31 December 2026.",
+  "body": [
+   "The UK Financial Conduct Authority will bring together financial firms, quantum technology providers and national research laboratories to test how quantum computing could help fight financial crime, it <a href=\"https://www.fca.org.uk/news/press-releases/fca-explore-quantum-computing-tackle-financial-crime\">announced on 5 November</a>. The FCA says its Quantum Experimentation Group, launching in the first quarter of 2027, will be the world's first regulator-led quantum computing experimentation group.",
+   "<h2>What the group will test</h2>",
+   "The group will first explore whether quantum machine learning can help detect money laundering and fraud. Participants will work on an FCA synthetic dataset, artificially generated data meant to get around one of the main barriers to testing: access to suitable data. The FCA will define the problem statements and work alongside participants.",
+   "Jessica Rusu, the FCA's chief data, information and intelligence officer, said early experimentation is \"essential to understanding its potential in financial services.\"",
+   "<h2>Who can join</h2>",
+   "Financial services firms, quantum technology providers and national research laboratories can <a href=\"https://www.fca.org.uk/register-your-interest-quantum-experimentation-group\">register their interest</a> by 31 December 2026. The FCA says the group will support organisations at every stage, from those just exploring use cases to those already running advanced experiments.",
+   "<h2>Why it matters</h2>",
+   "The initiative is an experiment, not a deployed supervisory tool, and the FCA does not claim quantum methods already beat conventional fraud detection. It says the group will help it understand the technology's opportunities and limits, the barriers to testing, and what they could mean for regulation."
+  ],
+  "sources": [
+   {
+    "title": "FCA to explore quantum computing to tackle financial crime",
+    "url": "https://www.fca.org.uk/news/press-releases/fca-explore-quantum-computing-tackle-financial-crime"
+   },
+   {
+    "title": "Register your interest in the Quantum Experimentation Group",
+    "url": "https://www.fca.org.uk/register-your-interest-quantum-experimentation-group"
+   }
+  ],
+  "image": {
+   "src": "src-img/fca-quantum-experimentation-group-financial-crime-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Abstract glowing qubit spheres linked by entanglement threads",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 8 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Abstract glowing qubit spheres linked by entanglement threads, no people faces logos or text",
+    "sha256": "1d026f9967b95a2dcc6d3b335106de6500b7bf46f193b5d2dacb12fefbb610ec",
+    "recorded": "2026-11-08",
+    "approved_by": "Joshua publish brief 2026-11-08: use bank PNG"
+   }
+  },
+  "disclaimer": "Figures and roadmaps are from company announcements. This is not investment advice."
+ },
+ {
   "slug": "d-wave-digital-innovation-award-italy-advantage2",
   "date": "2026-11-08",
   "updated": "2026-11-08",

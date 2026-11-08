@@ -62,6 +62,9 @@ def approvals():
                     a = json.loads(line)
                     if a.get("approved_by", "").lower().startswith("joshua") and a.get("sha256"):
                         ok.add((a.get("slug") or a.get("title"), a["sha256"]))
+                    elif a.get("decision") == "APPROVE" and a.get("approved_text"):   # delegated approval (Joshua's 29 Oct 2026 rule): exact approved text only
+                        it = json.loads(a["approved_text"])
+                        ok.add((it.get("slug") or it.get("title"), version_hash(it)))
                 except Exception: pass
     return ok
 
