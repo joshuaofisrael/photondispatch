@@ -1,5 +1,91 @@
 [
  {
+  "slug": "d-wave-digital-innovation-award-italy-advantage2",
+  "date": "2026-11-08",
+  "updated": "2026-11-08",
+  "cat": "industry",
+  "title": "D-Wave wins Digital Innovation Award for Italy's first annealing quantum computer",
+  "summary": "D-Wave said it won a 2026 Digital Innovation Award in the Quantum Computing and High-Performance Computing category for its project to deploy an Advantage2 annealing quantum computer in Italy with Swiss Quantum Technology and the Q-Alliance.",
+  "body": [
+   "<strong>Short answer:</strong> D-Wave <a href=\"https://x.com/dwavequantum/status/2118817462448009240\">said on X</a> on 6 November 2026 that it won a 2026 Digital Innovation Award in the Quantum Computing and High-Performance Computing category for a project titled \"Italy's First Annealing Quantum Computer: D-Wave's Advantage2™ System.\"",
+   "According to the post, D-Wave is working with Swiss Quantum Technology SA and the Q-Alliance to deploy an Advantage2 annealing quantum computer in Italy. The company said the goal is to \"expand access to quantum computing for businesses and researchers, support workforce training, and accelerate practical applications.\"",
+   "D-Wave added that Nicole Scourti, its Government Affairs Lead for EMEA, accepted the award in Italy last month, and thanked the Digital Innovation Forum organisers and its partners.",
+   "<h2>How to read it</h2>",
+   "This is an industry award for a deployment project, not a new hardware result or a performance benchmark. The post does not give an installation date, a customer list or contract value for the Italian system. Annealing machines such as Advantage2 are designed for optimisation problems and differ from the gate-based systems most rivals are building.",
+   "Photon Dispatch treats the <a href=\"https://x.com/dwavequantum/status/2118817462448009240\">6 November post</a> as the public record for the award and the Italy project description."
+  ],
+  "sources": [
+   {
+    "title": "D-Wave on X: 2026 Digital Innovation Award for Italy's first annealing quantum computer",
+    "url": "https://x.com/dwavequantum/status/2118817462448009240"
+   }
+  ],
+  "image": {
+   "src": "src-img/d-wave-digital-innovation-award-italy-advantage2-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Researcher seen from behind adjusting cables on a quantum cryostat",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 8 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Researcher seen from behind adjusting cables on a quantum cryostat, no people faces logos or text",
+    "sha256": "68c77613fb088935771c9e52b22bbf86a9acce1b213e0b5577b11ce5dfdcc8db",
+    "recorded": "2026-11-08",
+    "approved_by": "Joshua publish brief 2026-11-08: use bank PNG"
+   }
+  },
+  "disclaimer": "Figures and roadmaps are from company announcements. This is not investment advice."
+ },
+ {
+  "slug": "nqcc-phasecraft-enterprise-licence-sparq",
+  "date": "2026-11-08",
+  "updated": "2026-11-08",
+  "cat": "industry",
+  "title": "UK's National Quantum Computing Centre signs Phasecraft software licence for SparQ users",
+  "summary": "The UK National Quantum Computing Centre has signed an enterprise licence with Phasecraft, giving UK businesses, researchers and public sector users access to its Magritte, Monet and Mondrian quantum software. Applications open in late November 2026.",
+  "body": [
+   "The UK's National Quantum Computing Centre (NQCC) has signed an enterprise licence agreement with quantum algorithms company Phasecraft, giving UK organisations access to Phasecraft's software through the NQCC's SparQ Access initiative, <a href=\"https://www.phasecraft.io/journal/journal/uk%E2%80%99s-national-quantum-computing-centre-signs-agreement-with-phasecraft-to-bring-quantum-software-to-british-businesses-and-researchers\">Phasecraft announced</a> on 6 November. Applications open in late November 2026 and the first cohort starts in spring 2027.",
+   "<h2>First software on SparQ</h2>",
+   "Simon Plant, deputy director at the NQCC, said the deal \"marks the first time we are making quantum software available through our SparQ programme.\" The centre has until now focused on giving UK users access to quantum hardware.",
+   "<h2>Three tools</h2>",
+   "Participants will work with one of three Phasecraft tools. Magritte is for materials and molecular modelling, covering resource estimation and quantum circuit construction. Monet is a quantum-enhanced density functional theory tool for modelling materials and molecules. Mondrian is a quantum-enhanced optimisation platform for problems in areas such as finance, logistics or infrastructure, available through a web interface or API.",
+   "<h2>Who can apply</h2>",
+   "The NQCC and Phasecraft will invite proposals from UK businesses and researchers with challenges in materials science, chemistry and optimisation, with support from Phasecraft's scientists and engineers. Places are also reserved for the NQCC and academics doing non-commercial research.",
+   "Access to the software does not by itself show that quantum methods beat classical ones for a given problem. Results will depend on the problems chosen and the hardware used."
+  ],
+  "sources": [
+   {
+    "title": "UK's National Quantum Computing Centre signs agreement with Phasecraft to bring quantum software to British businesses and researchers",
+    "url": "https://www.phasecraft.io/journal/journal/uk%E2%80%99s-national-quantum-computing-centre-signs-agreement-with-phasecraft-to-bring-quantum-software-to-british-businesses-and-researchers"
+   }
+  ],
+  "image": {
+   "src": "src-img/nqcc-phasecraft-enterprise-licence-sparq-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Photonic quantum chip with glowing red waveguides and fibres",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 8 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Photonic quantum chip with glowing red waveguides and fibres, no people faces logos or text",
+    "sha256": "433338cc7541679cb4f97c937298670b0993cbb43d9bffe036b268e3b84003e3",
+    "recorded": "2026-11-08",
+    "approved_by": "Joshua publish brief 2026-11-08: use bank PNG"
+   }
+  },
+  "disclaimer": "Figures and roadmaps are from company announcements. This is not investment advice."
+ },
+ {
   "slug": "ibm-quantum-system-two-chicago-hyde-park",
   "date": "2026-11-07",
   "updated": "2026-11-07",
