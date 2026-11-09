@@ -1,5 +1,50 @@
 [
  {
+  "slug": "abu-dhabi-maritime-quantinuum-quincus-research",
+  "date": "2026-11-09",
+  "updated": "2026-11-09",
+  "cat": "industry",
+  "title": "Abu Dhabi Maritime Academy partners with Quincus and Quantinuum on quantum research",
+  "summary": "ADMA, Quincus and Quantinuum will study quantum, AI and high-performance computing for maritime operations, logistics and mining. No operational quantum advantage is claimed.",
+  "body": [
+   "Abu Dhabi Maritime Academy (ADMA), part of AD Ports Group, has announced a research partnership with Quincus and Quantinuum to explore quantum computing, artificial intelligence and high-performance computing for maritime operations, transport logistics and mining, <a href=\"https://thequantuminsider.com/2026/11/09/abu-dhabi-maritime-academy-quincus-quantinuum-quantum-research/\">The Quantum Insider reported</a> on November 9. The announcement was made at Quantum Innovation Summit 2026 in Dubai.",
+   "The report describes a research collaboration, not a finished commercial product or a measured quantum speedup.",
+   "<h2>What the partners say they will do</h2>",
+   "According to The Quantum Insider, the partners will start by identifying operational challenges and then assess where advanced computing could improve processes across the three sectors. That is a narrower commitment than announcing a working optimisation product. The report does not name a specific algorithm, dataset, quantum processor or performance target for the work.",
+   "<h2>Earlier maritime quantum work</h2>",
+   "The academy previously signed a memorandum of understanding with Vernewell Group and launched the Blue Initiative in October 2025. That earlier programme covers communications, sensing and optimisation alongside education and industry engagement. The new collaboration adds named technology partners. The Quantum Insider does not disclose a budget, project timetable or research milestones.",
+   "<h2>What is still missing</h2>",
+   "A meaningful assessment will need concrete use cases and comparisons with established classical methods. That distinction matters for optimisation, where classical software already handles many industrial problems. A later study might show quantum techniques helping in a defined setting; it would not automatically imply broad superiority.",
+   "For now, the November 9 announcement establishes the collaboration and its intended research areas. It does not establish that a quantum computer has improved shipping schedules, mining operations or transport costs."
+  ],
+  "sources": [
+   {
+    "title": "Abu Dhabi Maritime Academy Partners with Quincus and Quantinuum on Quantum Research",
+    "url": "https://thequantuminsider.com/2026/11/09/abu-dhabi-maritime-academy-quincus-quantinuum-quantum-research/"
+   }
+  ],
+  "image": {
+   "src": "src-img/abu-dhabi-maritime-quantinuum-quincus-research-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Long cold aisle of server racks with blue LEDs",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 9 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Long cold aisle of server racks with blue LEDs, no people faces logos or text",
+    "sha256": "08476b9896bb9fec39885aa32a351ce5da278af425659207e65a4b63c6a5302c",
+    "recorded": "2026-11-09",
+    "approved_by": "Joshua publish brief 2026-11-09: use bank PNG"
+   }
+  },
+  "disclaimer": "Figures and roadmaps are from company announcements. This is not investment advice."
+ },
+ {
   "slug": "ibm-quantum-job-sharing-patent",
   "date": "2026-11-09",
   "updated": "2026-11-09",
