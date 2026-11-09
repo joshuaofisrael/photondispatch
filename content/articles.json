@@ -1,5 +1,107 @@
 [
  {
+  "slug": "ibm-quantum-job-sharing-patent",
+  "date": "2026-11-09",
+  "updated": "2026-11-09",
+  "cat": "algorithms",
+  "title": "IBM patent filing describes sharing quantum processors by reusing noise models",
+  "summary": "IBM's \"Quantum Queue Optimization for Error Mitigation\" application describes a scheduler that groups compatible jobs on one chip and reuses stored noise models to cut repeated error-mitigation work.",
+  "body": [
+   "IBM is seeking patent protection for a method that would let several users share one quantum processor while reducing the work needed for error mitigation, <a href=\"https://thequantuminsider.com/2026/11/09/ibm-patent-application-targets-more-efficient-sharing-of-quantum-computers/\">The Quantum Insider reported</a> on November 9. The application is titled \"Quantum Queue Optimization for Error Mitigation.\" The Quantum Insider says it was filed on May 5, 2025.",
+   "The filing describes a proposed system. It does not report measured gains in throughput, waiting times or cost.",
+   "<h2>The problem it targets</h2>",
+   "According to the report, the application addresses two sources of waste. First, a program may need only part of a processor's qubits, but exclusive access leaves the other qubits idle. Second, some error-mitigation methods need extra experiments to learn how noise affects particular groups of gates, and that work gets repeated.",
+   "Running jobs side by side can cause crosstalk, which changes the errors that have to be accounted for. IBM's approach builds those effects into the decision about which programs to run together.",
+   "<h2>How the scheduler would work</h2>",
+   "- <strong>Reuse noise models:</strong> the system would store noise models, which describe the errors tied to specific operations, and look for queued programs whose combined operations match a model it already has. - <strong>Match connectivity:</strong> a model applies only to the same set of active qubit connections. A model measured for one pattern does not automatically cover another, even a subset. - <strong>Keep models fresh:</strong> because noise drifts, the system would update frequently used models and drop stale ones. It could move a queued job forward so it runs while a matching model is still valid. - <strong>Fill gaps:</strong> if one job finishes on its qubits while another is still running, more work could be fitted into the opening without lengthening the run.",
+   "The filing gives an example on a 127-qubit processor. One program uses 52 qubits and another uses 30, with four unused qubits between them to limit crosstalk.",
+   "<h2>Policies, users and billing</h2>",
+   "The application describes three sharing policies. The strictest combines jobs only when the needed noise models already exist. A second allows new measurements and saves the resulting models. A third derives the needed noise information from existing models. The choice could depend on queue length, available resources, interference and job priority. Machine learning could help decide where programs run.",
+   "Users would control whether and how their jobs are shared, and the billing system could offer rebates to encourage participation. The filing lists interference, possible information leakage between users and coordination difficulty as challenges.",
+   "The inventors listed, according to Patentlyze as cited by The Quantum Insider, are Ana Paula Appel, Daniel Josef Egger, Kaelyn Jae Ferris, Sanjay Kumar Lalta Prasad Vishwakarma and Razvan Paul Sebastian Brandhofer. The Quantum Insider has previously covered Columbia Engineering's HyperQ, a quantum virtual machine approach to sharing processors that was tested on IBM hardware."
+  ],
+  "sources": [
+   {
+    "title": "IBM Patent Application Targets More Efficient Sharing of Quantum Computers",
+    "url": "https://thequantuminsider.com/2026/11/09/ibm-patent-application-targets-more-efficient-sharing-of-quantum-computers/"
+   }
+  ],
+  "image": {
+   "src": "src-img/ibm-quantum-job-sharing-patent-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Gold quantum computer chandelier inside a glass enclosure in a clean lab",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 9 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Gold quantum computer chandelier inside a glass enclosure in a clean lab, no people faces logos or text",
+    "sha256": "a4c0243b956932ec8cf503dfed64cbb9852cd63d27d48dc6318fcb9310f530b2",
+    "recorded": "2026-11-09",
+    "approved_by": "Joshua publish brief 2026-11-09: use bank PNG"
+   }
+  },
+  "disclaimer": "Figures and roadmaps are from company announcements. This is not investment advice."
+ },
+ {
+  "slug": "trapped-ion-simulation-aharonov-bohm-loop",
+  "date": "2026-11-09",
+  "updated": "2026-11-09",
+  "cat": "research",
+  "title": "Oxford trapped-ion experiment shows Aharonov-Bohm interference in a lattice gauge theory loop",
+  "summary": "Using two strontium ions, Oxford researchers simulated a Z2 lattice gauge theory loop in which zero flux doubled a particle's tunneling and a vison flux froze it, according to a Nature Physics study.",
+  "body": [
+   "Researchers at the University of Oxford have used trapped ions to simulate the Aharonov-Bohm effect in a lattice gauge theory, according to a <a href=\"https://doi.org/10.1038/s41567-026-03400-6\">Nature Physics</a> study described by <a href=\"https://phys.org/news/2026-11-paths-flux-ions-simulate-aharonovbohm.html\">Phys.org</a> on November 7. The experiment built a quasi-two-dimensional loop so the team could see how magnetic flux affects a moving particle. Most earlier simulations of the simplest version of the theory could not show this.",
+   "<h2>Why loops matter</h2>",
+   "Lattice gauge theories model space as a grid, with matter at the sites and gauge fields on the links between them. In the simplest Z2 version, each link holds one of two values: a field line is either present or absent. Phys.org notes that Z2 theories are used to describe quantum spin liquids and high-temperature superconductors and are relevant to topological quantum error correction.",
+   "Most quantum simulations of Z2 theories have been one-dimensional, where links cannot form closed loops and flux effects cannot appear. Some two-dimensional experiments removed the matter fields, so they could not show how charges and fields affect each other.",
+   "<h2>Ions doing double duty</h2>",
+   "The Oxford team used a hybrid approach. Two electronic levels of a strontium ion served as a qubit representing the gauge field on a link, while the ion's vibrations stored matter. A single phonon represented one matter particle. Laser-driven forces made the phonon hop between sites, and each hop flipped the link's field line, tying the particle's motion to the gauge field.",
+   "\"The advantage is that matter fields can be stored much more efficiently in the vibrational modes,\" said first author Sebastian Saner.",
+   "<h2>What they saw</h2>",
+   "With one ion and one link, the particle tunneled back and forth while the field line switched on and off, which is consistent with the Z2 version of Gauss's law. When the researchers added an energy cost for creating a field line, tunneling became faster but smaller. They describe this suppression as a precursor to confinement.",
+   "Adding a second ion created a second link, so the particle had two paths around a loop. Entangling the two link qubits encoded the flux:",
+   "- <strong>Zero flux:</strong> both paths added up, and the particle tunneled twice as fast as on a single link. - <strong>Nonzero flux (a \"vison\"):</strong> the paths canceled out, and the particle stayed where it started.",
+   "The flux stayed constant apart from slow decay due to decoherence. Numerical simulations that included known noise sources matched the data.",
+   "<h2>Next steps</h2>",
+   "Saner said the single loop \"can easily be solved using classical computers,\" but that \"even a relatively modest increase in lattice size could make the problem very difficult, if not impossible in practice\" to simulate classically. The team also wants to extend the approach to Zn gauge theories with more field values."
+  ],
+  "sources": [
+   {
+    "title": "Two paths, one flux: Trapped ions simulate Aharonov-Bohm interference in a lattice gauge theory",
+    "url": "https://phys.org/news/2026-11-paths-flux-ions-simulate-aharonovbohm.html"
+   },
+   {
+    "title": "Aharonov-Bohm interference in a Z2 lattice gauge theory on a hybrid qubit-oscillator quantum computer (Nature Physics, DOI 10.1038/s41567-026-03400-6)",
+    "url": "https://doi.org/10.1038/s41567-026-03400-6"
+   }
+  ],
+  "image": {
+   "src": "src-img/trapped-ion-simulation-aharonov-bohm-loop-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Optical table with lasers, mirrors and beam paths in a dark trapped-ion lab",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 9 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Optical table with lasers, mirrors and beam paths in a dark trapped-ion lab, no people faces logos or text",
+    "sha256": "3495c5cb01850c7a33583312b2346cc5ab3d59f161821b5b51e48b58b337428f",
+    "recorded": "2026-11-09",
+    "approved_by": "Joshua publish brief 2026-11-09: use bank PNG"
+   }
+  },
+  "disclaimer": "Figures and roadmaps are from company announcements. This is not investment advice."
+ },
+ {
   "slug": "fca-quantum-experimentation-group-financial-crime",
   "date": "2026-11-08",
   "updated": "2026-11-08",
