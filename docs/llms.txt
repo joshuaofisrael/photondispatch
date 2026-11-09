@@ -40,4 +40,5 @@
 - [Editorial standards](https://photondispatch.com/standards.html)
 - [Corrections](https://photondispatch.com/corrections.html)
 - [Contact](https://photondispatch.com/contact.html)
+- [Image policy](https://photondispatch.com/image-policy/)
 - [RSS](https://photondispatch.com/feed.xml)
