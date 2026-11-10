@@ -1,5 +1,106 @@
 [
  {
+  "slug": "diraq-silicon-spin-quantum-equinix",
+  "date": "2026-11-10",
+  "updated": "2026-11-10",
+  "cat": "hardware",
+  "title": "Diraq switches on an eight qubit silicon spin quantum computer inside Equinix Sydney",
+  "summary": "Diraq says its silicon spin system is live in a commercial data centre, draws under 20 kW and is targeted to reach 256 qubits within a year.",
+  "body": [
+   "Sydney based Diraq says its silicon spin quantum computer is now live inside an Equinix data centre in Sydney, which it describes as the first deployment of a silicon spin system in a commercial data centre. The company made the <a href=\"https://www.diraq.com/newsdesk/diraq-deploys-worlds-first-silicon-spin-quantum-computer-inside-a-commercial-data-center\">announcement</a> this week.",
+   "<h2>What is running</h2>",
+   "The system currently operates with eight qubits. Diraq says it is targeting up to 256 qubits in the same deployed machine within the next year, which is a goal rather than a demonstrated capability.",
+   "Diraq builds its qubits in silicon using the same CMOS manufacturing processes used for conventional chips. The company argues that this lets customers add computing power by upgrading the quantum processor, with minimal changes to the surrounding infrastructure.",
+   "<h2>Power and space</h2>",
+   "The current machine draws less than 20 kW and occupies about 16 square metres, according to <a href=\"https://www.businessnewsaustralia.com/articles/diraq-fires-up-quantum-computer-inside-equinix-sydney-data-centre.html\">Business News Australia</a>. Diraq expects a future utility scale system to draw around 300 kW, which it says is less than a third of a single next generation AI rack, and to need as little as about 5 square metres.",
+   "The facility hosts computing for customers in banking, healthcare, utilities, manufacturing and retail. When the deployment was first announced in September, the companies said the system's cryogenic cooling and control electronics were self contained, and that testing in the live environment would come before partners and customers were invited to see it in action.",
+   "<h2>Equinix's view</h2>",
+   "Equinix executive vice president Harmeen Mehta called the deployment \"an important proof point for quantum,\" saying it shows a path for these systems to run alongside existing enterprise infrastructure.",
+   "<h2>What it does and does not show</h2>",
+   "Putting a quantum computer inside a working data centre tests practical questions such as power, cooling, footprint and integration with conventional systems. It does not by itself show that an eight qubit machine can outperform classical computers on useful problems. The more telling milestone will be whether Diraq reaches its 256 qubit target in the same system, and what error rates it reports along the way.",
+   "Diraq is one of several companies betting that qubits made with standard semiconductor processes will scale more easily than other approaches."
+  ],
+  "sources": [
+   {
+    "title": "Diraq deploys world's first silicon spin quantum computer inside a commercial data center",
+    "url": "https://www.diraq.com/newsdesk/diraq-deploys-worlds-first-silicon-spin-quantum-computer-inside-a-commercial-data-center"
+   },
+   {
+    "title": "Diraq fires up eight-qubit quantum computer inside Equinix Sydney data centre",
+    "url": "https://www.businessnewsaustralia.com/articles/diraq-fires-up-quantum-computer-inside-equinix-sydney-data-centre.html"
+   }
+  ],
+  "image": {
+   "src": "src-img/diraq-silicon-spin-quantum-equinix-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Macro of blue silicon wafers standing in a black cassette boat",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 10 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Macro of blue silicon wafers standing in a black cassette boat, no people faces logos or text",
+    "sha256": "336cafab23efb299d873a0d7c5d9849c8a88a056c7969387b8c324da3c0c104f",
+    "recorded": "2026-11-10",
+    "approved_by": "Joshua publish brief 2026-11-10: use bank PNG"
+   }
+  },
+  "disclaimer": "Figures and roadmaps are from company announcements. This is not investment advice."
+ },
+ {
+  "slug": "qci-third-quarter-photonics-results",
+  "date": "2026-11-10",
+  "updated": "2026-11-10",
+  "cat": "industry",
+  "title": "Quantum Computing Inc posts $9.5 million quarterly revenue as acquisitions kick in",
+  "summary": "QCi's third quarter revenue beat its whole first half total, driven by acquired photonics and packaging businesses. It lost $15.1 million and holds about $1.3 billion.",
+  "body": [
+   "Quantum Computing Inc, the Hoboken, New Jersey company known as QCi, reported third quarter revenue of $9.5 million on Monday, more than the $9.2 million it booked in the whole first half of 2026. The <a href=\"https://www.qci-us.com/news/press-releases/2026/quantum-computing-inc.-reports-third-quarter-2026-financial-results\">results release</a> shows that most of the growth came from businesses it bought this year rather than from quantum computers.",
+   "<h2>Where the revenue came from</h2>",
+   "QCi said growth was driven mainly by three companies acquired in the first half: Luminar Semiconductors, NuCrypt and NHanced Semiconductors. They sell photonic components, quantum communications products and advanced packaging services to aerospace, government and industrial customers. Revenue a year earlier was just $384 thousand.",
+   "<h2>Margins and losses</h2>",
+   "Gross profit was about $428 thousand, a gross margin of 4.5%. Operating expenses rose to $29.0 million from $10.5 million, which the company put down to higher personnel costs, expanded research and development, sales and marketing, and about $1.0 million of acquisition costs.",
+   "Interest and other income of $13.0 million helped offset that. The net loss was $15.1 million, or $0.07 per basic share.",
+   "<h2>A large cash cushion</h2>",
+   "QCi ended September with about $1.3 billion in cash, cash equivalents and investments, including $174.3 million in cash and $1.1 billion in short and long term investments. Contract backlog was about $39.1 million.",
+   "<h2>Quantum work</h2>",
+   "On the quantum side, the company highlighted a framework agreement with Hamad Bin Khalifa University in Qatar that includes cloud access to its Dirac 3 optimisation system, and a commercial agreement with INmune Bio to apply its Dirac technology alongside AI to clinical data. QCi called the INmune Bio deal its first commercial customer in pharmaceuticals and biotechnology.",
+   "<h2>Reading the numbers</h2>",
+   "The jump in revenue is real, but it reflects established photonics and packaging businesses rather than sales of quantum processors, and the 4.5% gross margin shows the combined company is still far from profitable operations. Chief executive Yuping Huang said the focus is \"increasingly shifting from what we can build to what we can put to work for customers.\"",
+   "*Figures are from the company's announcement. This is not investment advice.*"
+  ],
+  "sources": [
+   {
+    "title": "Quantum Computing Inc. Reports Third Quarter 2026 Financial Results",
+    "url": "https://www.qci-us.com/news/press-releases/2026/quantum-computing-inc.-reports-third-quarter-2026-financial-results"
+   }
+  ],
+  "image": {
+   "src": "src-img/qci-third-quarter-photonics-results-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Close up of chips in a tray with tweezers on an antistatic mat",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 10 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Close up of chips in a tray with tweezers on an antistatic mat, no people faces logos or text",
+    "sha256": "b03a70ba5df44e51c0e6b5f17291e393180e12747a08eee3df56537ad7aef0ba",
+    "recorded": "2026-11-10",
+    "approved_by": "Joshua publish brief 2026-11-10: use bank PNG"
+   }
+  },
+  "disclaimer": "Figures and roadmaps are from company announcements. This is not investment advice."
+ },
+ {
   "slug": "abu-dhabi-maritime-quantinuum-quincus-research",
   "date": "2026-11-09",
   "updated": "2026-11-09",
