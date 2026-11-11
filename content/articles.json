@@ -683,7 +683,7 @@
  {
   "slug": "ibm-quantum-system-two-chicago-hyde-park",
   "date": "2026-11-07",
-  "updated": "2026-11-07",
+  "updated": "2026-11-11",
   "cat": "hardware",
   "title": "IBM unveils Quantum System Two in Chicago at Hyde Park Labs",
   "summary": "IBM, the University of Chicago, Illinois and IQMP unveiled an IBM Quantum System Two in Chicago—IBM’s first quantum computer in Illinois—powered by Quantum Nighthawk at Hyde Park Labs.",
@@ -696,7 +696,8 @@
    "Since NQAC’s founding, IBM says industry partners have been building applications alongside its researchers. The release names Deloitte and AbbVie, working with IBM and Northwestern on quantum molecular simulation for drug discovery, and EPRI with the University of Illinois Urbana-Champaign on quantum optimisation for power grids. Fermilab is cited for high-energy physics and distributed quantum computing work. IBM also references a recent University of Chicago demonstration of quantum advantage over leading classical methods with guaranteed correctness; that demonstration is mentioned, not reproduced, here.",
    "<h2>Workforce angle</h2>",
    "Earlier this year IBM said it would establish the FutureNow Chicago centre at IQMP with City Colleges of Chicago, aiming to bring 750 jobs across AI, cybersecurity, data science and quantum. The System Two unveiling is presented as both a research tool and a workforce signal for the state’s quantum cluster.",
-   "For Photon Dispatch readers, the concrete news is hardware on the ground in Chicago: a Nighthawk-powered System Two now operational at Hyde Park Labs, with a planned move into IQMP once the park campus is ready."
+   "For Photon Dispatch readers, the concrete news is hardware on the ground in Chicago: a Nighthawk-powered System Two now operational at Hyde Park Labs, with a planned move into IQMP once the park campus is ready.",
+    "IBM has since announced <a href=\"ibm-quantum-nighthawk-r3-520-qubits.html\">Quantum Nighthawk r3, built for 10,000 operations on 520 qubits</a>."
   ],
   "sources": [
    {
@@ -821,7 +822,7 @@
  {
   "slug": "psi-aaronson-ambainis-conjecture-proof",
   "date": "2026-11-06",
-  "updated": "2026-11-06",
+  "updated": "2026-11-11",
   "cat": "research",
   "title": "PSI says its system found a Lean-checked proof of the Aaronson-Ambainis conjecture",
   "summary": "Physical Superintelligence PBC said on 6 November 2026 that an internal research system using a non-public Anthropic model produced a Lean-accepted proof of the Aaronson-Ambainis conjecture. The claim is the company's announcement; independent peer review may still be pending.",
@@ -866,13 +867,14 @@
    "<strong>What PSI says the result would mean.</strong> PSI frames the Aaronson-Ambainis conjecture as addressing whether quantum computers can be exponentially faster than classical ones on random inputs that lack rare structure. The company says that, with the conjecture proved, an ordinary computer can predict a quantum computer's yes/no answer probability (up to small error, for all but a small fraction of strings) with a number of looks that grows at most like a fixed power of the quantum look count T—not exponentially. In PSI's words, on yes-or-no questions a quantum computer cannot save exponentially many looks unless the input has a rare pattern. That implication is stated by PSI; outsiders should wait for independent verification before treating it as settled mathematics.",
    "<strong>Stanford group reading the proof.</strong> PSI says Guy Blanc, Jordan Docter, Carmen Strassle and Li-Yang Tan of Stanford, who in August 2026 settled a special case of the conjecture's prediction for algorithms with a fixed number of parallel rounds, have been reading the full proof, sent comments and are writing a shorter exposition. PSI quotes them as writing: \"This is a huge result. It resolves a decades-old conjecture with important implications for the nature of problems that admit quantum speedups. The proof draws on and extends several lines of work in the analysis of boolean functions and probabilistic combinatorics. Everything is brought together in a rather magical way.\" The quote appears on PSI's page; Photon Dispatch has not independently confirmed the Stanford correspondence beyond that posting.",
    "<strong>Contributors named by PSI.</strong> The page credits David Turturean with leading the work (research system, problem scoping, run, draft packaging and responsibility for correctness); Jim Halverson with auditing the proof; and Phiala Shanahan with comments on the Lean formalization.",
-   "<strong>What to watch.</strong> A publicly posted Lean formalization, an arXiv or journal manuscript, and independent expert write-ups (including any Stanford exposition) would let outsiders check the claim beyond the company announcement. Until then, the story rests on PSI's X post, Turturean's X post and PSI's research page."
+   "<strong>What to watch.</strong> A publicly posted Lean formalization, an arXiv or journal manuscript, and independent expert write-ups (including any Stanford exposition) would let outsiders check the claim beyond the company announcement. Until then, the story rests on PSI's X post, Turturean's X post and PSI's research page.",
+    "DeepMind and Google Quantum AI later described using <a href=\"google-lean-4-verified-quantum-algorithms.html\">Lean 4 to discover formally verified quantum algorithms</a>."
   ]
  },
  {
   "slug": "quantinuum-nexus-fault-tolerant-roadmap",
   "date": "2026-11-06",
-  "updated": "2026-11-06",
+  "updated": "2026-11-11",
   "cat": "industry",
   "title": "Quantinuum maps Nexus developer platform path towards fault tolerant computing",
   "summary": "Quantinuum has outlined a multi generation Nexus roadmap designed to connect application development with successive quantum hardware systems, including Apollo, which it plans for 2029.",
@@ -885,7 +887,8 @@
    "The deploy stage is designed to coordinate quantum and classical computing across Quantinuum processors, high performance computing systems, cloud infrastructure and third party tools. The aim is to let organisations integrate quantum workflows into existing computing environments.",
    "The company says Nexus already supports more than 200 organisations, up 45 per cent in 2026. It also reports that job submissions increased tenfold in the 12 months through August 2026 compared with the preceding 12 month period.",
    "Quantinuum says developers can already apply supported error correction techniques to programs and run supported programs on its Helios system. A further release planned for December is expected to expand hybrid workflows, add supported error correction codes and provide execution analytics.",
-   "The roadmap is a statement of intended product development. Its future capabilities, adoption and hardware milestones remain subject to delivery and should be read as company plans."
+   "The roadmap is a statement of intended product development. Its future capabilities, adoption and hardware milestones remain subject to delivery and should be read as company plans.",
+    "Quantinuum later said it and RIKEN had <a href=\"quantinuum-riken-reimei-h2-upgrade.html\">upgraded Japan's Reimei computer to a 56-qubit System Model H2</a>."
   ],
   "disclaimer": "Figures and roadmaps are from company announcements. This is not investment advice.",
   "sources": [
