@@ -1,5 +1,137 @@
 [
  {
+  "slug": "why-pqc-matters-for-tls",
+  "date": "2026-11-11",
+  "updated": "2026-11-11",
+  "cat": "algorithms",
+  "title": "Why Post-Quantum Cryptography Matters for TLS 1.3",
+  "summary": "TLS 1.3 can combine classical elliptic-curve exchange with ML-KEM. Understand the new IETF hybrid groups, security rationale, and deployment tradeoffs.",
+  "body": [
+   "TLS protects an enormous amount of Internet traffic, but the security of a TLS connection depends on several different cryptographic operations. The key-establishment stage is especially important to the post-quantum transition: if an attacker records encrypted traffic today, a sufficiently capable future quantum computer could threaten confidentiality when the session's secret depended only on quantum-vulnerable public-key mathematics. Standards bodies are addressing that exposure by defining <strong>hybrid key exchange</strong> for TLS 1.3.",
+   "<h2>What changes in a TLS handshake?</h2>",
+   "In a conventional TLS 1.3 handshake, client and server negotiate cryptographic parameters and derive shared secrets used to protect the connection. Elliptic-curve Diffie–Hellman exchange is widely used for this purpose. Its security relies on mathematical problems that a large, fault-tolerant quantum computer could attack with quantum algorithms. The post-quantum question is therefore not whether TLS uses encryption at all, but how the two parties agree on the secrets that feed that encryption.",
+   "NIST's <strong>FIPS 203</strong> defines ML-KEM, a key encapsulation mechanism based on the module learning-with-errors problem. A KEM allows parties to establish a shared secret over a public channel. The resulting secret can then support symmetric encryption and authentication. ML-KEM is not itself a replacement for every part of TLS: it does not replace the record-layer encryption algorithm, certificate validation or the entire protocol.",
+   "The IETF's <strong>RFC 9954</strong>, published in July 2026, describes how multiple key-exchange algorithms can be combined within TLS 1.3. The objective is that the resulting exchange can remain secure if all but one of its components resist attack. In the current transition, the practical combination is a traditional elliptic-curve exchange plus a post-quantum KEM.",
+   "<h2>The standardized hybrid groups</h2>",
+   "<strong>RFC 10024</strong>, published in August 2026 as an Internet Standards Track document, specifies three post-quantum/traditional hybrid key-agreement mechanisms for TLS 1.3:",
+   "<table><thead><tr><th>Named group</th><th>Traditional component</th><th>Post-quantum component</th></tr></thead><tbody><tr><td><code>X25519MLKEM768</code></td><td>X25519</td><td>ML-KEM-768</td></tr><tr><td><code>SecP256r1MLKEM768</code></td><td>secp256r1</td><td>ML-KEM-768</td></tr><tr><td><code>SecP384r1MLKEM1024</code></td><td>secp384r1</td><td>ML-KEM-1024</td></tr></tbody></table>",
+   "These are named groups, not three interchangeable spellings for one algorithm. A client and server need compatible support to negotiate a particular group. The ML-KEM suffix indicates the NIST parameter set; the traditional component indicates the elliptic-curve method paired with it. RFC 10024 supplies the protocol definition rather than leaving each vendor to invent its own combination.",
+   "The design is called <strong>hybrid</strong> because both components contribute to key establishment. It does not mean that a TLS connection automatically runs two complete independent TLS handshakes. Nor does the term mean that the post-quantum component has been proved unbreakable. The value of combining different assumptions is that an unforeseen weakness in one component need not immediately expose the shared secret if the other component remains secure under the construction's assumptions.",
+   "<h2>What hybrid TLS does not solve</h2>",
+   "A TLS deployment still needs server authentication. Certificates and their signatures are a distinct migration problem from the ephemeral key exchange. Replacing the latter with an ML-KEM hybrid does not by itself turn an RSA- or ECDSA-signed certificate chain into a post-quantum signature chain. NIST standardized <strong>ML-DSA under FIPS 204</strong> and <strong>SLH-DSA under FIPS 205</strong> for digital signatures, while FIPS 203 addresses key encapsulation. These roles should not be conflated in architecture diagrams or compliance reports.",
+   "Likewise, adding ML-KEM does not repair certificate misissuance, weak endpoint security, compromised application secrets or incorrect trust-store configuration. Hybrid key exchange addresses a specific cryptographic risk: the establishment of session keys against classical and future quantum threats. Existing TLS operational controls still matter.",
+   "<h2>Deployment questions for operators</h2>",
+   "Suppose an organization runs TLS at a cloud load balancer, an API gateway and an application server. Updating the application library alone may accomplish nothing for public-facing traffic if the load balancer actually terminates the external TLS session. The team should first identify each termination point, record the negotiated groups in testing and check whether clients, proxies and monitoring systems handle the new handshake material correctly.",
+   "A realistic pilot should measure connection establishment under normal and constrained network conditions. ML-KEM uses different public-key and ciphertext sizes from classical elliptic-curve exchanges, so implementers should examine handshake bytes, fragmentation, retransmissions and compatibility with middleboxes. The relevant comparison is an end-to-end connection through the actual network path, not a standalone algorithm benchmark.",
+   "Operators should also decide what happens when a peer does not support a hybrid group. A deployment can only claim post-quantum protection for connections that actually negotiate an appropriate mechanism. A server configuration flag, by itself, does not establish that every client session received the new protection. Negotiation telemetry and clearly defined fallback policy are essential to making deployment claims accurate.",
+   "<h2>Why the timing matters</h2>",
+   "NIST finalized FIPS 203 in August 2024, while the IETF published the TLS hybrid design and named-group standards in 2026. Those milestones make interoperable implementation more concrete, but do not mean that every TLS stack has deployed the new groups. The urgency stems partly from the possibility that encrypted data captured today could remain valuable to an adversary in the future. Organizations should therefore prioritize long-lived sensitive data, test interoperable implementations and distinguish <strong>hybrid key establishment</strong> from the separate work of migrating digital signatures."
+  ],
+  "sources": [
+   {
+    "title": "IETF RFC 9954: Hybrid Key Exchange in TLS 1.3",
+    "url": "https://datatracker.ietf.org/doc/rfc9954/"
+   },
+   {
+    "title": "IETF RFC 10024: PQ/traditional TLS groups",
+    "url": "https://datatracker.ietf.org/doc/rfc10024/"
+   },
+   {
+    "title": "NIST FIPS 203 ML-KEM",
+    "url": "https://csrc.nist.gov/pubs/fips/203/final"
+   },
+   {
+    "title": "NIST approval of three PQC standards",
+    "url": "https://csrc.nist.gov/News/2024/postquantum-cryptography-fips-approved"
+   }
+  ],
+  "image": {
+   "src": "src-img/why-pqc-matters-for-tls-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Dense colorful fiber jumpers in carrier racks along an empty aisle",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 11 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Dense colorful fiber jumpers in carrier racks along an empty aisle, no people faces logos or text",
+    "sha256": "1b85821961725af3d0e27341dee967a879dcdd52e64e0efd7ae5b8cf275368f2",
+    "recorded": "2026-11-11",
+    "approved_by": "Joshua publish brief 2026-11-11: use bank PNG"
+   }
+  },
+  "disclaimer": "This explainer is general background drawn from the standards and agency sources listed, not professional advice."
+ },
+ {
+  "slug": "what-is-shors-algorithm",
+  "date": "2026-11-11",
+  "updated": "2026-11-11",
+  "cat": "algorithms",
+  "title": "What Is Shor's Algorithm, and Why Does It Threaten RSA?",
+  "summary": "Shor’s algorithm uses quantum period finding to factor integers efficiently. See a small worked example, the RSA connection, and the hardware limitations.",
+  "body": [
+   "Shor's algorithm is the reason quantum computing appears in discussions of Internet security. Introduced by mathematician Peter Shor in 1994, it gives a quantum computer an efficient route to factoring large integers and solving related discrete-logarithm problems. Those are precisely the kinds of problems that underpin widely deployed public-key systems. The important qualification is that the algorithm's mathematical efficiency does <strong>not</strong> mean today's quantum hardware can routinely break real-world RSA keys.",
+   "<h2>Why factoring matters</h2>",
+   "Multiplying two large prime numbers is straightforward for an ordinary computer. Reversing the process (finding the prime factors when only their product is known) becomes difficult for appropriately chosen large inputs. RSA relies on this asymmetry. The public modulus is a product of two secret primes; knowledge of the factors makes it possible to derive information needed to recover the private key from the public parameters.",
+   "For a toy example, take <strong>15 = 3 × 5</strong>. A human can factor 15 immediately, so there is no security significance in this particular number. The point is to show the structure of the computation. Real cryptographic moduli are vastly larger, and their factors are not obvious. Classical factoring algorithms improve on naive trial division, but no known general-purpose classical polynomial-time factoring algorithm makes appropriately sized RSA moduli easy to break.",
+   "NIST explains that Shor's 1994 work transformed quantum computing into a national-security concern because a sufficiently capable machine could factor numbers that conventional cryptographic systems rely on keeping difficult to factor. The concern is specifically about public-key mathematical assumptions, not a claim that all encryption becomes instantly useless.",
+   "<h2>From factoring to period finding</h2>",
+   "The key insight is to turn factoring into a problem of finding a <strong>period</strong>, also called an order. Choose an integer <code>a</code> that is relatively prime to the number <code>N</code> to be factored. Examine the sequence of powers of <code>a</code> modulo <code>N</code>. Because there are only finitely many possible residues, the sequence repeats. Its period <code>r</code> is the smallest positive integer satisfying <code>a^r ≡ 1 (mod N)</code>.",
+   "Take <code>N = 15</code> and <code>a = 2</code>. The successive residues are:",
+   "<table><thead><tr><th>Power</th><th>Residue modulo 15</th></tr></thead><tbody><tr><td>2¹</td><td>2</td></tr><tr><td>2²</td><td>4</td></tr><tr><td>2³</td><td>8</td></tr><tr><td>2⁴</td><td>1</td></tr></tbody></table>",
+   "The period is therefore <strong>r = 4</strong>. Because <code>r</code> is even, compute <code>2^(r/2) = 4</code>. Then calculate <code>gcd(4 − 1, 15) = 3</code> and <code>gcd(4 + 1, 15) = 5</code>. These greatest common divisors reveal the two nontrivial factors of 15.",
+   "This example shows why period finding is useful: the period can provide a route to factors through ordinary arithmetic. It also shows why not every choice works. If the selected number shares a factor with <code>N</code>, the greatest-common-divisor step may already expose one; if the period is odd or produces an unhelpful value, the procedure may need another choice. Shor's algorithm is probabilistic rather than a magic single-operation factorizer.",
+   "<h2>Where the quantum speedup enters</h2>",
+   "A classical computer can perform the modular arithmetic and greatest-common-divisor calculations. The hard part for large numbers is obtaining the useful period efficiently. Shor's quantum subroutine prepares a superposition, applies modular exponentiation and uses quantum Fourier-transform techniques to extract information about periodicity from measurement outcomes. Classical post-processing then reconstructs a candidate period and tests whether it yields factors.",
+   "The quantum Fourier transform is not a device that reads every value of a superposition into a classical list. Measurement yields limited classical information, and the algorithm is designed so interference makes that information useful. Multiple runs and checks can be needed. This distinction matters because popular descriptions sometimes imply that a quantum computer simply tries all candidate factors in parallel and reads the answer. That is not how the algorithm works.",
+   "Shor's algorithm is often described as offering an exponential improvement over the best known classical approaches to the relevant mathematical problems. This is a statement about asymptotic computational complexity. It does not remove the substantial costs of reliable quantum gates, error correction, physical qubits, classical control or the implementation of modular arithmetic at cryptographic sizes.",
+   "<h2>Which cryptography is affected?</h2>",
+   "RSA is the clearest example because factoring its public modulus undermines its central assumption. Quantum algorithms for discrete logarithms also threaten traditional Diffie–Hellman and elliptic-curve public-key mechanisms. That means the exposure spans both <strong>key establishment</strong> and <strong>digital signatures</strong>, though these are different functions and require different replacements.",
+   "NIST finalized <strong>FIPS 203 (ML-KEM)</strong> for post-quantum key encapsulation, <strong>FIPS 204 (ML-DSA)</strong> for digital signatures and <strong>FIPS 205 (SLH-DSA)</strong> for stateless hash-based signatures in August 2024. The standards address the need to move away from vulnerable public-key schemes before a future large-scale quantum computer becomes practical. They do not imply that a cryptographically relevant quantum computer already exists.",
+   "<h2>What Shor's algorithm does not prove</h2>",
+   "The algorithm does not demonstrate that any announced processor with a particular raw qubit count can factor production RSA keys. Raw physical-qubit counts omit crucial information about error rates, circuit depth, connectivity and the overhead of fault tolerance. A useful security assessment therefore separates three questions: whether the mathematics gives a quantum advantage, whether a hardware platform can execute the required computation reliably, and when a specific cryptographic deployment must migrate.",
+   "It also does not establish that every cryptographic primitive is equally vulnerable. Symmetric-key encryption and cryptographic hashes face different quantum attack models from RSA factoring. The practical response is to inventory public-key dependencies, use standardized post-quantum replacements where appropriate and avoid treating speculative hardware dates as security guarantees."
+  ],
+  "sources": [
+   {
+    "title": "NIST: Quantum Computing Explained",
+    "url": "https://www.nist.gov/quantum-information-science/quantum-computing-explained"
+   },
+   {
+    "title": "NIST: Practical Impacts of Quantum Computing",
+    "url": "https://www.nccoe.nist.gov/sites/default/files/2023-08/pqc-light-at-the-end-of-the-tunnel-presentation.pdf"
+   },
+   {
+    "title": "NIST: PQC standards approved",
+    "url": "https://csrc.nist.gov/News/2024/postquantum-cryptography-fips-approved"
+   }
+  ],
+  "image": {
+   "src": "src-img/what-is-shors-algorithm-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Quantum processor chip held in tweezers under blue light",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 11 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Quantum processor chip held in tweezers under blue light, no people faces logos or text",
+    "sha256": "44a25135819f7822b3806fe1c0530b1ba89ca1138701c9711e7eba10cea66a99",
+    "recorded": "2026-11-11",
+    "approved_by": "Joshua publish brief 2026-11-11: use bank PNG"
+   }
+  },
+  "disclaimer": "This explainer is general background drawn from the standards and agency sources listed, not professional advice."
+ },
+ {
   "slug": "diraq-silicon-spin-quantum-equinix",
   "date": "2026-11-10",
   "updated": "2026-11-10",
