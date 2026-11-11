@@ -1,5 +1,44 @@
 [
  {
+  "slug": "quantinuum-riken-reimei-h2-upgrade",
+  "date": "2026-11-11",
+  "updated": "2026-11-11",
+  "cat": "industry",
+  "title": "Quantinuum and RIKEN say they have upgraded Japan's Reimei computer to a 56-qubit H2 system",
+  "summary": "In a 10 November post, Quantinuum said it and RIKEN have upgraded the Reimei quantum computer at RIKEN's Wako campus to Quantinuum's System Model H2, with 56 fully connected high-fidelity qubits.",
+  "body": [
+   "Quantinuum said on 10 November that it and RIKEN have upgraded the Reimei quantum computer to Quantinuum's System Model H2. In a <a href=\"https://www.quantinuum.com/blog/quantinuum-and-riken-announcement\">company blog post</a>, Quantinuum described Reimei as having 56 fully connected high-fidelity qubits and said the machine, at RIKEN's campus, is being used with the Fugaku supercomputer and the ROQUO GPU supercomputer as a hybrid platform. The post says the upgrade \"bring[s] quantum advantage into sight.\" That is Quantinuum's claim, not an independently verified milestone.",
+   "According to the post, Quantinuum Nexus coordinates the three machines so that jobs running on classical infrastructure can submit quantum tasks to Reimei and fold the results back into a larger calculation. Fugaku is described as handling large-scale classical modelling, ROQUO as supporting tensor-network simulation, AI training and massively parallel computation, and Reimei as performing selected calculations involving quantum states that become expensive to represent classically.",
+   "The company said two frontier projects are already under way. One, labelled GenQAI for materials discovery, is intended to map a material's phase diagram by combining quantum simulation, classical tensor networks and generative AI. Quantinuum said the team has already collected hardware data for a 6 by 6 two-dimensional spin model, trained a Transformer model for zero-noise extrapolation, and used a generative model to sample conditions that have not yet been simulated. The second project, with researchers from RIKEN, NVIDIA and Quantinuum, is described as a hybrid workflow for biomolecular chemistry, with an initial target of zinc porphyrin and a focus on excited-state properties rather than ground-state searches. Those project descriptions and early results are as stated by Quantinuum.",
+   "The post said that once the projects conclude, Reimei will start regular operations under a Test User Program. It also said the Reimei deployment is supported by Japan's New Energy and Industrial Technology Development Organization as part of a programme on integrated use of quantum computers and supercomputers. Quantinuum did not, in this announcement, report a published benchmark that would settle whether the upgraded system has reached quantum advantage."
+  ],
+  "sources": [
+   {
+    "title": "Reimei Powers Up to Help Japan Lead the Next Era of Discovery",
+    "url": "https://www.quantinuum.com/blog/quantinuum-and-riken-announcement"
+   }
+  ],
+  "image": {
+   "src": "src-img/quantinuum-riken-reimei-h2-upgrade-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Large unbranded lithography chamber in an empty fab bay, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 11 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Large unbranded lithography chamber in an empty fab bay, no logos or readable text, no people faces logos or text",
+    "sha256": "ffc486f0d83fe96120912a8fc1ad50b88a1ac996f48273c6109faf20c37ce870",
+    "recorded": "2026-11-11",
+    "approved_by": "Joshua publish brief 2026-11-11: use bank PNG"
+   }
+  }
+ },
+ {
   "slug": "xanadu-hyperlight-7mdb-optical-switch",
   "date": "2026-11-11",
   "updated": "2026-11-11",
