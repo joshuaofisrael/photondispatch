@@ -3,6 +3,8 @@
 > Independent, answer-first quantum computing and quantum technology news: hardware, algorithms, industry and funding, research and policy.
 
 ## Articles
+- [DeepMind and Google Quantum AI use Lean 4 to discover formally verified quantum algorithms](https://photondispatch.com/news/google-lean-4-verified-quantum-algorithms.html): Quantum Computing Report said a 10 November paper describes Gemini agents in Lean 4 that synthesised and machine-checked quantum programs, with reported spacetime-cost reductions on several scientific benchmarks.
+- [IBM announces Quantum Nighthawk r3, built for 10,000 operations on 520 qubits](https://photondispatch.com/news/ibm-quantum-nighthawk-r3-520-qubits.html): IBM said Nighthawk r3 will be built to run 10,000 quantum operations across 520 programmable qubits, with a plan to link two processors into a 1,040-qubit system in 2027.
 - [Why Post-Quantum Cryptography Matters for TLS 1.3](https://photondispatch.com/news/why-pqc-matters-for-tls.html): TLS 1.3 can combine classical elliptic-curve exchange with ML-KEM. Understand the new IETF hybrid groups, security rationale, and deployment tradeoffs.
 - [What Is Shor's Algorithm, and Why Does It Threaten RSA?](https://photondispatch.com/news/what-is-shors-algorithm.html): Shor’s algorithm uses quantum period finding to factor integers efficiently. See a small worked example, the RSA connection, and the hardware limitations.
 - [Diraq switches on an eight qubit silicon spin quantum computer inside Equinix Sydney](https://photondispatch.com/news/diraq-silicon-spin-quantum-equinix.html): Diraq says its silicon spin system is live in a commercial data centre, draws under 20 kW and is targeted to reach 256 qubits within a year.

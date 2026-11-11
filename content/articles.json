@@ -1,5 +1,93 @@
 [
  {
+  "slug": "google-lean-4-verified-quantum-algorithms",
+  "date": "2026-11-11",
+  "updated": "2026-11-11",
+  "cat": "research",
+  "title": "DeepMind and Google Quantum AI use Lean 4 to discover formally verified quantum algorithms",
+  "summary": "Quantum Computing Report said a 10 November paper describes Gemini agents in Lean 4 that synthesised and machine-checked quantum programs, with reported spacetime-cost reductions on several scientific benchmarks.",
+  "body": [
+   "Researchers at Google DeepMind and Google Quantum AI have described an automated pipeline that uses large language model agents inside the Lean 4 theorem prover to discover and formally verify quantum algorithms, <a href=\"https://quantumcomputingreport.com/google-deepmind-and-google-quantum-ai-use-lean-4-to-discover-formally-verified-quantum-algorithms/\">Quantum Computing Report wrote</a> on 10 November.",
+   "The work is detailed in a paper titled \"Discovering Formally Verified Quantum Programs with AI.\" According to the report, the system pairs multi-agent search with formal quantum Hoare logic, so candidate programs can be synthesised and then machine-checked, including at sizes that are beyond classical simulation.",
+   "The report says evaluating quantum subroutines with classical computers is limited to small qubit counts or restricted gate sets. When algorithms grow to thousands of logical qubits, classical checking becomes impractical. The Google team specified problems in Lean 4 as Hoare triples (precondition, program and postcondition) together with proofs of correctness and resource bounds. Heterogeneous Gemini agent teams iterate on candidates, share lemmas and code, and an independent Lean comparator checks that proofs meet frozen specifications without custom axioms or unproven placeholders, the report said.",
+   "Fault-tolerant cost is measured as Q · T, the peak logical qubit count multiplied by the non-Clifford T-gate count, used as a proxy for physical spacetime because magic-state preparation dominates many surface-code execution cycles. Quantum Computing Report summarised several benchmark improvements attributed to the paper:",
+   "<ul><li>25-bit fixed-point arcsin state preparation: Q · T reduced by more than 290 times, from more than 1.08 × 10^8 to 3.70 × 10^5, with non-Clifford T gates cut to 3,698 across 100 qubits.</li><li>Alpha-particle electronic stopping power in warm dense hydrogen: Q · T lowered 10.9 times, from 5.42 × 10^15 to 4.98 × 10^14, using 4,374 logical qubits, with qubitised walk steps reduced 12.8 times.</li><li>Non-Born-Oppenheimer molecular dynamics of C23H20N3O: Q · T reduced 8.08 times, from 4.98 × 10^15 to 6.16 × 10^14, across 6,057 logical qubits.</li><li>Cytochrome P450 Compound I active-space states: Q · T improved 2.49 times, from 1.09 × 10^12 to 4.37 × 10^11, on 333 logical qubits.</li><li>Multi-target parallel Grover search (m, k ≤ 1,024): up to 1.22 times speedup in expected oracle rounds for finding any target, and up to 2.55 times for finding all targets.</li></ul>",
+   "Those figures are as reported from the paper by Quantum Computing Report; they have not been independently re-run here. The report said the agents replaced some literature techniques, for example using measurement-based ancilla uncomputation and Bernstein polynomials in the photochemistry case, and one-hot orbital registers in the P450 case, which it said cut T-gate counts per walk step by 40%.",
+   "A preprint with technical specifications and proofs is linked from the report on arXiv. Formal verification of the discovered programs is a claim about machine-checked proofs in Lean, not a demonstration on current quantum hardware at those qubit counts."
+  ],
+  "sources": [
+   {
+    "title": "Google DeepMind and Google Quantum AI Use Lean 4 to Discover Formally Verified Quantum Algorithms",
+    "url": "https://quantumcomputingreport.com/google-deepmind-and-google-quantum-ai-use-lean-4-to-discover-formally-verified-quantum-algorithms/"
+   }
+  ],
+  "image": {
+   "src": "src-img/google-lean-4-verified-quantum-algorithms-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Optical breadboard with yellow fiber patch cords in an empty lab, no logos or text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 11 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Optical breadboard with yellow fiber patch cords in an empty lab, no logos or text, no people faces logos or text",
+    "sha256": "2b542331bc2c70bb8a19dcd5ea269fb4947e10dd1643ddbda161fe2e9053f4dc",
+    "recorded": "2026-11-11",
+    "approved_by": "Joshua publish brief 2026-11-11: use bank PNG"
+   }
+  }
+ },
+ {
+  "slug": "ibm-quantum-nighthawk-r3-520-qubits",
+  "date": "2026-11-11",
+  "updated": "2026-11-11",
+  "cat": "hardware",
+  "title": "IBM announces Quantum Nighthawk r3, built for 10,000 operations on 520 qubits",
+  "summary": "IBM said Nighthawk r3 will be built to run 10,000 quantum operations across 520 programmable qubits, with a plan to link two processors into a 1,040-qubit system in 2027.",
+  "body": [
+   "IBM announced on 11 November that its next Quantum Nighthawk processor, r3, will be built to execute 10,000 quantum operations across 520 programmable qubits. In a post on X, <a href=\"https://x.com/IBMResearch/status/2120486706348425722\">IBM Research</a> wrote: \"@IBM announces IBM Quantum Nighthawk r3, a new processor to support 10k quantum operations on 520 programmable qubits. A new managed workflow experience on the IBM Quantum Platform brings classical and quantum compute together in a single environment.\"",
+   "The <a href=\"https://newsroom.ibm.com/2026-11-11-ibm-quantum-nighthawk-demonstrates-new-levels-of-speed-and-quality,-with-plans-to-scale-beyond-1,000-qubits-in-2027\">IBM Newsroom release</a>, dated from Yorktown Heights, New York, says Nighthawk r3 is designed for 10,000 operations on 520 programmable qubits, with 2,034 total physical qubits. It keeps the square-lattice connectivity and fast operations of the current Nighthawk r2 and adds 10 chip-to-chip interconnects, called l-couplers, intended to join processors into larger systems. In 2027, IBM plans to link two Nighthawk r3 processors into a single 1,040-qubit system.",
+   "Jay Gambetta, director of IBM Research and an IBM Fellow, said in the release: \"Useful quantum computing hinges on whether results can be delivered with accuracy and speed, both are fundamental. Nighthawk is already showing us what that looks like today. As we scale this architecture to larger and more powerful quantum computers, the capabilities of quantum computation will reach new levels as we integrate more closely with classical resources and march ahead to fault tolerance.\"",
+   "Nighthawk r2, introduced in September, can deliver up to 100,000 samples per second and support computations with more than 7,500 quantum operations on 120 qubits, IBM said. Clients and partners including E.ON, Algorithmiq and Q-CTRL have run more than 34 billion circuits on r2 and reported speedups of up to 19 times over previous IBM processors, according to the company. IBM said E.ON reported a 15 times speedup on r2 in quantum machine learning for energy-grid optimisation, and that IBM itself saw a 12 times speedup, versus earlier work on IBM Quantum Heron, in a magnetic-materials experiment with Oak Ridge National Laboratory.",
+   "IBM also said it has connected Nighthawk r1 processors using four l-couplers, reaching 99.3% quantum state transfer fidelity toward a 99.9% target, and has connected two cryogenic modules into a single system for the first time, reaching operating temperature in under five days and cooling below 15 millikelvin.",
+   "The same announcement describes a managed IBM Quantum Platform environment that unites high-performance classical computing with quantum workflows. IBM said users can now plug quantum work into classical resources on the platform, and cited faster sample-based quantum diagonalization work with RIKEN and automated processing of 608 million samples with Cleveland Clinic and RIKEN. Those results are IBM's account of partner workloads.",
+   "Nighthawk r3 is a planned next-generation processor, not a machine already running customer jobs at 520 qubits. The 1,040-qubit linked system is a 2027 plan. The performance figures for r2 are IBM's, including partner-reported speedups."
+  ],
+  "sources": [
+   {
+    "title": "IBM Quantum Nighthawk Demonstrates New Levels of Speed and Quality, with Plans to Scale Beyond 1,000 Qubits in 2027",
+    "url": "https://newsroom.ibm.com/2026-11-11-ibm-quantum-nighthawk-demonstrates-new-levels-of-speed-and-quality,-with-plans-to-scale-beyond-1,000-qubits-in-2027"
+   },
+   {
+    "title": "IBM Research on X",
+    "url": "https://x.com/IBMResearch/status/2120486706348425722"
+   }
+  ],
+  "image": {
+   "src": "src-img/ibm-quantum-nighthawk-r3-520-qubits-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Technician from behind at a wafer microscope in a semiconductor cleanroom, no logos or faces",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 11 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Technician from behind at a wafer microscope in a semiconductor cleanroom, no logos or faces, no people faces logos or text",
+    "sha256": "940117316aab9e3e4b02cddea3bc574c098d79135f6385a4c6f457c8e1ee777f",
+    "recorded": "2026-11-11",
+    "approved_by": "Joshua publish brief 2026-11-11: use bank PNG"
+   }
+  }
+ },
+ {
   "slug": "why-pqc-matters-for-tls",
   "date": "2026-11-11",
   "updated": "2026-11-11",
