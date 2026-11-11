@@ -1,5 +1,45 @@
 [
  {
+  "slug": "xanadu-hyperlight-7mdb-optical-switch",
+  "date": "2026-11-11",
+  "updated": "2026-11-11",
+  "cat": "industry",
+  "title": "Xanadu and HyperLight say they cut photonic-switch loss to 7 millidecibels",
+  "summary": "In a 10 November release, the companies said a thin-film lithium niobate process reduced optical switch insertion loss to 7 mdB, down from their 2025 mark of 20 mdB.",
+  "body": [
+   "Xanadu Quantum Technologies and HyperLight Corporation said on 10 November that they had reduced optical switch insertion loss to 7 millidecibels, down from a 20 mdB result the partners reported in 2025. In a <a href=\"https://www.globenewswire.com/news-release/2026/11/10/3399337/0/en/xanadu-and-hyperlight-achieve-breakthrough-of-nearly-3x-reduction-in-optical-switch-loss-accelerating-path-to-commercial-photonic-quantum-systems.html\">joint release carried by GlobeNewswire</a>, the companies said the result was demonstrated on a high-volume wafer line using HyperLight's thin-film lithium niobate Chiplet platform, with what they described as excellent yield and repeatability.",
+   "Optical switches route photons that carry quantum information. Because those signals cannot be conventionally amplified without disturbing the quantum state, insertion loss is a central hardware constraint. Xanadu said lower switch loss preserves fidelity, reduces lost qubits and allows photonic networks to scale without an exponential rise in laser power or hardware redundancy. The 7 mdB figure, and the comparison with the partners' 2025 benchmark, are the companies' measurements as stated in the release.",
+   "Christian Weedbrook, Xanadu's founder and chief executive, said the result \"indicates that Xanadu's quantum-compatible switches are ready to ramp to production.\" He also said the 7 mdB loss is \"nearly 3x lower than our previous benchmark set just over a year ago and 10x lower than our closest competitor's most recent published result.\" The competitor comparison is Xanadu's claim; the release does not name the competing device. Weedbrook said the company expects improved manufacturing economics and a smaller footprint, and that the same low-loss technology could be useful in data centres, which the release treats as a forward-looking statement.",
+   "Mian Zhang, HyperLight's chief executive, said the longstanding partnership \"continues to demonstrate the power and versatility of HyperLight's TFLN Chiplet platform,\" and that \"the same platform that powers high-volume AI data centres and telecom networks has now delivered a record-setting 7 mdB switch loss for quantum computing with Xanadu.\"",
+   "Xanadu is a Canadian photonic quantum computing company. The release lists it as trading on Nasdaq and the TSX. The performance figures above are as announced by the two companies on 10 November 2026 and have not been re-measured here."
+  ],
+  "sources": [
+   {
+    "title": "Xanadu and HyperLight Achieve Breakthrough of Nearly 3x Reduction in Optical Switch Loss, Accelerating Path to Commercial Photonic Quantum Systems",
+    "url": "https://www.globenewswire.com/news-release/2026/11/10/3399337/0/en/xanadu-and-hyperlight-achieve-breakthrough-of-nearly-3x-reduction-in-optical-switch-loss-accelerating-path-to-commercial-photonic-quantum-systems.html"
+   }
+  ],
+  "image": {
+   "src": "src-img/xanadu-hyperlight-7mdb-optical-switch-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Photonic chip with glowing red waveguides and fibres, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 11 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Photonic chip with glowing red waveguides and fibres, no logos or readable text, no people faces logos or text",
+    "sha256": "433338cc7541679cb4f97c937298670b0993cbb43d9bffe036b268e3b84003e3",
+    "recorded": "2026-11-11",
+    "approved_by": "Joshua publish brief 2026-11-11: use bank PNG"
+   }
+  }
+ },
+ {
   "slug": "google-lean-4-verified-quantum-algorithms",
   "date": "2026-11-11",
   "updated": "2026-11-11",
