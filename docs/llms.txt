@@ -3,6 +3,7 @@
 > Independent, answer-first quantum computing and quantum technology news: hardware, algorithms, industry and funding, research and policy.
 
 ## Articles
+- [Quantinuum and RIKEN say they have upgraded Japan's Reimei computer to a 56-qubit H2 system](https://photondispatch.com/news/quantinuum-riken-reimei-h2-upgrade.html): In a 10 November post, Quantinuum said it and RIKEN have upgraded the Reimei quantum computer at RIKEN's Wako campus to Quantinuum's System Model H2, with 56 fully connected high-fidelity qubits.
 - [Xanadu and HyperLight say they cut photonic-switch loss to 7 millidecibels](https://photondispatch.com/news/xanadu-hyperlight-7mdb-optical-switch.html): In a 10 November release, the companies said a thin-film lithium niobate process reduced optical switch insertion loss to 7 mdB, down from their 2025 mark of 20 mdB.
 - [DeepMind and Google Quantum AI use Lean 4 to discover formally verified quantum algorithms](https://photondispatch.com/news/google-lean-4-verified-quantum-algorithms.html): Quantum Computing Report said a 10 November paper describes Gemini agents in Lean 4 that synthesised and machine-checked quantum programs, with reported spacetime-cost reductions on several scientific benchmarks.
 - [IBM announces Quantum Nighthawk r3, built for 10,000 operations on 520 qubits](https://photondispatch.com/news/ibm-quantum-nighthawk-r3-520-qubits.html): IBM said Nighthawk r3 will be built to run 10,000 quantum operations across 520 programmable qubits, with a plan to link two processors into a 1,040-qubit system in 2027.
