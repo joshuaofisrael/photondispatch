@@ -6,6 +6,7 @@ Content: content/articles.json   Source images: src-img/   Output: docs/ (GitHub
 See README.md for the daily routine (adding articles, images, 'why it's trending' posts).
 """
 import sys, json, os, html, datetime, shutil, re
+import topic_hubs
 
 # ---------------------------------------------------------------- config
 SITE_URL = "https://photondispatch.com"  # <-- ONLY place to change the domain
@@ -161,7 +162,7 @@ def page(path, title, desc, content, depth=0, ld=None, typ="website", image=None
 <a class="skip" href="#main">Skip to content</a><div class="progress" aria-hidden="true"></div>
 <header class="site-h"><div class="w"><a class="logo" href="{r}index.html" aria-label="{NAME} home">{MARK}<span>Photon<b>Dispatch</b></span></a><nav aria-label="Main"><a href="{r}index.html">News</a>{catnav}<a href="{r}about.html">About</a><a href="{r}contact.html">Contact</a><a href="{r}feed.xml">RSS</a></nav></div></header>
 <main id="main">{content}</main>
-<footer class="site-f"><div class="w"><p><a href="{r}about.html">About</a> · <a href="{r}standards.html">Editorial standards</a> · <a href="{r}corrections.html">Corrections</a> · <a href="{r}contact.html">Contact</a> · <a href="{r}terms.html">Terms</a> · <a href="{r}privacy.html">Privacy</a> · <a href="{r}disclaimer.html">Disclaimer</a> · <a href="{r}image-policy/">Image policy</a> · <a href="{r}copyright.html">Copyright</a> · <a href="{r}disclosure.html">Ad &amp; affiliate disclosure</a> · <a href="{r}feed.xml">RSS</a> · <a href="#" data-consent-open>Cookie settings</a></p>
+<footer class="site-f"><div class="w"><p><a href="{r}about.html">About</a> · <a href="{r}topics/">Topics</a> · <a href="{r}standards.html">Editorial standards</a> · <a href="{r}corrections.html">Corrections</a> · <a href="{r}contact.html">Contact</a> · <a href="{r}terms.html">Terms</a> · <a href="{r}privacy.html">Privacy</a> · <a href="{r}disclaimer.html">Disclaimer</a> · <a href="{r}image-policy/">Image policy</a> · <a href="{r}copyright.html">Copyright</a> · <a href="{r}disclosure.html">Ad &amp; affiliate disclosure</a> · <a href="{r}feed.xml">RSS</a> · <a href="#" data-consent-open>Cookie settings</a></p>
 </div></footer>
 <script defer src="{r}assets/app.js?v={ASSET_VER}"></script>{beacon}</body></html>"""
     p = os.path.join(OUT, path); os.makedirs(os.path.dirname(p) or OUT, exist_ok=True); open(p, "w", encoding="utf-8").write(h)
@@ -239,13 +240,15 @@ for a in A:
         why = '<aside class="why"><h2>Why it\'s trending</h2><ul>' + "".join(f"<li>{w}</li>" for w in a["why"]) + "</ul></aside>"
     src = "".join(f'<li><a href="{esc(s["url"])}" rel="noopener">{esc(s["title"])}</a></li>' for s in a["sources"])
     tag = '<span class="tag trend">Trending</span> ' if a.get("kind") == "trending" else ""
-    c = f'{fig}<article class="prose art"><p style="margin:24px 0 0">{tag}<a class="tag" href="../category/{a["cat"]}.html">{esc(CATN[a["cat"]])}</a></p><h1>{esc(a["title"])}</h1><p class="meta" style="font-size:.9rem">By {NAME} Staff · Published <time datetime="{a["date"]}">{fd(a["date"])}</time> · Last updated <time datetime="{upd}">{fd(upd)}</time></p>{body}{ana}{why}{dis}<div class="src"><h2>Sources</h2><p class="meta">Every factual claim above comes from these sources. See our <a href="../standards.html">editorial standards</a> and <a href="../corrections.html">corrections policy</a>.</p><ul>{src}</ul></div><p><a href="../index.html">← All news</a></p></article>'
+    c = f'{fig}<article class="prose art"><p style="margin:24px 0 0">{tag}<a class="tag" href="../category/{a["cat"]}.html">{esc(CATN[a["cat"]])}</a></p><h1>{esc(a["title"])}</h1><p class="meta" style="font-size:.9rem">By {NAME} Staff · Published <time datetime="{a["date"]}">{fd(a["date"])}</time> · Last updated <time datetime="{upd}">{fd(upd)}</time></p>{body}{ana}{why}{dis}<div class="src"><h2>Sources</h2><p class="meta">Every factual claim above comes from these sources. See our <a href="../standards.html">editorial standards</a> and <a href="../corrections.html">corrections policy</a>.</p><ul>{src}</ul></div>{("<p class=\"meta\">Topics: " + " · ".join(f'<a href=\"../topics/{ts}.html\">{esc(tn)}</a>' for ts, tn in topic_hubs.topics_for(a)) + "</p>") if topic_hubs.topics_for(a) else ""}<p><a href="../index.html">← All news</a></p></article>'
     page(f"news/{a['slug']}.html", f"{a['title']} | {NAME}", a["summary"], c, 1, ld, "article", a["_og"])
 
 for c, t in CATS:
     items = [a for a in A if a["cat"] == c]
     g = "".join(card(a).replace('href="news/', 'href="../news/').replace('href="category/', 'href="../category/').replace('src="img/', 'src="../img/').replace('img/', '../img/').replace('../../img/', '../img/') for a in items) or "<p>No stories in this section yet.</p>"
     page(f"category/{c}.html", f"{t} | Quantum News | {NAME}", f"Latest quantum {t.lower()} news from {NAME}.", f'<section class="sec"><div class="w"><h1 class="sh">{t}</h1><div class="grid">{g}</div></div></section>', 1)
+import topic_hubs
+TOPIC_PAGES = topic_hubs.build(A, page, card, esc, SITE_URL)
 L = f"<strong>{LLC}</strong>"
 CORRECTIONS = []
 CLOG = "<p>No corrections yet.</p>" if not CORRECTIONS else "<ul>" + "".join(f'<li><time datetime="{d}">{fd(d)}</time> · <a href="news/{sl}.html">{sl.replace("-", " ")}</a>: {esc(t)}</li>' for d, sl, t in CORRECTIONS) + "</ul>"
@@ -276,7 +279,7 @@ page("404.html", f"Page not found | {NAME}", "Page not found.", f'<div class="pr
 _img_pol = """<h1>Image policy</h1><p>Most images on PhotonDispatch are AI-generated illustrations. They do not show real events, real photographs or real people as they actually appeared, and they are not photos of the events we report. Each one carries a "Source" link under the image that leads to this page.</p><p>Some articles use Creative Commons photographs. These are credited under the image with the photographer, the licence and a link to the original.</p>"""
 page("image-policy/index.html", f"Image policy | {NAME}", f"Image policy for {NAME}: how AI-generated and Creative Commons images are labelled.", f'<div class="prose page">{_img_pol}</div>', 1)
 
-urls = [("", max(a.get("updated", a["date"]) for a in A), None)] + [(f"news/{a['slug']}.html", a.get("updated", a["date"]), a["_og"]) for a in A] + [(f"category/{c}.html", BUILD_DATE, None) for c, _ in CATS] + [(f, BUILD_DATE, None) for f in legal] + [("image-policy/", BUILD_DATE, None)]
+urls = [("", max(a.get("updated", a["date"]) for a in A), None)] + [(f"news/{a['slug']}.html", a.get("updated", a["date"]), a["_og"]) for a in A] + [(f"category/{c}.html", BUILD_DATE, None) for c, _ in CATS] + [(f, BUILD_DATE, None) for f in legal] + [("image-policy/", BUILD_DATE, None)] + [(p, d, None) for p, d, _, _ in TOPIC_PAGES]
 def sm(u, d, im):
     x = f"<url><loc>{SITE_URL}/{u}</loc><lastmod>{d}</lastmod>"
     if im: x += f"<image:image><image:loc>{im['url']}</image:loc></image:image>"
@@ -286,7 +289,7 @@ bots = ["Googlebot", "Mediapartners-Google", "Bingbot", "GPTBot", "OAI-SearchBot
 open(OUT + "/robots.txt", "w").write("".join(f"User-agent: {b}\nAllow: /\n\n" for b in bots) + f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n")
 open(OUT + "/ads.txt", "w").write(ADS_TXT)
 open(OUT + f"/{INDEXNOW_KEY}.txt", "w").write(INDEXNOW_KEY)
-open(OUT + "/llms.txt", "w").write(f"# {NAME}\n\n> {DESC}\n\n## Articles\n" + "".join(f"- [{a['title']}]({SITE_URL}/news/{a['slug']}.html): {a['summary']}\n" for a in A) + f"\n## About\n- [About]({SITE_URL}/about.html)\n- [Editorial standards]({SITE_URL}/standards.html)\n- [Corrections]({SITE_URL}/corrections.html)\n- [Contact]({SITE_URL}/contact.html)\n- [Image policy]({SITE_URL}/image-policy/)\n- [RSS]({SITE_URL}/feed.xml)\n")
+open(OUT + "/llms.txt", "w").write(f"# {NAME}\n\n> {DESC}\n\n## Articles\n" + "".join(f"- [{a['title']}]({SITE_URL}/news/{a['slug']}.html): {a['summary']}\n" for a in A) + "\n## Topics\n" + "".join(f"- [{n}]({SITE_URL}/{p})\n" for p, _, n, _ in TOPIC_PAGES) + f"\n## About\n- [About]({SITE_URL}/about.html)\n- [Editorial standards]({SITE_URL}/standards.html)\n- [Corrections]({SITE_URL}/corrections.html)\n- [Contact]({SITE_URL}/contact.html)\n- [Image policy]({SITE_URL}/image-policy/)\n- [RSS]({SITE_URL}/feed.xml)\n")
 def rfc(d): return datetime.datetime.fromisoformat(d + "T12:00:00+00:00").strftime("%a, %d %b %Y %H:%M:%S +0000")
 open(OUT + "/feed.xml", "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>{NAME}</title><link>{SITE_URL}/</link><description>{esc(DESC)}</description><language>en</language><atom:link href="{SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>' + "".join(f"<item><title>{esc(a['title'])}</title><link>{SITE_URL}/news/{a['slug']}.html</link><guid>{SITE_URL}/news/{a['slug']}.html</guid><pubDate>{rfc(a['date'])}</pubDate><description>{esc(a['summary'])}</description>" + (f'<media:content url="{a["_og"]["url"]}" type="image/jpeg" medium="image" width="1200" height="630"/>' if a["_og"] else "") + "</item>" for a in A) + "</channel></rss>\n")
 open(OUT + "/.nojekyll", "w").write("")
