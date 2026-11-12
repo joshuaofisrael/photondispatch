@@ -52,6 +52,16 @@
 - [Qilimanjaro raises €19.6 million Series A first close led by Indra Group](https://photondispatch.com/news/qilimanjaro-19-6m-series-a-first-close-indra-sett.html): Barcelona's Qilimanjaro Quantum Tech says it closed €19.6 million, with €10 million from Indra Group via IndraMind and €9.6 million from Spain's SETT.
 - [UK puts £78 million into quantum sensing, networking and apprenticeships](https://photondispatch.com/news/uk-78m-quantum-sensing-networking-quest-apprentices.html): The UK government announced £78 million for quantum: £50 million for sensing and navigation projects, £20 million for networking and £8 million for apprentices.
 
+## Topics
+- [IBM](https://photondispatch.com/topics/ibm.html)
+- [IonQ](https://photondispatch.com/topics/ionq.html)
+- [Quantinuum](https://photondispatch.com/topics/quantinuum.html)
+- [Google Quantum AI](https://photondispatch.com/topics/google-quantum-ai.html)
+- [Quantum error correction](https://photondispatch.com/topics/error-correction.html)
+- [Trapped ion quantum computing](https://photondispatch.com/topics/trapped-ions.html)
+- [Photonic quantum computing](https://photondispatch.com/topics/photonic.html)
+- [Topics](https://photondispatch.com/topics/)
+
 ## About
 - [About](https://photondispatch.com/about.html)
 - [Editorial standards](https://photondispatch.com/standards.html)
