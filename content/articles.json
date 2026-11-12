@@ -1,5 +1,284 @@
 [
  {
+  "slug": "gartner-quantum-market-shapers-ionq-d-wave",
+  "date": "2026-11-12",
+  "updated": "2026-11-12",
+  "cat": "industry",
+  "title": "IonQ and D-Wave say Gartner named them Market Shapers in its first quantum computing quadrant",
+  "summary": "IonQ and D-Wave each say Gartner placed them as Market Shapers in its inaugural Emerging Market Quadrant for Quantum Computing, Established Vendors.",
+  "body": [
+   "<strong>Short answer:</strong> Two listed quantum companies, IonQ and D-Wave, say research firm Gartner has positioned them as Market Shapers in its first Emerging Market Quadrant for Quantum Computing, Established Vendors. The Gartner report itself is paid; the placements below are as the companies describe them.",
+   "IonQ announced its placement on 10 November. In its <a href=\"https://www.ionq.com/news/ionq-positioned-as-a-market-shaper-in-inaugural-gartner-r-emerging-market-quadrant-for-quantum-computing---established-vendors\">press release</a>, the company quoted Gartner as describing Market Shapers as vendors that have proven they can reliably deliver and support advanced systems in commercial settings. IonQ cited the report as authored by Gaurav Gupta, Matthew Brisse and Chirag Dekate, and <a href=\"https://x.com/IonQ_Inc/status/2120614016653345201\">repeated the announcement on X</a> on 11 November, dating the report 4 November 2026.",
+   "D-Wave followed on 12 November. Its release, filed with the SEC as <a href=\"https://www.sec.gov/Archives/edgar/data/1907982/000190798226000183/d-wavenamedamarketshaperas.htm\">an exhibit to a Form 8-K</a>, says it was recognised as a Market Shaper as of November 2026 and was among six vendors in the upper right quadrant. D-Wave quoted the report as saying Market Shapers are moving beyond research experiments toward scalable fault-tolerant architectures, high-fidelity logical qubits and enterprise software stacks. The company also <a href=\"https://x.com/dwavequantum/status/2120851489249956004\">posted the news on X</a>.",
+   "Neither release lists the other four vendors in the upper right quadrant, and PhotonDispatch has not seen the full report. Both companies reproduce Gartner's standard disclaimer that it does not endorse any vendor and that its research reflects the opinions of its analysts rather than statements of fact."
+  ],
+  "sources": [
+   {
+    "title": "IonQ: IonQ Positioned as a Market Shaper in Inaugural Gartner Emerging Market Quadrant for Quantum Computing, Established Vendors",
+    "url": "https://www.ionq.com/news/ionq-positioned-as-a-market-shaper-in-inaugural-gartner-r-emerging-market-quadrant-for-quantum-computing---established-vendors"
+   },
+   {
+    "title": "SEC EDGAR: D-Wave Quantum Inc. Form 8-K exhibit 99.1, D-Wave Named a Market Shaper (12 Nov 2026)",
+    "url": "https://www.sec.gov/Archives/edgar/data/1907982/000190798226000183/d-wavenamedamarketshaperas.htm"
+   },
+   {
+    "title": "IonQ on X: Gartner Market Shaper announcement",
+    "url": "https://x.com/IonQ_Inc/status/2120614016653345201"
+   },
+   {
+    "title": "D-Wave on X: Gartner Market Shaper announcement",
+    "url": "https://x.com/dwavequantum/status/2120851489249956004"
+   }
+  ],
+  "image": {
+   "src": "src-img/gartner-quantum-market-shapers-ionq-d-wave-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Gold-plated tiers and copper cables of an unbranded quantum computer cryostat, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 12 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Gold-plated tiers and copper cables of an unbranded quantum computer cryostat, no logos or readable text",
+    "sha256": "af54cc367dc8f47da5985518b6141b3b12f6a243c0e082700cfa116dcc8ae576",
+    "recorded": "2026-11-12",
+    "approved_by": "Joshua all-out brief 2026-11-12: use bank PNG"
+   }
+  },
+  "disclaimer": "This report summarises company announcements and a filing; figures and characterisations are the companies' own and have not been independently verified. This is not investment advice."
+ },
+ {
+  "slug": "psiquantum-amd-expanded-partnership-equity-investment",
+  "date": "2026-11-12",
+  "updated": "2026-11-12",
+  "cat": "industry",
+  "title": "AMD expands PsiQuantum partnership and plans an equity investment in the photonic quantum company",
+  "summary": "PsiQuantum and AMD will co-design infrastructure for utility-scale quantum computers, and AMD plans an undisclosed equity investment in PsiQuantum.",
+  "body": [
+   "<strong>Short answer:</strong> PsiQuantum and AMD announced on 12 November an expanded strategic partnership to co-design the classical computing that utility-scale, fault-tolerant quantum computers will need, and AMD plans to make an equity investment in PsiQuantum. The size of the stake was not disclosed.",
+   "According to the companies' <a href=\"https://www.businesswire.com/news/home/20261112481657/en/PsiQuantum-and-AMD-Collaborate-to-Build-the-Computing-Foundation-for-Utility-Scale-Quantum-Computing\">joint announcement</a>, the deal builds on PsiQuantum's earlier choice of AMD Versal FPGA technology for its fault-tolerant platform and widens it to AMD Instinct GPUs, EPYC CPUs and the ROCm software stack, combined with PsiQuantum's silicon photonics. The two say they will also develop hybrid applications that mix quantum, high-performance and AI computing, and plan to share more at the SC26 supercomputing conference in Chicago from 15 to 20 November.",
+   "<a href=\"https://www.boursorama.com/bourse/actualites/amd-va-investir-dans-psiquantum-pour-faire-progresser-l-infrastructure-de-l-informatique-quantique-69501f7b7c7922ea4c269d8c74e28844\">Reuters reported</a> that the companies did not disclose the amount of AMD's planned investment. The agency also said the companies described PsiQuantum's drug discovery workflow as already running on AMD hardware, with early results simulating covalent inhibitors, a class of molecules relevant to oncology drug discovery. Reuters noted that in May the US Commerce Department announced plans for minority stakes in nine quantum companies under a $2 billion CHIPS Act programme, including a $100 million agreement with PsiQuantum.",
+   "The partnership follows joint research the two companies published days earlier. <a href=\"https://qubitwire.com/articles/psiquantum-amd-prism-photonic-error-decoder\">QubitWire reported</a> on 11 November that PsiQuantum and AMD researchers had described PRISM, a machine learning decoder for photonic error correction mapped to an AMD VP1902 FPGA, and stressed that the preprint is decoder engineering rather than a working fault-tolerant machine."
+  ],
+  "sources": [
+   {
+    "title": "Business Wire: PsiQuantum and AMD Collaborate to Build the Computing Foundation for Utility-Scale Quantum Computing",
+    "url": "https://www.businesswire.com/news/home/20261112481657/en/PsiQuantum-and-AMD-Collaborate-to-Build-the-Computing-Foundation-for-Utility-Scale-Quantum-Computing"
+   },
+   {
+    "title": "Reuters via Boursorama: AMD va investir dans PsiQuantum (12 Nov 2026)",
+    "url": "https://www.boursorama.com/bourse/actualites/amd-va-investir-dans-psiquantum-pour-faire-progresser-l-infrastructure-de-l-informatique-quantique-69501f7b7c7922ea4c269d8c74e28844"
+   },
+   {
+    "title": "QubitWire: PsiQuantum and AMD reshape an AI decoder for photonic quantum hardware",
+    "url": "https://qubitwire.com/articles/psiquantum-amd-prism-photonic-error-decoder"
+   }
+  ],
+  "image": {
+   "src": "src-img/psiquantum-amd-expanded-partnership-equity-investment-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Unbranded photonic chip with glowing red waveguides and optical fibres, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 12 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Unbranded photonic chip with glowing red waveguides and optical fibres, no logos or readable text",
+    "sha256": "433338cc7541679cb4f97c937298670b0993cbb43d9bffe036b268e3b84003e3",
+    "recorded": "2026-11-12",
+    "approved_by": "Joshua all-out brief 2026-11-12: use bank PNG"
+   }
+  },
+  "disclaimer": "This report summarises company announcements and a filing; figures and characterisations are the companies' own and have not been independently verified. This is not investment advice."
+ },
+ {
+  "slug": "qunova-hi-vqe-80-qubit-iron-sulfur-chemical-accuracy",
+  "date": "2026-11-12",
+  "updated": "2026-11-12",
+  "cat": "research",
+  "title": "Qunova says HI-VQE reached chemical accuracy on an 80-qubit iron-sulfur cluster run",
+  "summary": "Qunova says HI-VQE, run on an IBM quantum computer at RIKEN with Fugaku, matched a top classical benchmark for a 4Fe-4S cluster within chemical accuracy.",
+  "body": [
+   "<strong>Short answer:</strong> South Korean start-up Qunova Computing says its HI-VQE algorithm reached chemical accuracy in an 80-qubit simulation of the 4Fe-4S iron-sulfur cubane cluster, using an IBM Quantum System Two at RIKEN together with RIKEN's Fugaku supercomputer. The claim comes from a company press release published on 12 November.",
+   "According to the <a href=\"https://thequantuminsider.com/2026/11/12/qunovas-hybrid-computing-method-matches-classical-benchmark-for-iron-sulfur-cluster/\">release carried by The Quantum Insider</a>, Qunova's extrapolated ground-state energy for the cluster was −327.2482 ± 0.0007 Hartree, which it says agrees within chemical accuracy with a leading classical reference from the density matrix renormalisation group method (−327.2471 Hartree). Qunova describes HI-VQE as the first quantum algorithm to reach chemical accuracy at 80 qubits and says the result is more accurate than recent extrapolated trimmed configuration interaction results.",
+   "The company also compared cost with an earlier quantum approach. Qunova says that against a previously published sample-based quantum diagonalisation result for the same molecule, HI-VQE reached a lower energy of −326.9821 Hartree by its second iteration using 2,518 Fugaku node-hours, which it puts at roughly 300 times less classical compute.",
+   "HI-VQE, short for handover iterative variational quantum eigensolver, is offered as a Qiskit Function on IBM's platform. The <a href=\"https://quantum.cloud.ibm.com/docs/en/functions/qunova-chemistry\">IBM documentation</a> describes it as a hybrid method in which the quantum processor samples candidate electron configurations and classical computers calculate the resulting wave function, so that only a compact subset of configurations is kept.",
+   "Iron-sulfur clusters sit at the core of enzymes involved in nitrogen fixation, hydrogen production and electron transport, which is why the molecule is a common stress test for new chemistry methods. Qunova says it plans to add orbital rotation and optimisation to HI-VQE and is looking for systems where it consistently beats classical methods; the release does not claim that yet."
+  ],
+  "sources": [
+   {
+    "title": "The Quantum Insider: Qunova's Hybrid Computing Method Matches Classical Benchmark for Iron-Sulfur Cluster (press release)",
+    "url": "https://thequantuminsider.com/2026/11/12/qunovas-hybrid-computing-method-matches-classical-benchmark-for-iron-sulfur-cluster/"
+   },
+   {
+    "title": "IBM Quantum Documentation: HI-VQE Chemistry by Qunova Computing",
+    "url": "https://quantum.cloud.ibm.com/docs/en/functions/qunova-chemistry"
+   }
+  ],
+  "image": {
+   "src": "src-img/qunova-hi-vqe-80-qubit-iron-sulfur-chemical-accuracy-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Researcher seen from behind adjusting cables on an unbranded quantum cryostat, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 12 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Researcher seen from behind adjusting cables on an unbranded quantum cryostat, no logos or readable text",
+    "sha256": "68c77613fb088935771c9e52b22bbf86a9acce1b213e0b5577b11ce5dfdcc8db",
+    "recorded": "2026-11-12",
+    "approved_by": "Joshua all-out brief 2026-11-12: use bank PNG"
+   }
+  },
+  "disclaimer": "Results described here are as reported by the researchers and companies involved and have not been independently replicated by PhotonDispatch."
+ },
+ {
+  "slug": "iqm-quantum-kernel-45-qubits-engineered-learning",
+  "date": "2026-11-12",
+  "updated": "2026-11-12",
+  "cat": "research",
+  "title": "IQM preprint shows a quantum kernel beating classical models on an engineered task at up to 45 qubits",
+  "summary": "IQM researchers report a quantum kernel beating 11 classical models on a task built to favour quantum hardware, and say it is not quantum advantage.",
+  "body": [
+   "<strong>Short answer:</strong> Researchers at quantum hardware maker IQM report that a quantum machine learning model running on its noisy processors outperformed a full set of classical models on a classification task designed to favour quantum hardware, at 15, 30 and 45 qubits. They also say plainly that this is not quantum advantage, because a classical simulation of the same circuits matched it.",
+   "The work is described in a <a href=\"https://iqm.tech/blog/testing-quantum-machine-learning-fairly-on-iqm-hardware/\">12 November IQM blog post</a> and the preprint <a href=\"https://arxiv.org/abs/2610.41848\">Engineered Learning Problems on Noisy Quantum Processors</a> by Esteban Payares, Nadia Milazzo, Ghada Ben Slama and Thomas Cope. The experiments ran on IQM Emerald (54 qubits) and IQM Garnet (20 qubits) using images of T-shirts and dresses from the Fashion-MNIST dataset. One quantum run, the referee, relabels the images so quantum kernels predict them well and classical similarity measures do not; a second run on separate hardware, the challenger, then has to predict those labels, as do 11 classical models.",
+   "At 15 qubits with shallow circuits, IQM says the quantum challenger labelled 81% of test images correctly against 51% for the best classical model. At the deepest 15-qubit setting the gap shrank to 68% versus 64%, which was not statistically significant. At 30 and 45 qubits the gap stayed between 17 and 28 points at every depth tested.",
+   "The team also tested error mitigation on the deepest 15-qubit case. Zero-noise extrapolation and IQM's adaptive Pauli twirling both restored a significant gap, of 14 and 17 points. But the authors found most of the zero-noise extrapolation gain came from making the referee's labels harder for classical models rather than from better quantum computation, a caution they say a noise-free reference can expose.",
+   "The key limit is classical simulation. For the largest run, 45 qubits at the deepest setting, the authors simulated the circuits with matrix product states in under 20 seconds per circuit and reached 72% accuracy, against 73% for the quantum challenger. The preprint abstract calls the task artificial and says beating state-of-the-art simulation remains the main challenge."
+  ],
+  "sources": [
+   {
+    "title": "IQM: Testing quantum machine learning fairly on IQM hardware",
+    "url": "https://iqm.tech/blog/testing-quantum-machine-learning-fairly-on-iqm-hardware/"
+   },
+   {
+    "title": "arXiv: Engineered Learning Problems on Noisy Quantum Processors (arXiv:2610.41848)",
+    "url": "https://arxiv.org/abs/2610.41848"
+   }
+  ],
+  "image": {
+   "src": "src-img/iqm-quantum-kernel-45-qubits-engineered-learning-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Gold unbranded quantum computer cryostat hanging in a lab, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 12 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Gold unbranded quantum computer cryostat hanging in a lab, no logos or readable text",
+    "sha256": "8546603dbea6f48ff732e6cf1db64c3361dd1c6b2a708abbcfc042a1a98bea88",
+    "recorded": "2026-11-12",
+    "approved_by": "Joshua all-out brief 2026-11-12: use bank PNG"
+   }
+  },
+  "disclaimer": "Results described here are as reported by the researchers and companies involved and have not been independently replicated by PhotonDispatch."
+ },
+ {
+  "slug": "alice-bob-ldpc-cat-codes-gpu-decoding-nvqlink",
+  "date": "2026-11-12",
+  "updated": "2026-11-12",
+  "cat": "hardware",
+  "title": "Alice & Bob decodes LDPC-cat error correction on GPUs through NVIDIA NVQLink",
+  "summary": "Quantum Machines says Alice & Bob decoded LDPC-cat codes on GPUs via NVQLink and its OPX1000 controller, in a proof of concept using synthetic data.",
+  "body": [
+   "<strong>Short answer:</strong> French cat-qubit company Alice &amp; Bob has decoded its LDPC-cat error-correcting codes on GPUs, using NVIDIA's NVQLink interconnect and Quantum Machines' OPX1000 controller, according to a Quantum Machines blog post this month. The test used synthetic data, not a live quantum processor.",
+   "In the <a href=\"https://www.quantum-machines.co/resources/blog/alice-bob-ldpc-cat-codes-gpu-decoding-nvqlink/\">Quantum Machines post</a>, the controller maker explains why decoding matters: error correction repeatedly measures syndromes, and a classical decoder must turn them into corrections fast enough to avoid a backlog. For realistic superconducting designs, it says controller-decoder loops need to stay in the tens of microseconds. Its Open Acceleration Stack links the OPX1000 to GPUs, CPUs and FPGAs with a 2 to 4 microsecond round trip, is NVQLink-compliant and supports CUDA-Q, CUDA, C++ and Python.",
+   "LDPC-cat codes pair cat qubits, which suppress one type of error in hardware, with two-dimensional low-density parity-check codes, with the aim of cutting the overhead of fault tolerance. Quantum Machines says Alice &amp; Bob reports this as the first time such codes have been decoded on GPUs through NVQLink.",
+   "The team also found that batching helps. <a href=\"https://quantumzeitgeist.com/quantum-machines-nvidia-alice-bob-decodes/\">Quantum Zeitgeist reported</a> on 11 November that decoding many syndromes together made latency grow sublinearly, so the time per syndrome falls as the batch grows, which suggests GPU efficiency improves as machines produce more syndrome data.",
+   "Both accounts say the next step is real-time decoding with live data, which will require the controller-to-GPU path to keep pace with the machine's cycle time."
+  ],
+  "sources": [
+   {
+    "title": "Quantum Machines: Alice & Bob Decodes Cat-Qubit Error Correction on GPUs with Quantum Machines via NVIDIA NVQLink",
+    "url": "https://www.quantum-machines.co/resources/blog/alice-bob-ldpc-cat-codes-gpu-decoding-nvqlink/"
+   },
+   {
+    "title": "Quantum Zeitgeist: Alice & Bob decodes cat-qubit errors on GPUs with NVQLink",
+    "url": "https://quantumzeitgeist.com/quantum-machines-nvidia-alice-bob-decodes/"
+   }
+  ],
+  "image": {
+   "src": "src-img/alice-bob-ldpc-cat-codes-gpu-decoding-nvqlink-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Liquid cooling pipes and manifolds behind unbranded server racks, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 12 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Liquid cooling pipes and manifolds behind unbranded server racks, no logos or readable text",
+    "sha256": "6ca86aea4ebe6e06234040bb8ae1d9b87e89e52b254ad275ec56b4449106e06f",
+    "recorded": "2026-11-12",
+    "approved_by": "Joshua all-out brief 2026-11-12: use bank PNG"
+   }
+  },
+  "disclaimer": "Results described here are as reported by the researchers and companies involved and have not been independently replicated by PhotonDispatch."
+ },
+ {
+  "slug": "osaka-seafood-octopus-quantum-hpc-platform",
+  "date": "2026-11-12",
+  "updated": "2026-11-12",
+  "cat": "hardware",
+  "title": "University of Osaka links its OCTOPUS supercomputer to in-house quantum computers in SEAFOOD platform",
+  "summary": "Osaka's SEAFOOD platform connects the OCTOPUS supercomputer with QIQB's superconducting quantum computers via OQTOPUS; operation starts in December 2026.",
+  "body": [
+   "<strong>Short answer:</strong> The University of Osaka has built SEAFOOD, a platform that lets its OCTOPUS supercomputer and its own superconducting quantum computers run parts of the same calculation. The university says SEAFOOD will begin operating in December 2026, with trial access for selected research teams in fiscal 2027.",
+   "According to the <a href=\"https://thequantuminsider.com/2026/11/11/seafood-puts-octopus-and-quantum-computers-on-the-same-menu/\">university press release published by The Quantum Insider</a> on 11 November, SEAFOOD connects OCTOPUS, run by the university's D3 Center, with quantum computers developed and operated by its Center for Quantum Information and Quantum Biology (QIQB) on a separate campus. The link uses OQTOPUS, open-source software developed by QIQB and partners, so programs on OCTOPUS can send work straight to the quantum machines and get results back. The university calls it the first case in Japan of joining a domestically developed quantum computer with a supercomputer at the same university.",
+   "As a proof of concept, the team used quantum-selected configuration interaction, in which the quantum computer picks out important electron configurations and the supercomputer does the matrix calculations. In a test on four hydrogen atoms, OCTOPUS and QIQB's Urchin quantum computer ran the whole calculation as one workflow and produced a ground-state energy that matched a conventional reference calculation. That is a small benchmark molecule, chosen to show the plumbing works rather than to beat classical methods.",
+   "The <a href=\"https://www.ais.d3c.osaka-u.ac.jp/en/20261109-hpcqc-int-pressrelease/\">D3 Center's announcement</a> describes SEAFOOD as jointly developed by the D3 Center and QIQB. The release says lessons from the fiscal 2027 trials will be used to improve job scheduling and to explore wider access through national programmes, and that using open-source software and standard interfaces may help other institutions build similar systems."
+  ],
+  "sources": [
+   {
+    "title": "The Quantum Insider: SEAFOOD Puts OCTOPUS and Quantum Computers on the Same Menu (press release)",
+    "url": "https://thequantuminsider.com/2026/11/11/seafood-puts-octopus-and-quantum-computers-on-the-same-menu/"
+   },
+   {
+    "title": "D3 Center, The University of Osaka: The University of Osaka Launches SEAFOOD, a Quantum-HPC Hybrid Computing Platform",
+    "url": "https://www.ais.d3c.osaka-u.ac.jp/en/20261109-hpcqc-int-pressrelease/"
+   }
+  ],
+  "image": {
+   "src": "src-img/osaka-seafood-octopus-quantum-hpc-platform-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Unbranded quantum computer core under a glass dome in a white data room, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 12 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Unbranded quantum computer core under a glass dome in a white data room, no logos or readable text",
+    "sha256": "a4c0243b956932ec8cf503dfed64cbb9852cd63d27d48dc6318fcb9310f530b2",
+    "recorded": "2026-11-12",
+    "approved_by": "Joshua all-out brief 2026-11-12: use bank PNG"
+   }
+  },
+  "disclaimer": "Results described here are as reported by the researchers and companies involved and have not been independently replicated by PhotonDispatch."
+ },
+ {
   "slug": "quantinuum-riken-reimei-h2-upgrade",
   "date": "2026-11-11",
   "updated": "2026-11-11",
@@ -697,7 +976,7 @@
    "<h2>Workforce angle</h2>",
    "Earlier this year IBM said it would establish the FutureNow Chicago centre at IQMP with City Colleges of Chicago, aiming to bring 750 jobs across AI, cybersecurity, data science and quantum. The System Two unveiling is presented as both a research tool and a workforce signal for the state’s quantum cluster.",
    "For Photon Dispatch readers, the concrete news is hardware on the ground in Chicago: a Nighthawk-powered System Two now operational at Hyde Park Labs, with a planned move into IQMP once the park campus is ready.",
-    "IBM has since announced <a href=\"ibm-quantum-nighthawk-r3-520-qubits.html\">Quantum Nighthawk r3, built for 10,000 operations on 520 qubits</a>."
+   "IBM has since announced <a href=\"ibm-quantum-nighthawk-r3-520-qubits.html\">Quantum Nighthawk r3, built for 10,000 operations on 520 qubits</a>."
   ],
   "sources": [
    {
@@ -868,7 +1147,7 @@
    "<strong>Stanford group reading the proof.</strong> PSI says Guy Blanc, Jordan Docter, Carmen Strassle and Li-Yang Tan of Stanford, who in August 2026 settled a special case of the conjecture's prediction for algorithms with a fixed number of parallel rounds, have been reading the full proof, sent comments and are writing a shorter exposition. PSI quotes them as writing: \"This is a huge result. It resolves a decades-old conjecture with important implications for the nature of problems that admit quantum speedups. The proof draws on and extends several lines of work in the analysis of boolean functions and probabilistic combinatorics. Everything is brought together in a rather magical way.\" The quote appears on PSI's page; Photon Dispatch has not independently confirmed the Stanford correspondence beyond that posting.",
    "<strong>Contributors named by PSI.</strong> The page credits David Turturean with leading the work (research system, problem scoping, run, draft packaging and responsibility for correctness); Jim Halverson with auditing the proof; and Phiala Shanahan with comments on the Lean formalization.",
    "<strong>What to watch.</strong> A publicly posted Lean formalization, an arXiv or journal manuscript, and independent expert write-ups (including any Stanford exposition) would let outsiders check the claim beyond the company announcement. Until then, the story rests on PSI's X post, Turturean's X post and PSI's research page.",
-    "DeepMind and Google Quantum AI later described using <a href=\"google-lean-4-verified-quantum-algorithms.html\">Lean 4 to discover formally verified quantum algorithms</a>."
+   "DeepMind and Google Quantum AI later described using <a href=\"google-lean-4-verified-quantum-algorithms.html\">Lean 4 to discover formally verified quantum algorithms</a>."
   ]
  },
  {
@@ -888,7 +1167,7 @@
    "The company says Nexus already supports more than 200 organisations, up 45 per cent in 2026. It also reports that job submissions increased tenfold in the 12 months through August 2026 compared with the preceding 12 month period.",
    "Quantinuum says developers can already apply supported error correction techniques to programs and run supported programs on its Helios system. A further release planned for December is expected to expand hybrid workflows, add supported error correction codes and provide execution analytics.",
    "The roadmap is a statement of intended product development. Its future capabilities, adoption and hardware milestones remain subject to delivery and should be read as company plans.",
-    "Quantinuum later said it and RIKEN had <a href=\"quantinuum-riken-reimei-h2-upgrade.html\">upgraded Japan's Reimei computer to a 56-qubit System Model H2</a>."
+   "Quantinuum later said it and RIKEN had <a href=\"quantinuum-riken-reimei-h2-upgrade.html\">upgraded Japan's Reimei computer to a 56-qubit System Model H2</a>."
   ],
   "disclaimer": "Figures and roadmaps are from company announcements. This is not investment advice.",
   "sources": [
