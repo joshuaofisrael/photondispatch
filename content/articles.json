@@ -1,5 +1,99 @@
 [
  {
+  "slug": "cornell-chip-laser-cooling-trapped-ion-150-microseconds",
+  "date": "2026-11-13",
+  "updated": "2026-11-13",
+  "cat": "research",
+  "title": "Cornell chip cools a trapped ion close to its ground state in about 150 microseconds",
+  "summary": "A Cornell team used light delivered through a chip with built-in optics to cool all three measured motions of a calcium ion at once, about three times faster than a conventional laser set-up.",
+  "body": [
+   "<strong>Short answer:</strong> Researchers at Cornell say a chip that delivers a carefully shaped pattern of laser light can cool a trapped ion's motion close to its quantum ground state in about 150 microseconds, against roughly 500 microseconds with a conventional laser arrangement, a roughly threefold speed-up also highlighted by <a href=\"https://interestingengineering.com/science/cornell-trapped-ion-laser-cooling-quantum-computing\">Interesting Engineering</a>. The work was published on 9 November in PRX Quantum and announced by the university on 12 November.",
+   "Trapped-ion quantum computers hold individual charged atoms in electromagnetic fields, and any leftover motion can spoil calculations, so the ions must be cooled again and again. According to the <a href=\"https://news.cornell.edu/stories/2026/11/researchers-develop-faster-laser-cooling-quantum-computers\">Cornell Chronicle</a>, that cooling can take up a large share of a machine's running time. \"Cooling operations, particularly to near the quantum ground state, end up being a major bottleneck in leading systems,\" said Karan Mehta, the assistant professor of electrical and computer engineering who led the work.",
+   "The team sent two counter-propagating beams through photonic components built into the trap chip, creating a standing wave of bright and dark regions. Placing a calcium ion at a point of minimum intensity let them remove energy from its motion while suppressing interactions that would otherwise heat it, the university says. The method is a form of electromagnetically induced transparency cooling.",
+   "Two further results stand out in the release. The technique cooled all three measured modes of the ion's motion at the same time, across a frequency range of about 5 megahertz, where conventional approaches often need separate cooling steps for each direction. The researchers also report cooling below the conventional Doppler limit, confirming a long-standing theoretical prediction.",
+   "The chips were made commercially in the Netherlands through a collaboration with ETH Zurich, and were packaged to handle wavelengths from ultraviolet to near-infrared while running at cryogenic temperatures. Doctoral students Zhenzhong Xing and Hamim Mahmud Rivy are the co-first authors.",
+   "The experiment used a single ion, so the speed-up has not yet been shown in a full processor. The Cornell team argues the approach applies to larger trapped-ion machines, and integrated optics of this kind are one of the routes several groups are pursuing to scale ion traps to many more qubits."
+  ],
+  "sources": [
+   {
+    "title": "Cornell Chronicle: Researchers develop faster laser cooling for quantum computers",
+    "url": "https://news.cornell.edu/stories/2026/11/researchers-develop-faster-laser-cooling-quantum-computers"
+   },
+   {
+    "title": "Interesting Engineering: Chip-based lasers cool trapped ions 3x faster for quantum computing",
+    "url": "https://interestingengineering.com/science/cornell-trapped-ion-laser-cooling-quantum-computing"
+   }
+  ],
+  "image": {
+   "src": "src-img/cornell-chip-laser-cooling-trapped-ion-150-microseconds-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Laser optics table for a trapped-ion quantum experiment, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 13 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Laser optics table for a trapped-ion quantum experiment, no logos or readable text",
+    "sha256": "3495c5cb01850c7a33583312b2346cc5ab3d59f161821b5b51e48b58b337428f",
+    "recorded": "2026-11-13",
+    "approved_by": "Daily news brief 2026-11-13: image bank first"
+   }
+  },
+  "disclaimer": "This report summarises a university news release about a peer-reviewed paper; the timings are the researchers' own and were measured on a single ion."
+ },
+ {
+  "slug": "rigetti-q3-2026-cepheus-108q-99-5-percent-fidelity",
+  "date": "2026-11-13",
+  "updated": "2026-11-13",
+  "cat": "industry",
+  "title": "Rigetti reports 99.5% median two-qubit fidelity on its 108-qubit system and $1.4 million Q3 revenue",
+  "summary": "Rigetti says Cepheus-1-108Q met its 99.5% fidelity milestone. Third-quarter revenue was $1.4 million, and the company now targets a 300-plus-qubit system by mid-2028.",
+  "body": [
+   "<strong>Short answer:</strong> Rigetti Computing says its Cepheus-1-108Q system reached 99.5% median two-qubit gate fidelity across 108 qubits, meeting a milestone it had set for the machine. In the same <a href=\"https://www.rigetti.com/news/rigetti-computing-reports-third-quarter-2026-financial-results\">third-quarter results release</a> on 11 November, the company reported revenue of $1.4 million and set a new target of a 300-plus-qubit system by mid-2028.",
+   "The fidelity figure matters because Cepheus-1-108Q is built from 12 interconnected nine-qubit chiplets, and Rigetti has argued that chiplets are a practical way to scale superconducting processors. According to the release, <a href=\"https://thequantuminsider.com/2026/11/11/rigetti-q3-2026-results-quantum-computing-roadmap/\">carried in full by The Quantum Insider</a>, the system also reached 99.6% median two-qubit fidelity on an 80-qubit sublattice and 99.7% on a 50-qubit sublattice. Rigetti credits work across chip design, materials, manufacturing, calibration and system engineering.",
+   "<h2>The numbers</h2>",
+   "Rigetti reported a third-quarter operating loss of $33.2 million and a GAAP net loss of $3.1 million, with a non-GAAP net loss of $20.5 million. Revenue for the first nine months of 2026 was $10.9 million, up about 110% from $5.2 million a year earlier. The company ended September with $497.1 million in cash, cash equivalents and available-for-sale investments, and no debt. It expects full-year 2026 revenue of about $20 million, assuming customer acceptance by C-DAC and the related revenue recognition in the fourth quarter.",
+   "Chief executive Subodh Kulkarni also pointed to a definitive $100 million agreement with the U.S. Department of Commerce, signed during the quarter.",
+   "<h2>Roadmap</h2>",
+   "The next system target is more than 300 qubits with about 99.7% median two-qubit fidelity and gate speeds below 60 nanoseconds by mid-2028, with more qubits per chiplet, faster readout and more cryogenic capacity. Rigetti still aims for roughly 1,000 qubits at about 99.9% fidelity and gate speeds below 50 nanoseconds within about three years, and says it plans to pack more qubits into a single dilution refrigerator rather than network several together.",
+   "Rigetti says its gates run in 50 to 70 nanoseconds. Its claim that this is about 10,000 times faster than trapped-ion systems is the company's own comparison."
+  ],
+  "sources": [
+   {
+    "title": "Rigetti Computing reports third quarter 2026 financial results",
+    "url": "https://www.rigetti.com/news/rigetti-computing-reports-third-quarter-2026-financial-results"
+   },
+   {
+    "title": "The Quantum Insider: Rigetti Reports Q3 2026 Results and Updates Quantum Computing Roadmap",
+    "url": "https://thequantuminsider.com/2026/11/11/rigetti-q3-2026-results-quantum-computing-roadmap/"
+   }
+  ],
+  "image": {
+   "src": "src-img/rigetti-q3-2026-cepheus-108q-99-5-percent-fidelity-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Gold-plated dilution refrigerator cryostat open in a physics lab, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 13 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Gold-plated dilution refrigerator cryostat open in a physics lab, no logos or readable text",
+    "sha256": "ec981e708e499edaa42d84a93f4cea6104995fc528101158601fa63c24560ac2",
+    "recorded": "2026-11-13",
+    "approved_by": "Daily news brief 2026-11-13: image bank first"
+   }
+  },
+  "disclaimer": "This report summarises a company results release; figures and targets are Rigetti's own and have not been independently verified. This is not investment advice."
+ },
+ {
   "slug": "gartner-quantum-market-shapers-ionq-d-wave",
   "date": "2026-11-12",
   "updated": "2026-11-12",
