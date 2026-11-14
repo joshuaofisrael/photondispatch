@@ -1,5 +1,105 @@
 [
  {
+  "slug": "atom-computing-100-million-chips-rd-award-finalized",
+  "date": "2026-11-14",
+  "updated": "2026-11-14",
+  "cat": "industry",
+  "title": "Commerce Department finalizes CHIPS R&D award of up to $100 million to Atom Computing",
+  "summary": "The award turns an earlier letter of intent into a signed agreement and funds work toward neutral-atom quantum computers that control tens of thousands of qubits.",
+  "body": [
+   "<strong>Short answer:</strong> The US Department of Commerce has signed a final CHIPS and Science Act research and development award of up to $100 million with Atom Computing, a neutral-atom quantum computing company, according to an <a href=\"https://www.nist.gov/news-events/news/2026/11/department-commerce-announces-finalization-chips-rd-award-atom-computing\">announcement published by NIST</a>. The deal formalises an earlier letter of intent, as tech journalist Rich Tehrani <a href=\"https://x.com/rtehrani/status/2121397199812616468\">noted on X</a> on Friday evening.",
+   "The announcement comes from the department's CHIPS Research and Development Office. It says the money will support R&D on semiconductors and related technology for utility-scale, commercially useful neutral-atom quantum computers, including the hardware development and systems integration needed to manipulate, control and address tens of thousands of qubits, and to validate their performance.",
+   "<a href=\"https://quantumcomputingreport.com/atom-computing-finalizes-100-million-u-s-department-of-commerce-rd-agreement-for-fault-tolerant-quantum-systems/\">Quantum Computing Report</a> says the agreement supports hardware engineering and manufacturing scale-up at Atom Computing's operations in Boulder, Colorado. It lists the scope as in-house component engineering, parallel testbeds and supply-chain integration, which it says should shorten hardware validation cycles.",
+   "Atom Computing traps individual neutral atoms with light and uses them as qubits. Its arrays have passed 1,000 physical qubits, Quantum Computing Report says, and it lists the company as the only neutral-atom vendor in Stage C of DARPA's Quantum Benchmarking Initiative.",
+   "The figure is a ceiling, not a cheque: the government describes the award as up to $100 million. Neither the NIST announcement nor the trade coverage we read sets out a payment schedule or the specific milestones attached."
+  ],
+  "sources": [
+   {
+    "title": "NIST: Department of Commerce Announces Finalization of CHIPS R&D Award with Atom Computing Inc.",
+    "url": "https://www.nist.gov/news-events/news/2026/11/department-commerce-announces-finalization-chips-rd-award-atom-computing"
+   },
+   {
+    "title": "Quantum Computing Report: Atom Computing Finalizes $100 Million U.S. Department of Commerce R&D Agreement",
+    "url": "https://quantumcomputingreport.com/atom-computing-finalizes-100-million-u-s-department-of-commerce-rd-agreement-for-fault-tolerant-quantum-systems/"
+   },
+   {
+    "title": "Rich Tehrani on X: Atom Computing signs $100 million quantum R&D deal with Commerce",
+    "url": "https://x.com/rtehrani/status/2121397199812616468"
+   }
+  ],
+  "image": {
+   "src": "src-img/atom-computing-100-million-chips-rd-award-finalized-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Vacuum chamber with a glowing neutral atom array, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 14 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Vacuum chamber with a glowing neutral atom array, no logos or readable text",
+    "sha256": "1482ebf6ea7a0b5855affc6077049245ae58a340d893dd9f778af90eaf2989a0",
+    "recorded": "2026-11-14",
+    "approved_by": "Daily news brief 2026-11-14: image bank first"
+   }
+  },
+  "disclaimer": "Funding figures are the maximum award stated by the Department of Commerce; payments under CHIPS R&D awards are typically tied to milestones."
+ },
+ {
+  "slug": "q-ctrl-290-million-series-c-salesforce-ventures",
+  "date": "2026-11-14",
+  "updated": "2026-11-14",
+  "cat": "industry",
+  "title": "Q-CTRL raises $290 million Series C led by Salesforce Ventures, valued above $1 billion",
+  "summary": "The Sydney-based quantum software and navigation company says the oversubscribed round will expand its software work and deployment of its GPS-free Ironstone Opal navigation system.",
+  "body": [
+   "<strong>Short answer:</strong> Quantum software company Q-CTRL has raised US$290 million (A$415 million) in a Series C round led by Salesforce Ventures, the company <a href=\"https://q-ctrl.com/blog/q-ctrl-secures-us-290-million-series-c-funding-led-by-salesforce-ventures-to-accelerate-the-convergence-of-quantum-and-ai\">announced on Thursday</a>. Q-CTRL says the round was oversubscribed and expanded twice, and calls it the largest quantum-sector fundraise for a software-focused business.",
+   "<a href=\"https://qz.com/q-ctrl-290-million-series-c-salesforce-ventures-111226\">Quartz</a>, citing Bloomberg, reports that the round values the company at more than $1 billion. Bullhound Capital and Affinity Partners made significant contributions, Q-CTRL says, and <a href=\"https://siliconangle.com/2026/11/12/quantum-sensor-and-software-maker-q-ctrl-raises-290m-in-funding/\">SiliconANGLE</a> lists AMD Ventures among more than a dozen other investors. Quartz names returning investors including In-Q-Tel, Lockheed Martin Ventures, DCVC and Square Peg.",
+   "## What Q-CTRL sells",
+   "The company's best-known product is Ironstone Opal, a navigation system meant to work when GPS is jammed or unavailable. SiliconANGLE explains that it uses quantum magnetometers and gravimeters to read small variations in the Earth's magnetic field and gravity, then matches them against pre-loaded maps. Q-CTRL says the system is being deployed on commercial aircraft and autonomous vehicles; Quartz reports work with Airbus and Lockheed Martin.",
+   "Q-CTRL also sells software that calibrates qubits and reduces error rates on quantum computers, which it describes as \"AI for quantum\" infrastructure.",
+   "## What the money is for",
+   "Q-CTRL says it will use the funds to scale its software and expand global deployment of its quantum navigation systems. The claims about performance in the field are the company's own; we have not seen independent test data."
+  ],
+  "sources": [
+   {
+    "title": "Q-CTRL: Q-CTRL Secures US$290 Million Series C Funding Led by Salesforce Ventures",
+    "url": "https://q-ctrl.com/blog/q-ctrl-secures-us-290-million-series-c-funding-led-by-salesforce-ventures-to-accelerate-the-convergence-of-quantum-and-ai"
+   },
+   {
+    "title": "SiliconANGLE: Quantum sensor and software maker Q-CTRL raises $290M in funding",
+    "url": "https://siliconangle.com/2026/11/12/quantum-sensor-and-software-maker-q-ctrl-raises-290m-in-funding/"
+   },
+   {
+    "title": "Quartz: Q-CTRL raised $290 million at more than $1 billion valuation",
+    "url": "https://qz.com/q-ctrl-290-million-series-c-salesforce-ventures-111226"
+   }
+  ],
+  "image": {
+   "src": "src-img/q-ctrl-290-million-series-c-salesforce-ventures-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Researcher seen from behind adjusting cables on a quantum cryostat, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 14 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Researcher seen from behind adjusting cables on a quantum cryostat, no logos or readable text",
+    "sha256": "68c77613fb088935771c9e52b22bbf86a9acce1b213e0b5577b11ce5dfdcc8db",
+    "recorded": "2026-11-14",
+    "approved_by": "Daily news brief 2026-11-14: image bank first"
+   }
+  },
+  "disclaimer": "Valuation is as reported by Bloomberg via Quartz; Q-CTRL describes itself as the newest quantum unicorn but its release does not state a figure."
+ },
+ {
   "slug": "cornell-chip-laser-cooling-trapped-ion-150-microseconds",
   "date": "2026-11-13",
   "updated": "2026-11-13",
