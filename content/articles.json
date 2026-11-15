@@ -1,5 +1,144 @@
 [
  {
+  "slug": "riken-symplectic-double-code-fewer-qubits-state-preparation",
+  "date": "2026-11-15",
+  "updated": "2026-11-15",
+  "cat": "research",
+  "title": "RIKEN cuts the qubit cost of preparing a high-rate error-correcting code, in simulation",
+  "summary": "A Science Advances paper from RIKEN shrinks the encoding circuit for a 30-qubit code holding six logical qubits from 108 CNOT gates to 67 and roughly halves the qubits needed for state preparation.",
+  "body": [
+   "<strong>Short answer:</strong> Researchers at RIKEN's Center for Quantum Computing have designed a cheaper way to prepare the protected starting states that a high-rate quantum error-correcting code needs, according to a <a href=\"https://www.riken.jp/press/2026/20261114_2/index.html\">RIKEN announcement</a> dated 14 November. The work was published in Science Advances on 13 November.",
+   "The team, Naoyuki Kanomata and Hayato Goto, studied a symplectic double code that stores six logical qubits in 30 physical qubits. RIKEN says that is a code rate of 20%, against about 4% for a surface code with similar error-correcting ability, and that other codes with a 20% rate usually need more than 100 physical qubits.",
+   "High-rate codes save hardware on paper, but preparing their encoded states fault-tolerantly normally adds many extra qubits and complex error checks. RIKEN says the team reduced the number of CNOT gates in the circuit that prepares all six logical qubits in the plus state from 108 to 67, then extended an error-detection method Goto had developed for the Steane code so that dangerous errors are caught with fewer qubits.",
+   "In numerical simulations of a logical CNOT gate, the method kept logical error rates similar to a conventional approach that uses six copies of the encoded state, while cutting the average total number of physical qubits needed for preparation to half or less. The team also proposed a way to prepare arbitrary states, which RIKEN says allows any gate operation on the code.",
+   "<a href=\"https://qubitwire.com/articles/riken-quantum-code-state-preparation-simulation\">QubitWire notes</a> that the core idea appeared in a <a href=\"https://arxiv.org/abs/2509.15457\">preprint</a> in September 2025, that the 30-qubit block is not the full size of the preparation system, and that the earlier manuscript's simulations left out memory errors and single-qubit gate errors. A hardware test would be needed to see how much of the saving survives real device noise."
+  ],
+  "sources": [
+   {
+    "title": "RIKEN press release: Protecting more quantum information with fewer qubits (Japanese)",
+    "url": "https://www.riken.jp/press/2026/20261114_2/index.html"
+   },
+   {
+    "title": "QubitWire: RIKEN proposes fewer steps to prepare protected quantum bits",
+    "url": "https://qubitwire.com/articles/riken-quantum-code-state-preparation-simulation"
+   },
+   {
+    "title": "arXiv: Kanomata and Goto, symplectic double code preprint",
+    "url": "https://arxiv.org/abs/2509.15457"
+   }
+  ],
+  "image": {
+   "src": "src-img/riken-symplectic-double-code-fewer-qubits-state-preparation-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Quantum processor chip held in tweezers under blue light, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 15 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Quantum processor chip held in tweezers under blue light, no logos or readable text",
+    "sha256": "44a25135819f7822b3806fe1c0530b1ba89ca1138701c9711e7eba10cea66a99",
+    "recorded": "2026-11-15",
+    "approved_by": "Daily news brief 2026-11-15: image bank first"
+   }
+  },
+  "disclaimer": "The result comes from numerical simulations, not a hardware experiment."
+ },
+ {
+  "slug": "qfactorial-monash-quantum-logistics-grant-1-12-million",
+  "date": "2026-11-15",
+  "updated": "2026-11-15",
+  "cat": "industry",
+  "title": "QFactorial and Monash win about A$1.13 million to trial a quantum route-planning solver with freight firms",
+  "summary": "The Australian government grant funds a 15-month demonstrator of a hybrid quantum-classical optimiser for last-mile delivery, using IBM Quantum, AWS and Fujitsu computing and data from Team Global Express and Opal Packaging.",
+  "body": [
+   "<strong>Short answer:</strong> Perth-based quantum software company QFactorial will lead a government-funded project to test a hybrid quantum-classical optimisation solver on real freight problems, with Monash University as a research partner. The <a href=\"https://business.gov.au/grants-and-programs/critical-technologies-challenge-program-round-2/grant-recipients-stage-2\">official recipient list</a> for Round 2, Stage 2 of Australia's Critical Technologies Challenge Program shows A$1,126,846 for the project, titled \"Supply chain optimisation with a quantum solver for last-mile delivery\".",
+   "<a href=\"https://quantumcomputingreport.com/qfactorial-and-monash-university-secure-a1-12-million-758-6k-usd-australian-government-grant-for-quantum-logistics-optimization/\">Quantum Computing Report</a>, which reported the award on 13 November, says it was one of six Stage 2 demonstrator projects chosen from 14 initial feasibility awards, and that the 15-month project aims to move QFactorial's routing and fleet-utilisation platform from technology readiness level 5 to level 7.",
+   "The government list names the partners as Amazon Web Services, Fujitsu Australia, Griffith University, IBM Australia, Ipec, Monash University, Opal Packaging Australia, Team Global Express and the University of Queensland. According to Quantum Computing Report, IBM Quantum, AWS and Fujitsu provide quantum and classical computing for hardware trials, while Team Global Express and Opal Packaging supply operational freight and packaging data.",
+   "Monash researchers led by Professor Muhammad Usman will work on making the algorithms more efficient and on error correction tailored to the specific circuits the solver uses, so that it holds up better against noise on current quantum processors, the outlet reports.",
+   "Vehicle routing and load planning are classic combinatorial problems where exact classical solvers can run out of time as constraints grow. The project's job is to show whether a hybrid approach can produce useful plans on real operator data within those limits; the public material does not yet include performance results."
+  ],
+  "sources": [
+   {
+    "title": "business.gov.au: Critical Technologies Challenge Program Round 2, Stage 2 successful applicants",
+    "url": "https://business.gov.au/grants-and-programs/critical-technologies-challenge-program-round-2/grant-recipients-stage-2"
+   },
+   {
+    "title": "Quantum Computing Report: QFactorial and Monash University secure A$1.12 million Australian government grant",
+    "url": "https://quantumcomputingreport.com/qfactorial-and-monash-university-secure-a1-12-million-758-6k-usd-australian-government-grant-for-quantum-logistics-optimization/"
+   }
+  ],
+  "image": {
+   "src": "src-img/qfactorial-monash-quantum-logistics-grant-1-12-million-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Stacked shipping containers and crane silhouette at dusk, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 15 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Stacked shipping containers and crane silhouette at dusk, no logos or readable text",
+    "sha256": "00993fa4ce37241680823432ad41518b8fedd09488a4aacaab2e4a3530f5f5ff",
+    "recorded": "2026-11-15",
+    "approved_by": "Daily news brief 2026-11-15: image bank first"
+   }
+  },
+  "disclaimer": "Grant figures are from the Australian government's published recipient list; the project is a demonstrator, not a commercial product."
+ },
+ {
+  "slug": "slovakia-four-city-entanglement-qkd-network-real-time-keys",
+  "date": "2026-11-15",
+  "updated": "2026-11-15",
+  "cat": "research",
+  "title": "Slovak researchers report a four-city entanglement QKD network delivering keys in real time over existing fibre",
+  "summary": "A 12 November preprint describes the entanglement-based segment of Slovakia's national quantum communication infrastructure, linking Bratislava, Trnava, Nitra and Trenčín, with 13.5 bit/s over 109 km.",
+  "body": [
+   "<strong>Short answer:</strong> A team working on Slovakia's national quantum communication infrastructure has reported an entanglement-based quantum key distribution (QKD) network that links four cities in the west of the country over deployed telecom fibre and delivers finished keys in real time. The work was posted to <a href=\"https://arxiv.org/abs/2611.17265\">arXiv</a> on 12 November.",
+   "According to <a href=\"https://quantum.world/news/preprint-four-city-slovak-qkd-network-live-keys\">Quantum.world</a>, the network connects Bratislava, Trnava, Nitra and Trenčín. A central node in Trnava generates polarisation-entangled photon pairs and routes them by wavelength, so Trnava, Bratislava and Nitra form a fully meshed sub-network without trusted relay nodes, while Trenčín connects through the central node. The paper says all links ran at the same time and keys are handed to applications through the ETSI GS QKD 014 interface.",
+   "The authors stress that their rates are measured after the complete post-processing chain rather than estimated from raw photon coincidences. With partial dispersion compensation they report 13.5 bit/s over 109 km, and 4.3 bit/s over a link with 32.1 dB of accumulated loss between two cities that have no direct fibre between them.",
+   "The paper is candid about a security gap. When the team benchmarked its privacy amplification against finite-key bounds, the heuristic setting used in the deployment could produce more key than the bound allows, and on the 142.9 km link the implemented scheme yields no certifiable key at all. The authors estimate that replacing their detect-and-discard reconciliation with true error correction would raise the finite-key rate by a factor of 4.1 to 6.6 and give a positive rate on that longest link.",
+   "The preprint also introduces a matrix formalism for planning passive wavelength routing so that every pair of users shares exactly one entangled channel."
+  ],
+  "sources": [
+   {
+    "title": "arXiv: A deployed four-city entanglement-based QKD network with real-time key delivery, benchmarked against finite-key security bounds",
+    "url": "https://arxiv.org/abs/2611.17265"
+   },
+   {
+    "title": "Quantum.world: Preprint reports live keys from four-city Slovak QKD network",
+    "url": "https://quantum.world/news/preprint-four-city-slovak-qkd-network-live-keys"
+   }
+  ],
+  "image": {
+   "src": "src-img/slovakia-four-city-entanglement-qkd-network-real-time-keys-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Utility van open on a rural roadside with fibre splicing gear, technician seen from behind, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 15 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Utility van open on a rural roadside with fibre splicing gear, technician seen from behind, no logos or readable text",
+    "sha256": "30420f25469bd50c96cd14b468221debd02b4a6007678e2a909448a289b2e8a3",
+    "recorded": "2026-11-15",
+    "approved_by": "Daily news brief 2026-11-15: image bank first"
+   }
+  },
+  "disclaimer": "The results are from a preprint that has not yet been peer reviewed. The authors report that the key on the longest link is not certified under their finite-key bound."
+ },
+ {
   "slug": "atom-computing-100-million-chips-rd-award-finalized",
   "date": "2026-11-14",
   "updated": "2026-11-14",
