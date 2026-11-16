@@ -1,5 +1,87 @@
 [
  {
+  "slug": "liquid-c2-graphiant-post-quantum-network-service-africa",
+  "date": "2026-11-16",
+  "updated": "2026-11-16",
+  "cat": "industry",
+  "title": "Liquid C2 and Graphiant launch a managed post-quantum network service for African enterprises",
+  "summary": "The Cassava Technologies business will resell Graphiant's network-as-a-service platform with post-quantum encryption, routing controls and audit trails, aimed at banks, government and healthcare users.",
+  "body": [
+   "<strong>Short answer:</strong> Liquid C2, part of Cassava Technologies, has partnered with US networking company Graphiant to sell a managed \"Quantum Secure Network-as-a-Service\" to businesses in Africa, <a href=\"https://thequantuminsider.com/2026/11/16/liquid-c2-graphiant-quantum-secure-networking-africa/\">according to a press release carried by The Quantum Insider</a> on 16 November.",
+   "The service wraps Graphiant's network platform into a managed offering that links branches, data centres, cloud environments and business partners. The companies say it combines post-quantum cryptography with network segmentation, central security policies and private cloud connections, so customers do not have to manage each link as a separate project.",
+   "Two features stand out. Customers can choose which countries their traffic passes through and keep an auditable record of every route, which the companies pitch at regulated users in finance, government and healthcare that want to move AI workloads onto Cassava's AI Factories. The service also adds network-level controls over AI agent and IoT traffic, limiting which destinations those systems can reach and keeping evidence of each connection.",
+   "Graphiant chief executive Ali Shaikh argued that updating thousands of applications one by one is not realistic, and that adding quantum protection at the network layer means \"one upgrade covers them all\". He also pointed to Google's own 2029 target for becoming quantum-safe.",
+   "The release gives no pricing, launch customers, list of countries or the specific post-quantum algorithms used. Network-layer encryption protects data in transit between sites, which addresses the risk of data being recorded now and decrypted later, but it does not replace upgrading the encryption inside the applications themselves."
+  ],
+  "sources": [
+   {
+    "title": "The Quantum Insider: Liquid C2 and Graphiant partner on quantum-secure networking in Africa (press release)",
+    "url": "https://thequantuminsider.com/2026/11/16/liquid-c2-graphiant-quantum-secure-networking-africa/"
+   }
+  ],
+  "image": {
+   "src": "src-img/liquid-c2-graphiant-post-quantum-network-service-africa-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Empty network operations centre with a wall of abstract network maps and empty chairs, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 16 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Empty network operations centre with a wall of abstract network maps and empty chairs, no logos or readable text",
+    "sha256": "61a7361017e98c855eaa8fd765119e7bc022f13cff3d14b1f6c4249e1196e01d",
+    "recorded": "2026-11-16",
+    "approved_by": "Daily news brief 2026-11-16: image bank first"
+   }
+  },
+  "disclaimer": "Details come from the companies' press release. No pricing, customers or launch countries were given."
+ },
+ {
+  "slug": "jij-mitsubishi-electric-jhpc-quantum-thermal-fluid-hybrid-solver",
+  "date": "2026-11-16",
+  "updated": "2026-11-16",
+  "cat": "algorithms",
+  "title": "Mitsubishi Electric and Jij will test a hybrid quantum solver for thermal-fluid simulation on Japan's quantum-HPC platform",
+  "summary": "Their proposal was accepted into the JHPC-quantum test user programme run by RIKEN and SoftBank, which links quantum computers with supercomputers.",
+  "body": [
+   "<strong>Short answer:</strong> Tokyo quantum software company Jij says a joint proposal with Mitsubishi Electric has been selected for the JHPC-quantum Test User Program, <a href=\"https://thequantuminsider.com/2026/11/16/jij-mitsubishi-electric-jhpc-quantum-thermal-fluid-analysis/\">according to a press release published by The Quantum Insider</a> on 16 November. The pair will evaluate quantum-classical hybrid algorithms for solving the linear systems that come up in thermal-fluid analysis.",
+   "The project is titled \"Performance Evaluation of a Quantum-Classical Hybrid Linear Solver for Thermal-Fluid Analysis\". Mitsubishi Electric is the lead proposer and Jij the joint proposer. The release says thermal-fluid simulation is used to design products ranging from transport equipment to electronic components and air-conditioning systems, and that larger, more accurate simulations are making computing efficiency a growing problem.",
+   "JHPC-quantum is a research and development project run jointly by RIKEN and SoftBank to build system software that connects quantum computers with high-performance computing systems. The test user programme invites proposals that use the platform while it is being developed, to gather feedback and identify promising applications. The work is commissioned by NEDO with support from Japan's Ministry of Economy, Trade and Industry.",
+   "Tsuyoshi Yoshida, who leads Mitsubishi Electric's quantum project group, said the company wants to raise the technology's readiness level using the computing resources available. Jij chief executive Yu Yamashiro said the aim is to understand where quantum computing can make a meaningful difference on real industrial problems.",
+   "The release does not give a timeline, the size of the problems to be tested or which quantum hardware will be used. Linear solvers are a common target for hybrid methods because they sit at the heart of many engineering simulations, but useful speed-ups on today's machines are still unproven."
+  ],
+  "sources": [
+   {
+    "title": "The Quantum Insider: JIJ and Mitsubishi Electric selected for JHPC-quantum programme (press release)",
+    "url": "https://thequantuminsider.com/2026/11/16/jij-mitsubishi-electric-jhpc-quantum-thermal-fluid-analysis/"
+   }
+  ],
+  "image": {
+   "src": "src-img/jij-mitsubishi-electric-jhpc-quantum-thermal-fluid-hybrid-solver-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Gold-plated tiers and copper cables of a quantum computer cryostat, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 16 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Gold-plated tiers and copper cables of a quantum computer cryostat, no logos or readable text",
+    "sha256": "af54cc367dc8f47da5985518b6141b3b12f6a243c0e082700cfa116dcc8ae576",
+    "recorded": "2026-11-16",
+    "approved_by": "Daily news brief 2026-11-16: image bank first"
+   }
+  },
+  "disclaimer": "The project is an evaluation of performance and technical challenges, not a demonstration of quantum advantage."
+ },
+ {
   "slug": "riken-symplectic-double-code-fewer-qubits-state-preparation",
   "date": "2026-11-15",
   "updated": "2026-11-15",
