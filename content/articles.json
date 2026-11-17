@@ -1,5 +1,91 @@
 [
  {
+  "slug": "ibm-nvidia-fermilab-modular-quantum-co-design-platform-sc26",
+  "date": "2026-11-17",
+  "updated": "2026-11-17",
+  "cat": "hardware",
+  "title": "IBM, NVIDIA and Fermilab plan a co-design platform that puts GPUs next to IBM quantum computers",
+  "summary": "Announced at SC26, the platform will co-locate NVIDIA DGX B200 systems with IBM quantum processors, including Nighthawk, and draw on Fermilab's SQMS Center to test how modular quantum machines and classical compute scale together.",
+  "body": [
+   "<strong>Short answer:</strong> IBM, NVIDIA and Fermi National Accelerator Laboratory plan to build a shared platform for designing modular quantum computers alongside classical supercomputers. <a href=\"https://x.com/IBMResearch/status/2122370483316203814\">IBM Research posted the news on X</a> from the SC26 supercomputing conference in Chicago on Monday, and the details are in <a href=\"https://newsroom.ibm.com/2026-11-16-ibm%2C-fermilab%2C-and-nvidia-announce-plans-for-new-co-design-platform-to-accelerate-the-development-of-next-generation%2C-modular-quantum-computers\">IBM's press release</a>.",
+   "According to the release, the platform will co-locate NVIDIA DGX B200 systems with IBM quantum computers, including those powered by IBM Quantum Nighthawk. IBM describes Nighthawk as its most powerful processor so far, running circuits of up to 7,500 two-qubit operations on 120 qubits at up to 100,000 samples per second.",
+   "The aim is to test what is needed for several quantum processors to work together and for classical computing to scale alongside them. Fermilab's Superconducting Quantum Materials and Systems (SQMS) Center will contribute its work on ultracoherent quantum hardware. Fermilab and IBM also plan to study calculations in high-energy and nuclear physics that classical machines cannot handle alone, such as lattice gauge theories, neutrino interactions and nuclear simulations.",
+   "Jerry Chow, IBM Fellow and chief technology officer of quantum-centric computing, said the partners want to explore how real problems \"can help us shape the modular, interconnected architectures that will define the next generation of quantum computers\".",
+   "The release describes intentions rather than a working system. It does not say when the platform will be running, where it will be housed or how much it will cost, so the useful milestones to watch are the first published experiments from the shared setup."
+  ],
+  "sources": [
+   {
+    "title": "IBM Research on X: IBM, NVIDIA and Fermilab co-design platform announced at SC26",
+    "url": "https://x.com/IBMResearch/status/2122370483316203814"
+   },
+   {
+    "title": "IBM newsroom: IBM, Fermilab, and NVIDIA announce plans for new co-design platform (16 Nov 2026)",
+    "url": "https://newsroom.ibm.com/2026-11-16-ibm%2C-fermilab%2C-and-nvidia-announce-plans-for-new-co-design-platform-to-accelerate-the-development-of-next-generation%2C-modular-quantum-computers"
+   }
+  ],
+  "image": {
+   "src": "src-img/ibm-nvidia-fermilab-modular-quantum-co-design-platform-sc26-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Gold-plated quantum computer cryostat hanging in a lab, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 17 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Gold-plated quantum computer cryostat hanging in a lab, no logos or readable text",
+    "sha256": "8546603dbea6f48ff732e6cf1db64c3361dd1c6b2a708abbcfc042a1a98bea88",
+    "recorded": "2026-11-17",
+    "approved_by": "Daily news brief 2026-11-17: image bank first"
+   }
+  },
+  "disclaimer": "This is an announced plan. The companies gave no start date, cost or site details, and no results have been published yet."
+ },
+ {
+  "slug": "ibm-amd-pelagos-open-source-quantum-error-correction-decoder-tool",
+  "date": "2026-11-17",
+  "updated": "2026-11-17",
+  "cat": "research",
+  "title": "IBM and AMD release Pelagos, an open-source GPU tool for testing quantum error-correction decoders",
+  "summary": "The framework runs large decoder-evaluation campaigns on AMD or NVIDIA GPUs. IBM says tests on AMD Instinct MI300X and MI355X chips showed roughly 7.5 times speed-ups across eight GPUs for the decoding stage.",
+  "body": [
+   "<strong>Short answer:</strong> IBM and AMD have released Pelagos, an open-source framework that uses GPUs to evaluate quantum error-correction decoders at large scale, <a href=\"https://newsroom.ibm.com/blog-pelagos-accelerates-quantum-error-correction-decoding-at-scale\">IBM announced</a> at SC26 this week.",
+   "Error-correcting codes protect quantum information by repeatedly checking for signs of errors. Those checks produce data called syndromes, and a decoder works out the most likely correction. Proving that a decoder works well can mean simulating billions of sampled error patterns, which takes a lot of classical computing. Pelagos, named after the Greek word for \"open sea\", is meant to make those campaigns faster and easier to run.",
+   "The tool is built with the Triton programming framework and supports both AMD and NVIDIA GPUs, IBM says. Earlier studies showed up to 97 times the throughput of a single CPU core. New research released alongside it shows the GPU decoding stage scaling to roughly 7.5 times the speed of a single GPU across eight AMD Instinct MI300X and MI355X accelerators. The framework has also been run on Lux, an AMD-powered system at Oak Ridge National Laboratory.",
+   "IBM and AMD also published a survey paper on hierarchical decoding, which argues that fault-tolerant quantum computing will need advances in the classical systems that handle decoding, orchestration and data movement, not just in quantum hardware. Pelagos complements the quantum error-correction co-design platform that ORNL, IBM and AMD announced earlier this month.",
+   "The code is on GitHub, so other groups can check the performance claims for themselves. That makes it a practical release for decoder researchers rather than a hardware milestone."
+  ],
+  "sources": [
+   {
+    "title": "IBM newsroom: IBM and AMD accelerate quantum error correction decoding at scale",
+    "url": "https://newsroom.ibm.com/blog-pelagos-accelerates-quantum-error-correction-decoding-at-scale"
+   }
+  ],
+  "image": {
+   "src": "src-img/ibm-amd-pelagos-open-source-quantum-error-correction-decoder-tool-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Long data centre aisle of server racks with blue lighting, no people, logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 17 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Long data centre aisle of server racks with blue lighting, no people, logos or readable text",
+    "sha256": "c30f66e3c71452c5136fc464ba7bac8b337aab230fa8546a0afbefde3e97873d",
+    "recorded": "2026-11-17",
+    "approved_by": "Daily news brief 2026-11-17: image bank first"
+   }
+  },
+  "disclaimer": "Performance figures are IBM and AMD's own results; independent benchmarks have not been published."
+ },
+ {
   "slug": "liquid-c2-graphiant-post-quantum-network-service-africa",
   "date": "2026-11-16",
   "updated": "2026-11-16",
