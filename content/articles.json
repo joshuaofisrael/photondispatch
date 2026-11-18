@@ -1,5 +1,95 @@
 [
  {
+  "slug": "iqm-halocene-upgrade-program-1000-qubits-sc26",
+  "date": "2026-11-18",
+  "updated": "2026-11-18",
+  "cat": "hardware",
+  "title": "IQM offers Halocene buyers an upgrade path from 150 to more than 1,000 qubits, without downtime",
+  "summary": "Announced at SC26 in Chicago, the programme installs each new Halocene system while the old one keeps running and includes IQM's HPC integration service. IQM gave no prices or dates for the larger systems.",
+  "body": [
+   "<strong>Short answer:</strong> IQM Quantum Computers has launched an upgrade programme for Halocene, its error-correction product line, that gives customers a route from today's 150-qubit system to a future system with more than 1,000 qubits. The company <a href=\"https://iqm.tech/press-releases/iqm-unveils-halocene-upgrade-program-at-sc26-creating-a-path-to-over-1000-qubits-while-accelerating-integration-with-ai-based-applications/\">announced it on 17 November</a> at the SC26 supercomputing conference in Chicago.",
+   "According to IQM, when a customer upgrades it installs the new Halocene machine while the current one keeps running, then removes the old system once the new one is in service. Its HPC integration service, included with every upgrade, connects each new system to the centre's existing infrastructure, job schedulers and GPU platforms. IQM says Halocene generations share infrastructure, error-correction methods and software, so the work done on one system carries over to the next.",
+   "IQM introduced Halocene in November 2025 with a 150-qubit system. The LUMI AI Factory, coordinated by Finland's CSC, has since chosen it for LUMI-IQ, which will be connected to the upcoming LUMI-AI supercomputer. The company points to its record with existing customers: VTT has moved through IQM systems since 2021, from 5 qubits to a 53-qubit machine coupled with LUMI, and the Leibniz Supercomputing Centre has integrated four IQM systems.",
+   "\"With Halocene now upgradable to over 1,000 qubits, our customers can start today, run hybrid workloads alongside their AI and HPC systems, and move to each new system without downtime,\" said Jan Goetz, IQM's co-founder and chief executive. <a href=\"https://quantumcomputingreport.com/iqm-announces-zero-downtime-upgrade-program-for-halocene-product-line-scaling-past-1000-qubits/\">Quantum Computing Report</a> describes the plan as a zero-downtime upgrade programme for the product line.",
+   "The release does not say when the 1,000-qubit system will be ready, what an upgrade costs, or what logical-qubit performance customers should expect. The pitch is really about procurement: a centre buying a quantum computer now wants to know it will not be stranded in a few years, and IQM is promising continuity rather than a specific technical milestone."
+  ],
+  "sources": [
+   {
+    "title": "IQM: IQM unveils Halocene upgrade program at SC26 (17 Nov 2026)",
+    "url": "https://iqm.tech/press-releases/iqm-unveils-halocene-upgrade-program-at-sc26-creating-a-path-to-over-1000-qubits-while-accelerating-integration-with-ai-based-applications/"
+   },
+   {
+    "title": "Quantum Computing Report: IQM announces zero-downtime upgrade program for Halocene",
+    "url": "https://quantumcomputingreport.com/iqm-announces-zero-downtime-upgrade-program-for-halocene-product-line-scaling-past-1000-qubits/"
+   }
+  ],
+  "image": {
+   "src": "src-img/iqm-halocene-upgrade-program-1000-qubits-sc26-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Gold-plated quantum computer cryostat hanging in a lab, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 18 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Gold-plated quantum computer cryostat hanging in a lab, no logos or readable text",
+    "sha256": "8546603dbea6f48ff732e6cf1db64c3361dd1c6b2a708abbcfc042a1a98bea88",
+    "recorded": "2026-11-18",
+    "approved_by": "Daily news brief 2026-11-18: image bank first"
+   }
+  },
+  "disclaimer": "This is a commercial programme announcement. IQM did not publish a schedule, prices or performance figures for the future Halocene systems."
+ },
+ {
+  "slug": "quantum-machines-opx1000-nvidia-cuda-q-qec-real-time-decoding",
+  "date": "2026-11-18",
+  "updated": "2026-11-18",
+  "cat": "research",
+  "title": "Quantum Machines runs NVIDIA's CUDA-Q QEC decoders in real time on its OPX1000 controller",
+  "summary": "Using pre-sampled surface-code syndromes, QM measured a steady 2.4 microsecond round trip to an NVIDIA GH200 and per-round decoding under 1 microsecond at distances 7 and 11. Early access opens to OPX1000 customers in December.",
+  "body": [
+   "<strong>Short answer:</strong> Quantum Machines has connected its OPX1000 quantum control system to NVIDIA's CUDA-Q QEC decoding software, so error-correction data can be decoded while a quantum circuit is still running rather than afterwards. The company <a href=\"https://www.quantum-machines.co/press-release/real-time-qec-decoding-opx1000-nvidia-cuda-q/\">published its first results</a> in a release dated Chicago, 16 November.",
+   "Quantum computers make errors constantly, and a classical computer has to read the stream of error checks, called syndromes, and work out corrections fast enough to keep up. QM built a bridge to NVIDIA's CUDA-Q Realtime API, and its controller sends syndromes over NVIDIA NVQLink to a decoding server and gets corrections back within the same shot.",
+   "In the test, a single CUDA-Q program ran a surface-code memory experiment on the OPX1000, with 10,000 shots for each of nine set-ups: code distances 7, 11 and 15 at 25, 50 and 75 rounds. The syndromes were pre-sampled at a 0.1% physical error rate and decoded with PyMatching on an NVIDIA GH200 server. QM reports a steady 2.4 microsecond two-way link between controller and decoder, and decoding of 0.19 to 0.22 microseconds per round at distance 7 and 0.56 to 0.67 microseconds at distance 11, below the 1 microsecond mark it uses for keeping pace with a fast error-correction cycle. At distance 15 it took 1.2 to 1.5 microseconds per round, which QM says is where more optimisation matters.",
+   "This first version routes data through the host CPU, with direct GPU dispatch to follow, and supports static memory circuits only. <a href=\"https://quantumcomputingreport.com/quantum-machines-demonstrates-sub-microsecond-surface-code-decoding-on-opx1000-using-nvidia-cuda-q-qec-and-nvqlink/\">Quantum Computing Report</a> notes that early access for OPX1000 customers opens in December 2026. \"Error correction only works if decoding can keep pace with the quantum hardware,\" said QM co-founder and chief technology officer Yonatan Cohen.",
+   "The useful part for labs is flexibility: users can switch between decoders, such as PyMatching or NVIDIA's fusion decoder, with a configuration change. The open question is how the numbers hold up with live qubits and at larger code distances."
+  ],
+  "sources": [
+   {
+    "title": "Quantum Machines: Quantum Machines delivers first results from CUDA-Q QEC real-time decoders (16 Nov 2026)",
+    "url": "https://www.quantum-machines.co/press-release/real-time-qec-decoding-opx1000-nvidia-cuda-q/"
+   },
+   {
+    "title": "Quantum Computing Report: Quantum Machines demonstrates sub-microsecond surface-code decoding on OPX1000",
+    "url": "https://quantumcomputingreport.com/quantum-machines-demonstrates-sub-microsecond-surface-code-decoding-on-opx1000-using-nvidia-cuda-q-qec-and-nvqlink/"
+   }
+  ],
+  "image": {
+   "src": "src-img/quantum-machines-opx1000-nvidia-cuda-q-qec-real-time-decoding-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Long cold aisle of server racks with blue LEDs, no people, logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 18 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Long cold aisle of server racks with blue LEDs, no people, logos or readable text",
+    "sha256": "08476b9896bb9fec39885aa32a351ce5da278af425659207e65a4b63c6a5302c",
+    "recorded": "2026-11-18",
+    "approved_by": "Daily news brief 2026-11-18: image bank first"
+   }
+  },
+  "disclaimer": "These results use simulated error data, not a live quantum processor, and come from Quantum Machines' own tests."
+ },
+ {
   "slug": "ibm-nvidia-fermilab-modular-quantum-co-design-platform-sc26",
   "date": "2026-11-17",
   "updated": "2026-11-17",
