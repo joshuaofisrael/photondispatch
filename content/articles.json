@@ -1,5 +1,56 @@
 [
  {
+  "slug": "infleqtion-cold-atom-vacuum-core-purdue-virgin-galactic-quantum-navigation",
+  "date": "2026-11-19",
+  "updated": "2026-11-19",
+  "cat": "research",
+  "title": "A quantum navigation test is heading to the edge of space, and Infleqtion built the cold-atom core",
+  "summary": "Infleqtion says it supplied the vacuum core and supporting parts Purdue researchers will use to cool atoms and measure gravity and acceleration on a Virgin Galactic suborbital flight planned for 2027.",
+  "body": [
+   "<strong>Short answer:</strong> Infleqtion, the neutral-atom quantum company, says it built the heart of a quantum sensing experiment that Purdue University plans to fly on a Virgin Galactic suborbital flight in 2027. The test will look at whether cold atoms can help future spacecraft work out where they are and how they are moving.",
+   "\"Infleqtion provided the vacuum core and supporting components that @PurdueEngineers researchers will use to prepare cold atoms and measure gravity and acceleration during an upcoming @virgingalactic suborbital flight,\" the company <a href=\"https://x.com/Infleqtion/status/2123457149124927926\">posted on X</a> on Thursday. It added that it was \"thrilled to support the Boilermakers as they explore how quantum sensing could help future spacecraft navigate\".",
+   "<strong>The experiment.</strong> According to <a href=\"https://engineering.purdue.edu/Engr/AboutUs/News/Spotlights/2026/2026-1012-purdue-1-mission-patch-designs-2027-spaceflight\">Purdue's mission page</a>, the work comes from Shengwang Du, the Scifres Family Professor in the Elmore Family School of Electrical and Computer Engineering, whose research on quantum positioning, navigation and timing is featured on one of the mission's seven patches. Purdue says Du's team uses laser light to cool atoms to temperatures very close to absolute zero, slowing them so they can be controlled with great precision. Those atoms, Purdue says, are the basis for quantum technologies that could answer \"Where are we?\", \"How are we moving?\" and \"What time is it?\"",
+   "Du credits \"our partner, Infleqtion\" in Purdue's write-up, which describes the patch's grey cylinder as a vacuum chamber with a warped magnetic field inside.",
+   "<strong>The mission.</strong> Purdue 1 is an all-Boilermaker suborbital flight aboard Virgin Galactic with five astronauts, <a href=\"https://x.com/PurdueEngineers/status/2122778528823574618\">Purdue Engineering posted</a> on 17 November. Crew member Beth Stubbings, who Purdue says has six suborbital flights and is the world's most-flown female astronaut, is one of them. Other experiments cover in-space manufacturing, liquid behaviour in microgravity and a graduate student's thesis.",
+   "<strong>Why it matters.</strong> Atom-based accelerometers and gravimeters are one route to navigation that does not depend on GPS signals. A suborbital flight gives only minutes of microgravity, so this is a test of whether the hardware works in flight, not a navigation system.",
+   "<strong>Our read:</strong> Infleqtion has mostly made headlines for quantum computers; this is a reminder that the same cold-atom hardware underpins sensing. We will watch for Purdue's flight date and any published data."
+  ],
+  "sources": [
+   {
+    "title": "Infleqtion on X: vacuum core and components for Purdue's cold-atom experiment on a Virgin Galactic flight (19 Nov 2026)",
+    "url": "https://x.com/Infleqtion/status/2123457149124927926"
+   },
+   {
+    "title": "Purdue Engineering on X: five Boilermakers, seven patches, one mission to space (17 Nov 2026)",
+    "url": "https://x.com/PurdueEngineers/status/2122778528823574618"
+   },
+   {
+    "title": "Purdue University: Purdue 1 patch designs tell the stories of the university's 2027 mission to space",
+    "url": "https://engineering.purdue.edu/Engr/AboutUs/News/Spotlights/2026/2026-1012-purdue-1-mission-patch-designs-2027-spaceflight"
+   }
+  ],
+  "image": {
+   "src": "src-img/infleqtion-cold-atom-vacuum-core-purdue-virgin-galactic-quantum-navigation-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Vacuum chamber with a glowing array of cold atoms in a dark lab, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 19 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Vacuum chamber with a glowing array of cold atoms in a dark lab, no logos or readable text",
+    "sha256": "1482ebf6ea7a0b5855affc6077049245ae58a340d893dd9f778af90eaf2989a0",
+    "recorded": "2026-11-19",
+    "approved_by": "Daily news brief 2026-11-19: image bank first"
+   }
+  },
+  "disclaimer": "The flight is planned for 2027. No results exist yet; this article describes the planned experiment as Infleqtion and Purdue describe it."
+ },
+ {
   "slug": "memq-infleqtion-mou-networked-quantum-computing-sqale-xqna",
   "date": "2026-11-19",
   "updated": "2026-11-19",
