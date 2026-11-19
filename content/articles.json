@@ -1,5 +1,91 @@
 [
  {
+  "slug": "alice-bob-doubles-2030-target-200-logical-qubits-nine-fridges",
+  "date": "2026-11-19",
+  "updated": "2026-11-19",
+  "cat": "hardware",
+  "title": "Alice & Bob doubles its 2030 goal to 200 logical qubits, spread across nine dilution fridges",
+  "summary": "The cat-qubit company's new roadmap targets 200 logical qubits from 3,600 physical qubits in its Carbon system by 2030, then 2,048 logical qubits by 2034. The 2030 machine would link nine cryostats over cryogenic cables.",
+  "body": [
+   "<strong>Short answer:</strong> Alice &amp; Bob, the Paris- and Boston-based company building superconducting cat qubits, has published a faster fault-tolerant roadmap. It now aims for 200 logical qubits from 3,600 physical qubits in a system called Carbon by 2030, double its earlier 2030 target, and 2,048 logical qubits by 2034, <a href=\"https://quantumcomputingreport.com/alice-bob-accelerates-modular-cat-qubit-roadmap-to-200-logical-qubits-from-3600-physical-qubits-by-2030/\">Quantum Computing Report says</a>.",
+   "The ratio is the eye-catching number: 18 physical qubits per logical qubit. Cat qubits suppress bit-flip errors in the hardware itself, so the error-correction code mainly has to deal with phase flips. That is why Alice &amp; Bob can plan for far fewer physical qubits per logical qubit than most superconducting roadmaps.",
+   "According to the technical specifications released with the roadmap, the 2030 Carbon machine would take up 350 square metres and connect nine dilution refrigerators with cryogenic coaxial cables that exchange Bell pairs between chips. It is designed around degree-five qubit connectivity, a hybrid low-density parity-check (LDPC) and repetition code, a 10 microsecond clock, 10 million logical operations and a target logical error rate of one in 10 million.",
+   "Alice &amp; Bob says the schedule builds on work under France's PROQCIMA programme, where it built, assembled and ran three separate quantum processors and showed the core logical-qubit building blocks close to the error-correction threshold. It also credits AI-assisted chip design and algorithm work that it says cut its estimate of the resources needed to break RSA-2048 by a factor of 40. We covered its earlier <a href=\"/news/alice-bob-22593-cat-qubits-rsa-2048-estimate.html\">RSA-2048 estimate</a> and its <a href=\"/news/alice-bob-ldpc-cat-codes-gpu-decoding-nvqlink.html\">GPU decoding work with NVIDIA</a>.",
+   "The modular, multi-fridge design is the real bet. No single cryostat has to hold the whole machine, but the plan depends on the cable links between fridges working at the error rates the roadmap assumes, something no one has yet shown at this scale."
+  ],
+  "sources": [
+   {
+    "title": "Quantum Computing Report: Alice & Bob accelerates modular cat-qubit roadmap to 200 logical qubits by 2030 (18 Nov 2026)",
+    "url": "https://quantumcomputingreport.com/alice-bob-accelerates-modular-cat-qubit-roadmap-to-200-logical-qubits-from-3600-physical-qubits-by-2030/"
+   }
+  ],
+  "image": {
+   "src": "src-img/alice-bob-doubles-2030-target-200-logical-qubits-nine-fridges-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Close-up of unmarked chips in a tray with tweezers on an anti-static mat, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 19 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Close-up of unmarked chips in a tray with tweezers on an anti-static mat, no logos or readable text",
+    "sha256": "b03a70ba5df44e51c0e6b5f17291e393180e12747a08eee3df56537ad7aef0ba",
+    "recorded": "2026-11-19",
+    "approved_by": "Daily news brief 2026-11-19: image bank first"
+   }
+  },
+  "disclaimer": "This is a company roadmap. The 2030 and 2034 figures are targets, not demonstrated results."
+ },
+ {
+  "slug": "nist-quantum-position-verification-entangled-photons-195-metres",
+  "date": "2026-11-19",
+  "updated": "2026-11-19",
+  "cat": "research",
+  "title": "NIST pins down where you are with entangled photons, closing loopholes in quantum position checks",
+  "summary": "Two stations 195 metres apart used entangled photons, random numbers and the speed of light to verify a prover's location. NIST says real-world use may be more than a decade away.",
+  "body": [
+   "<strong>Short answer:</strong> Researchers at the US National Institute of Standards and Technology (NIST) and their collaborators have used entangled photons to check that a person is where they say they are, in what physicist Krister Shalm calls \"the first complete demonstration\" of quantum position verification. <a href=\"https://www.nist.gov/news-events/news/2026/11/quantum-physics-can-verify-persons-location-nist-researchers-show\">NIST announced the result</a> on 18 November, and the team reported it in Nature this week.",
+   "The method uses two trusted verifiers and one prover. On the NIST campus in Boulder, Colorado, the team built two verifier stations 195 metres apart, linked by electrical cables and optical fibre, with the prover's claimed location between them. One verifier creates a pair of entangled photons, keeps one and sends the other to the prover. Both verifiers then send random numbers timed to reach the prover's claimed location at the same moment. The prover uses those numbers to decide how to measure the photon's polarisation and sends the result back.",
+   "Two physical rules do the checking. Because nothing travels faster than light, a prover who is somewhere else takes too long to answer. And because the verifiers run a loophole-free Bell test on millions of rounds over a few minutes, a cheater cannot copy the quantum information to accomplices or answer early without the correlations breaking down. According to NIST, earlier schemes left loopholes that impostors could exploit, and this experiment closes them.",
+   "NIST suggests uses such as stopping remote attackers from sending commands to power grids or water plants, protecting medical records, and blocking unauthorised trades. Study collaborator Scott Glancy cautions that real-world use \"may be more than a decade away\", because it needs high-fidelity quantum networks that can share entangled photons between, for example, a customer and their bank. <a href=\"https://thequantuminsider.com/2026/11/18/quantum-physics-can-verify-a-persons-location-nist-researchers-show/\">The Quantum Insider</a> carries the full release.",
+   "For readers following post-quantum security, this is a different tool from the new encryption standards we track, such as <a href=\"/news/nist-ir-8547-public-key-2030-2035.html\">NIST's 2030 to 2035 public-key transition</a>. It checks where a party is, not just who holds a key."
+  ],
+  "sources": [
+   {
+    "title": "NIST: Quantum physics can verify a person's location, NIST researchers show (18 Nov 2026)",
+    "url": "https://www.nist.gov/news-events/news/2026/11/quantum-physics-can-verify-persons-location-nist-researchers-show"
+   },
+   {
+    "title": "The Quantum Insider: Quantum physics can verify a person's location, NIST researchers show",
+    "url": "https://thequantuminsider.com/2026/11/18/quantum-physics-can-verify-a-persons-location-nist-researchers-show/"
+   }
+  ],
+  "image": {
+   "src": "src-img/nist-quantum-position-verification-entangled-photons-195-metres-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Optical breadboard with yellow fibre patch cords in an empty lab, no people, logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 19 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Optical breadboard with yellow fibre patch cords in an empty lab, no people, logos or readable text",
+    "sha256": "2b542331bc2c70bb8a19dcd5ea269fb4947e10dd1643ddbda161fe2e9053f4dc",
+    "recorded": "2026-11-19",
+    "approved_by": "Daily news brief 2026-11-19: image bank first"
+   }
+  },
+  "disclaimer": "This is a laboratory demonstration. NIST says practical use depends on quantum networks that do not yet exist at scale."
+ },
+ {
   "slug": "iqm-halocene-upgrade-program-1000-qubits-sc26",
   "date": "2026-11-18",
   "updated": "2026-11-18",
