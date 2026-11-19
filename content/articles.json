@@ -1,5 +1,52 @@
 [
  {
+  "slug": "memq-infleqtion-mou-networked-quantum-computing-sqale-xqna",
+  "date": "2026-11-19",
+  "updated": "2026-11-19",
+  "cat": "industry",
+  "title": "Infleqtion and memQ want to cluster quantum computers like supercomputers, but it is an MoU, not an order",
+  "summary": "memQ and Infleqtion have signed a memorandum of understanding to validate and certify that memQ's xQNA networking works with Infleqtion's Sqale quantum computer and Superstaq software. No money, dates or hardware orders were announced.",
+  "body": [
+   "<strong>Short answer:</strong> memQ, a Chicago quantum networking company, and Infleqtion (NYSE: INFQ), which builds neutral-atom quantum computers, have signed a memorandum of understanding to test whether their technologies work together. The goal is to link several quantum computers into one larger system.",
+   "The deal surfaced on X on Thursday, where the stock-tracking account <a href=\"https://x.com/miscomputate/status/2123460297679568931\">@miscomputate posted</a> a summary with a pointed caveat: \"This is currently an MoU focused on integration and interoperability, NOT a confirmed purchase order or revenue-generating contract.\"",
+   "According to the <a href=\"https://www.globenewswire.com/news-release/2026/11/19/3406537/0/en/memq-and-infleqtion-sign-mou-to-advance-networked-quantum-computing.html\">joint announcement on GlobeNewswire</a>, the MoU covers \"validation and certification of interoperability\" between memQ's xQNA quantum networking technology and Infleqtion's Sqale quantum computer and Superstaq software. The companies compare the aim to the high-performance computing world, where many machines are clustered so users can grow in modules and spread workloads.",
+   "The announcement explains the problem: quantum computers \"cannot cluster together over existing data networks to execute complex algorithms without collapsing the quantum state\". memQ says its xQNA portfolio can connect quantum systems of different types without that collapse. That is the company's description of its product, not something the MoU has yet shown on Infleqtion hardware.",
+   "\"Interoperability is essential as our industry moves toward broader commercial deployments,\" said Pranav Gokhale, Infleqtion's chief technology officer. memQ chief executive Charles Foley called the MoU \"another important step toward an open ecosystem where quantum computers can work together\".",
+   "The release gives no timeline, no funding figures and no test results. It quotes an IDC forecast that worldwide quantum computing customer spend will reach $27.5 billion by 2030, up from $4.2 billion in 2025, but that is a market projection, not a number tied to this deal.",
+   "<strong>Our read:</strong> distributed quantum computing is where many roadmaps are heading, because single machines hit size limits. An interoperability certificate would be useful to buyers; the first test results will show how close it is."
+  ],
+  "sources": [
+   {
+    "title": "@miscomputate on X: Infleqtion and memQ announced a new partnership to advance networked quantum computing (19 Nov 2026)",
+    "url": "https://x.com/miscomputate/status/2123460297679568931"
+   },
+   {
+    "title": "GlobeNewswire: memQ and Infleqtion sign MoU to advance networked quantum computing (19 Nov 2026)",
+    "url": "https://www.globenewswire.com/news-release/2026/11/19/3406537/0/en/memq-and-infleqtion-sign-mou-to-advance-networked-quantum-computing.html"
+   }
+  ],
+  "image": {
+   "src": "src-img/memq-infleqtion-mou-networked-quantum-computing-sqale-xqna-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Rows of fibre patch panels with glowing link lights in a dark equipment room, no logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 19 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Rows of fibre patch panels with glowing link lights in a dark equipment room, no logos or readable text",
+    "sha256": "1b85821961725af3d0e27341dee967a879dcdd52e64e0efd7ae5b8cf275368f2",
+    "recorded": "2026-11-19",
+    "approved_by": "Daily news brief 2026-11-19: image bank first"
+   }
+  },
+  "disclaimer": "This is a memorandum of understanding. It sets out plans to test and certify interoperability; it is not a purchase order or a demonstrated result."
+ },
+ {
   "slug": "alice-bob-doubles-2030-target-200-logical-qubits-nine-fridges",
   "date": "2026-11-19",
   "updated": "2026-11-19",
