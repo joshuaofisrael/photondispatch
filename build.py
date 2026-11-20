@@ -20,7 +20,7 @@ INDEXNOW_KEY = "8cb05bd1e79a50594f6726934d66a801"
 # ads.txt publisher line only. Do not inject an AdSense script from this prep.
 ADS_TXT = "google.com, pub-5681559774142917, DIRECT, f08c47fec0942fa0\n"
 DESC = "Independent, answer-first quantum computing and quantum technology news: hardware, algorithms, industry and funding, research and policy."
-OUT = "docs"; ASSET_VER = "4"
+OUT = "docs"; ASSET_VER = "5"
 # ----------------------------------------------------------------
 
 TODO_IMAGES = []
@@ -127,8 +127,12 @@ def make_inline(slug, n, spec):
     im.resize((600, round(H * 600 / W)), Image.LANCZOS).save(f"{OUT}/img/{name}-600.webp", "WEBP", quality=74, method=6)
     return {"name": name, "w": w, "h": h, "w6": 600, "h6": round(H * 600 / W), "src": p, "srcw": W}
 
+def ai_caption():
+    """Visible credit: the words AI-generated image, linking to the image policy."""
+    return f'<a href="{SITE_URL}/image-policy/">AI-generated image</a>'
+
 def inline_fig(m, spec):
-    cap = (esc(spec["caption"]).rstrip(". ") + ". " if spec.get("caption") else "") + f'<a href="{SITE_URL}/image-policy/">Source</a>'
+    cap = (esc(spec["caption"]).rstrip(". ") + ". " if spec.get("caption") else "") + ai_caption()
     return (f'<figure class="inl"><img src="../img/{m["name"]}-1200.webp" srcset="../img/{m["name"]}-600.webp 600w, ../img/{m["name"]}-1200.webp 1200w" '
             f'sizes="(max-width:760px) 100vw, 720px" width="{m["w"]}" height="{m["h"]}" alt="{esc(spec["alt"])}" loading="lazy" decoding="async">'
             f'<figcaption>{cap}</figcaption></figure>')
@@ -136,7 +140,7 @@ def inline_fig(m, spec):
 def is_ai(im): return bool(im.get("ai"))
 AI_LICENCE = "generated; rights held by the site owner (see terms.html)"
 def credit_html(im):
-    if is_ai(im): return f'<a href="{SITE_URL}/image-policy/">Source</a>'
+    if is_ai(im): return ai_caption()
     s = f'Photo: {esc(im["credit"])}'
     if im.get("source_url"): s += f' · <a href="{esc(im["source_url"])}" rel="noopener">Source</a>'
     return s + f' · {esc(im["license"])}'
@@ -147,7 +151,8 @@ def page(path, title, desc, content, depth=0, ld=None, typ="website", image=None
     url = SITE_URL + "/" + path.replace("index.html", "")
     catnav = "".join(f'<a href="{r}category/{c}.html">{t}</a>' for c, t in CATS)
     og = image or {"url": f"{SITE_URL}/img/og-default.jpg", "alt": NAME + ": quantum technology news"}
-    lds = [{"@context": "https://schema.org", "@type": "WebSite", "name": NAME, "url": SITE_URL + "/", "publisher": PUB}] + ([ld] if ld else [])
+    extra_ld = ld if isinstance(ld, list) else ([ld] if ld else [])
+    lds = [{"@context": "https://schema.org", "@type": "WebSite", "name": NAME, "url": SITE_URL + "/", "publisher": PUB}] + extra_ld
     beacon = f'<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon=\'{{"token": "{CF_BEACON_TOKEN}"}}\'></script>' if CF_BEACON_TOKEN else ""
     robots = "noindex" if path == "404.html" else "index,follow,max-image-preview:large,max-snippet:-1"
     h = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -198,7 +203,8 @@ def card(a, feat=False, eager=False):
     im = ""
     if has_img(a):
         sizes = "(max-width:760px) 100vw, 620px" if feat else "(max-width:760px) 100vw, 520px"
-        im = f'<div class="im">{img_tag(a["slug"], a["image"]["alt"], eager, sizes)}</div>'
+        im = (f'<figure class="shot"><div class="im">{img_tag(a["slug"], a["image"]["alt"], eager, sizes)}</div>'
+              f'<figcaption>{ai_caption()}</figcaption></figure>')
     tag = '<span class="tag trend">Trending</span> ' if a.get("kind") == "trending" else ""
     return (f'<article class="card reveal{" feat" if feat else ""}">{im}<div class="tx">{tag}<a class="tag" href="category/{a["cat"]}.html">{esc(CATN[a["cat"]])}</a>'
             f'<h3><a href="news/{a["slug"]}.html">{esc(a["title"])}</a></h3><p class="meta"><time datetime="{a["date"]}">{fd(a["date"])}</time></p><p>{esc(a["summary"])}</p></div></article>')
@@ -212,16 +218,174 @@ cos = ["IBM", "Google Quantum AI", "Quantinuum", "IonQ", "Rigetti", "D-Wave", "P
 sections += '<section class="sec"><div class="w"><h2 class="sh">What we cover</h2><ul class="chips">' + "".join(f"<li>{c}</li>" for c in cos) + "</ul></div></section>"
 hero = (f'<section class="hero hero-photo"><picture><source type="image/webp" srcset="img/hero-1200.webp 1200w, img/hero-1920.webp 1920w" sizes="100vw">'
         f'<img class="hero-bg" src="img/hero.jpg" width="1920" height="1080" alt="Gold-plated cryogenic quantum computer chandelier in a dim violet-lit lab (AI-generated image)" fetchpriority="high" decoding="async"></picture>'
-        f'<div class="hero-shade"></div>{HERO_SVG}<div class="w"><div class="hero-tx"><span class="kicker">Quantum technology · daily</span><h1>Quantum news, <em>answered first.</em></h1><p>{esc(DESC)}</p><a class="btn" href="#latest">Read the latest</a><a class="btn ghost" href="feed.xml">RSS feed</a><p class="cap"><a href="{SITE_URL}/image-policy/">Source</a></p></div></div></section>')
+        f'<div class="hero-shade"></div>{HERO_SVG}<div class="w"><div class="hero-tx"><span class="kicker">Quantum technology · daily</span><h1>Quantum news, <em>answered first.</em></h1><p>{esc(DESC)}</p><p class="byline">By <a rel="author" href="about.html">PhotonDispatch Staff</a></p><a class="btn" href="#latest">Read the latest</a><a class="btn ghost" href="feed.xml">RSS feed</a><p class="cap">{ai_caption()}</p></div></div></section>')
 page("index.html", f"{NAME}: Quantum Computing & Quantum Tech News", DESC, hero + sections, 0, extra_head='<link rel="preload" as="image" type="image/webp" href="img/hero-1200.webp" imagesrcset="img/hero-1200.webp 1200w, img/hero-1920.webp 1920w" imagesizes="100vw" fetchpriority="high">')
+
+def crumbs_html(items):
+    """items: list of (href or None, label). The last item is the current page."""
+    parts = []
+    for i, (href, label) in enumerate(items):
+        if i:
+            parts.append('<span aria-hidden="true">/</span>')
+        if href and i != len(items) - 1:
+            parts.append(f'<a href="{href}">{esc(label)}</a>')
+        else:
+            parts.append(f'<span aria-current="page">{esc(label)}</span>')
+    return f'<nav class="crumbs" aria-label="Breadcrumb">{"".join(parts)}</nav>'
+
+def crumb_ld(items):
+    """items: list of (absolute url, name)."""
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": name, "item": url} for i, (url, name) in enumerate(items)]}
+
+def nextreads_html(picks, heading, link_prefix, img_prefix):
+    if len(picks) < 3:
+        return ""
+    cards = []
+    for b in picks[:4]:
+        img = img_tag(b["slug"], b["image"]["alt"], False, "(max-width:760px) 100vw, 360px", img_prefix) if has_img(b) else ""
+        cards.append(
+            f'<article class="ncard"><a class="nmain" href="{link_prefix}{b["slug"]}.html">{img}<span>{esc(b["title"])}</span></a>'
+            f'<p class="cap">{ai_caption()}</p></article>')
+    return f'<aside class="nextreads"><h2>{esc(heading)}</h2><div class="nextgrid">{"".join(cards)}</div></aside>'
+
+def related_picks(a):
+    mine = {s for s, _ in topic_hubs.topics_for(a)}
+    scored = []
+    for b in A:
+        if b["slug"] == a["slug"]:
+            continue
+        score = 3 * len(mine & {s for s, _ in topic_hubs.topics_for(b)})
+        if b["cat"] == a["cat"]:
+            score += 2
+        if score:
+            scored.append((score, article_sort_key(b), b))
+    scored.sort(key=lambda x: (x[0], x[1]), reverse=True)
+    picks = [b for _, _, b in scored]
+    if len(picks) < 4:
+        for b in A:
+            if b["slug"] != a["slug"] and b["cat"] == a["cat"] and all(p["slug"] != b["slug"] for p in picks):
+                picks.append(b)
+            if len(picks) >= 4:
+                break
+    # Explainers in a thin category still point at the sibling explainers named in the compare box.
+    if len(picks) < 4 and a["slug"] in COMPARE:
+        by = {b["slug"]: b for b in A}
+        for href, _label in COMPARE[a["slug"]]:
+            slug = href.rsplit("/", 1)[-1].replace(".html", "")
+            if slug in by and all(p["slug"] != slug for p in picks):
+                picks.append(by[slug])
+    # Last resort for a story with almost no category peers: overlap on specific words, not the word "quantum".
+    if len(picks) < 3:
+        skip = {"quantum", "computing", "computer", "qubits", "qubit", "company", "million", "billion", "research", "technology"}
+        words = set(re.findall(r"[a-z0-9]{5,}", (a["title"] + " " + a.get("summary", "")).lower())) - skip
+        have = {p["slug"] for p in picks} | {a["slug"]}
+        extra = []
+        for b in A:
+            if b["slug"] in have:
+                continue
+            overlap = words & set(re.findall(r"[a-z0-9]{5,}", (b["title"] + " " + b["summary"]).lower()))
+            if overlap:
+                extra.append((len(overlap), article_sort_key(b), b))
+        extra.sort(key=lambda x: (x[0], x[1]), reverse=True)
+        for _, _, b in extra:
+            picks.append(b)
+            if len(picks) >= 3:
+                break
+    return picks[:8]
+
+def split_reads(picks):
+    if len(picks) >= 7:
+        return picks[:4], picks[4:8]
+    return picks[:4], picks[:4]
+
+def compare_html(pairs):
+    lis = "".join(f'<li><a href="{href}">{esc(text)}</a></li>' for href, text in pairs)
+    return f'<aside class="compare"><h2>Check another</h2><ul>{lis}</ul></aside>'
+
+# Lookup and explainer pages. News stories do not get this box.
+COMPARE = {
+ "what-is-a-logical-qubit": [
+  ("quantum-error-correction-basics.html", "Quantum error correction: syndromes, thresholds and overhead"),
+  ("../topics/google-quantum-ai.html", "What Google has published about Willow"),
+  ("quantinuum-helios-99-9995-logical-fidelity-color-code.html", "Quantinuum's Helios logical-fidelity claim"),
+ ],
+ "quantum-error-correction-basics": [
+  ("what-is-a-logical-qubit.html", "What a logical qubit is"),
+  ("../topics/google-quantum-ai.html", "Willow, the chip in Google's below-threshold post"),
+  ("google-magic-state-cultivation-willow-science.html", "Google's magic-state cultivation report"),
+ ],
+ "ml-kem-ml-dsa-slh-dsa-what-they-do": [
+  ("nist-ir-8547-public-key-2030-2035.html", "NIST's 2030 and 2035 transition dates"),
+  ("what-is-hqc-nist-backup-kem.html", "HQC, NIST's backup key-encapsulation method"),
+  ("what-is-fn-dsa-fips-206.html", "FN-DSA and the status of FIPS 206"),
+ ],
+ "nist-ir-8547-public-key-2030-2035": [
+  ("ml-kem-ml-dsa-slh-dsa-what-they-do.html", "What ML-KEM, ML-DSA and SLH-DSA each do"),
+  ("what-is-hqc-nist-backup-kem.html", "What HQC is"),
+  ("what-is-fn-dsa-fips-206.html", "Where FN-DSA stands"),
+  ("harvest-now-decrypt-later-explained.html", "Harvest now, decrypt later"),
+ ],
+ "what-is-hqc-nist-backup-kem": [
+  ("ml-kem-ml-dsa-slh-dsa-what-they-do.html", "ML-KEM, the primary key-encapsulation standard"),
+  ("nist-ir-8547-public-key-2030-2035.html", "The 2030 and 2035 transition dates"),
+  ("what-is-fn-dsa-fips-206.html", "FN-DSA, the other unfinished standard"),
+ ],
+ "what-is-fn-dsa-fips-206": [
+  ("ml-kem-ml-dsa-slh-dsa-what-they-do.html", "The three standards NIST already finished"),
+  ("what-is-hqc-nist-backup-kem.html", "HQC, the backup key-encapsulation method"),
+  ("nist-ir-8547-public-key-2030-2035.html", "When the old public-key algorithms are disallowed"),
+ ],
+ "harvest-now-decrypt-later-explained": [
+  ("nist-ir-8547-public-key-2030-2035.html", "NIST's 2030 and 2035 dates"),
+  ("why-pqc-matters-for-tls.html", "Why this shows up in TLS"),
+  ("ml-kem-ml-dsa-slh-dsa-what-they-do.html", "The standards meant to replace the vulnerable ones"),
+ ],
+ "why-pqc-matters-for-tls": [
+  ("harvest-now-decrypt-later-explained.html", "Harvest now, decrypt later"),
+  ("nist-ir-8547-public-key-2030-2035.html", "The federal transition dates"),
+  ("ml-kem-ml-dsa-slh-dsa-what-they-do.html", "Which standard does which job"),
+ ],
+ "what-is-shors-algorithm": [
+  ("nist-ir-8547-public-key-2030-2035.html", "How NIST timed the move off public-key encryption"),
+  ("harvest-now-decrypt-later-explained.html", "Why encrypted data is already being kept"),
+  ("ml-kem-ml-dsa-slh-dsa-what-they-do.html", "The post-quantum standards"),
+ ],
+}
+
+def follow_html(a):
+    mine = {s for s, _ in topic_hubs.topics_for(a)}
+    if not mine:
+        return ""
+    key = article_sort_key(a)
+    newer = []
+    for b in A:
+        if b["slug"] == a["slug"] or article_sort_key(b) <= key:
+            continue
+        if mine & {s for s, _ in topic_hubs.topics_for(b)}:
+            newer.append(b)
+        if len(newer) >= 2:
+            break
+    if not newer:
+        return ""
+    links = " ".join(f'<a href="{b["slug"]}.html">{esc(b["title"])}</a>' for b in newer)
+    return f'<p class="follow"><strong>What happened next.</strong> {links}</p>'
+
+def wrap_block(i, p, extra):
+    if p.startswith("<h2>") or p.startswith("<ul") or p.startswith("<ol") or p.startswith("<aside"):
+        return p + extra
+    cls = " class=lede" if i == 0 else ""
+    return f"<p{cls}>{p}</p>" + extra
 
 for a in A:
     u = f"{SITE_URL}/news/{a['slug']}.html"
-    ld = {"@context": "https://schema.org", "@type": "NewsArticle", "headline": a["title"], "description": a["summary"], "datePublished": a["date"], "dateModified": a.get("updated", a["date"]),
-          "mainEntityOfPage": u, "isAccessibleForFree": True, "inLanguage": "en", "author": {"@type": "Organization", "name": NAME + " Staff"}, "publisher": PUB, "isBasedOn": [s["url"] for s in a["sources"]]}
+    upd = a.get("updated", a["date"])
+    ld = {"@context": "https://schema.org", "@type": "NewsArticle", "headline": a["title"], "description": a["summary"], "datePublished": a["date"], "dateModified": upd,
+          "mainEntityOfPage": u, "isAccessibleForFree": True, "inLanguage": "en", "author": {"@type": "Organization", "name": NAME + " Staff", "url": SITE_URL + "/about.html"}, "publisher": PUB, "isBasedOn": [s["url"] for s in a["sources"]]}
     ld["image"] = [{"@type": "ImageObject", "url": a["_og"]["url"], "width": 1200, "height": 630}] if a["_og"] else [SITE_URL + "/img/og-default.jpg"]
+    crumbs = crumbs_html([("../index.html", "Home"), (f"../category/{a['cat']}.html", CATN[a["cat"]]), (None, a["title"])])
+    bld = crumb_ld([(SITE_URL + "/", "Home"), (f"{SITE_URL}/category/{a['cat']}.html", CATN[a["cat"]]), (u, a["title"])])
     fig = ""
-    # (inline images are added to JSON-LD after they are built, below)
     if has_img(a):
         fig = f'<div class="a-hero"><figure>{img_tag(a["slug"], a["image"]["alt"], True, "(max-width:980px) 100vw, 980px", "../")}<figcaption>{credit_html(a["image"])}</figcaption></figure></div>'
     ins = {}
@@ -229,10 +393,18 @@ for a in A:
     for n, sp in enumerate(a.get("inline_images", []), 1):
         m = make_inline(a["slug"], n, sp)
         if m: ins.setdefault(int(sp["insert_after_paragraph"]), []).append(inline_fig(m, sp)); a["_inl"].append((m, sp))
-    body = "".join(f'<p{" class=lede" if i == 0 else ""}>{p}</p>' + "".join(ins.get(i + 1, [])) for i, p in enumerate(a["body"]))
     if isinstance(ld.get("image"), list):
         ld["image"] += [{"@type": "ImageObject", "url": f"{SITE_URL}/img/{m['name']}-1200.webp", "width": m["w"], "height": m["h"], "caption": sp.get("caption") or sp["alt"]} for m, sp in a["_inl"]]
-    upd = a.get("updated", a["date"])
+    chunks = [wrap_block(i, p, "".join(ins.get(i + 1, []))) for i, p in enumerate(a["body"])]
+    if a["slug"] in COMPARE and chunks:
+        chunks[0] += compare_html(COMPARE[a["slug"]])
+    mid, end = split_reads(related_picks(a))
+    mid_html = nextreads_html(mid, "Related reading", "", "../")
+    end_html = nextreads_html(end, "Read next", "", "../")
+    if chunks and mid_html:
+        at = 0 if len(chunks) < 3 else min(len(chunks) - 1, max(1, len(chunks) // 2))
+        chunks[at] += mid_html
+    body = "".join(chunks)
     ana = "".join(f'<aside class="note analysis"><h2>Analysis</h2><p>{p}</p></aside>' for p in a.get("analysis", []))
     dis = f'<aside class="note"><strong>Note:</strong> {a["disclaimer"]}</aside>' if a.get("disclaimer") else ""
     why = ""
@@ -240,15 +412,21 @@ for a in A:
         why = '<aside class="why"><h2>Why it\'s trending</h2><ul>' + "".join(f"<li>{w}</li>" for w in a["why"]) + "</ul></aside>"
     src = "".join(f'<li><a href="{esc(s["url"])}" rel="noopener">{esc(s["title"])}</a></li>' for s in a["sources"])
     tag = '<span class="tag trend">Trending</span> ' if a.get("kind") == "trending" else ""
-    c = f'{fig}<article class="prose art"><p style="margin:24px 0 0">{tag}<a class="tag" href="../category/{a["cat"]}.html">{esc(CATN[a["cat"]])}</a></p><h1>{esc(a["title"])}</h1><p class="meta" style="font-size:.9rem">By {NAME} Staff · Published <time datetime="{a["date"]}">{fd(a["date"])}</time> · Last updated <time datetime="{upd}">{fd(upd)}</time></p>{body}{ana}{why}{dis}<div class="src"><h2>Sources</h2><p class="meta">Every factual claim above comes from these sources. See our <a href="../standards.html">editorial standards</a> and <a href="../corrections.html">corrections policy</a>.</p><ul>{src}</ul></div>{("<p class=\"meta\">Topics: " + " · ".join(f'<a href=\"../topics/{ts}.html\">{esc(tn)}</a>' for ts, tn in topic_hubs.topics_for(a)) + "</p>") if topic_hubs.topics_for(a) else ""}<p><a href="../index.html">← All news</a></p></article>'
-    page(f"news/{a['slug']}.html", f"{a['title']} | {NAME}", a["summary"], c, 1, ld, "article", a["_og"])
+    tops = topic_hubs.topics_for(a)
+    bg = ("<p class=\"meta\">Background: " + " · ".join(f'<a href="../topics/{ts}.html">{esc(tn)}</a>' for ts, tn in tops) + "</p>") if tops else ""
+    c = f'{crumbs}{fig}<article class="prose art"><p style="margin:24px 0 0">{tag}<a class="tag" href="../category/{a["cat"]}.html">{esc(CATN[a["cat"]])}</a></p><h1>{esc(a["title"])}</h1><p class="byline">By <a rel="author" href="../about.html">{NAME} Staff</a></p><p class="meta" style="font-size:.9rem">Published <time datetime="{a["date"]}">{fd(a["date"])}</time> · Last updated <time datetime="{upd}">{fd(upd)}</time></p>{body}{ana}{why}{dis}{follow_html(a)}{end_html}<div class="src"><h2>Sources</h2><p class="meta">Every factual claim above comes from these sources. See our <a href="../standards.html">editorial standards</a> and <a href="../corrections.html">corrections policy</a>.</p><ul>{src}</ul></div>{bg}<p><a href="../index.html">← All news</a></p></article>'
+    desc = a["summary"] if len(a["summary"]) <= 155 else a["summary"][:152].rsplit(" ", 1)[0] + "..."
+    page(f"news/{a['slug']}.html", f"{a['title']} | {NAME}", desc, c, 1, [ld, bld], "article", a["_og"])
 
 for c, t in CATS:
     items = [a for a in A if a["cat"] == c]
     g = "".join(card(a).replace('href="news/', 'href="../news/').replace('href="category/', 'href="../category/').replace('src="img/', 'src="../img/').replace('img/', '../img/').replace('../../img/', '../img/') for a in items) or "<p>No stories in this section yet.</p>"
-    page(f"category/{c}.html", f"{t} | Quantum News | {NAME}", f"Latest quantum {t.lower()} news from {NAME}.", f'<section class="sec"><div class="w"><h1 class="sh">{t}</h1><div class="grid">{g}</div></div></section>', 1)
+    cat_url = f"{SITE_URL}/category/{c}.html"
+    cat_ld = crumb_ld([(SITE_URL + "/", "Home"), (cat_url, t)])
+    cat_top = crumbs_html([("../index.html", "Home"), (None, t)]) + f'<p class="byline">By <a rel="author" href="../about.html">{NAME} Staff</a></p>'
+    page(f"category/{c}.html", f"{t} | Quantum News | {NAME}", f"Latest quantum {t.lower()} news from {NAME}.", f'<section class="sec"><div class="w">{cat_top}<h1 class="sh">{t}</h1><div class="grid">{g}</div></div></section>', 1, cat_ld)
 import topic_hubs
-TOPIC_PAGES = topic_hubs.build(A, page, card, esc, SITE_URL)
+TOPIC_PAGES = topic_hubs.build(A, page, card, esc, SITE_URL, {"crumbs": crumbs_html, "crumb_ld": crumb_ld, "nextreads": nextreads_html, "compare": compare_html})
 L = f"<strong>{LLC}</strong>"
 CORRECTIONS = []
 CLOG = "<p>No corrections yet.</p>" if not CORRECTIONS else "<ul>" + "".join(f'<li><time datetime="{d}">{fd(d)}</time> · <a href="news/{sl}.html">{sl.replace("-", " ")}</a>: {esc(t)}</li>' for d, sl, t in CORRECTIONS) + "</ul>"
@@ -256,13 +434,13 @@ CONTACT = (f'<p>Email: <a href="mailto:{EMAIL}">{EMAIL}</a></p>' if EMAIL else '
 analytics = "We use Cloudflare Web Analytics, a privacy-focused service that measures page views without cookies or cross-site tracking. " if CF_BEACON_TOKEN else ""
 FORM = f'''<h2>Send us a message</h2><div id="thanks" class="note" role="status" tabindex="-1" hidden><h2>Thank you</h2><p>Your message has been sent. We will reply if a response is needed.</p></div><form id="cf" class="cf" method="POST" action="https://formsubmit.co/{FORM_TO}" data-ajax="https://formsubmit.co/ajax/{FORM_TO}"><p><label for="cf-name">Name</label><input id="cf-name" name="name" type="text" autocomplete="name" required maxlength="120"></p><p><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="200"></p><p><label for="cf-msg">Message</label><textarea id="cf-msg" name="message" rows="6" required maxlength="4000"></textarea></p><input type="text" name="_honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"><input type="hidden" name="_subject" value="PhotonDispatch contact"><input type="hidden" name="_captcha" value="false"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="{SITE_URL}/contact.html?sent=1#thanks"><p><button type="submit" class="btn">Send message</button></p><p id="cf-err" role="alert" hidden>Sorry, the message could not be sent. Please try again, or use the GitHub link below.</p><p class="fine">Messages are emailed to the site owner only so we can respond. They are not shared or sold. See our <a href="privacy.html">privacy policy</a>.</p></form>'''
 legal = {
-"about.html": ("About", f"<h1>About {NAME}</h1><p>{NAME} is an independent publication covering quantum computing and quantum technology: hardware, algorithms, industry and funding, research and policy. Our brand line: <strong>quantum news, answered first.</strong> Every story is written originally, leads with the answer, and links to the sources its facts come from. We do not invent facts or quotes. See our <a href=\"standards.html\">editorial standards</a>, <a href=\"corrections.html\">corrections policy</a> and <a href=\"contact.html\">contact page</a>.</p><h2>Images</h2><p>All images on {NAME} are AI-generated, photorealistic scenes created for illustration and labelled with a \"Source\" link to our <a href=\"image-policy/\">image policy</a>. They are generic and do not depict real people or real news events.</p>"),
+"about.html": ("About", f"<h1>About {NAME}</h1><p>{NAME} is an independent publication covering quantum computing and quantum technology: hardware, algorithms, industry and funding, research and policy. Our brand line: <strong>quantum news, answered first.</strong> Every story is written originally, leads with the answer, and links to the sources its facts come from. We do not invent facts or quotes. See our <a href=\"standards.html\">editorial standards</a>, <a href=\"corrections.html\">corrections policy</a> and <a href=\"contact.html\">contact page</a>.</p><h2>Who writes this</h2><p>Stories carry the byline {NAME} Staff. That is this site's editorial desk, not a named outside expert and not a personal biography. We do not publish staff credentials.</p><h2>Images</h2><p>All images on {NAME} are AI-generated, photorealistic scenes created for illustration. Each one is labelled <a href=\"image-policy/\">AI-generated image</a>, and that label links to our image policy. They are generic and do not depict real people or real news events.</p>"),
 "contact.html": ("Contact", f"<h1>Contact</h1>{FORM}<h2>Alternative: public issue tracker</h2>{CONTACT}<p>For corrections, please include the article link, the sentence in question, and a source that supports the fix. Please do not post private personal information in a public issue. See our <a href=\"corrections.html\">corrections policy</a>.</p>"),
 "corrections.html": ("Corrections Policy", f"<h1>Corrections Policy</h1><p>We aim to be accurate. If we get something wrong, we fix it and say so.</p><h2>How we correct</h2><ul><li>Factual errors are corrected in the article as soon as they are verified, and the article's <strong>Last updated</strong> date changes.</li><li>Significant corrections are logged below with the date and what changed.</li><li>If a claim cannot be verified against a cited source, we soften it or remove it.</li><li>We will review and, where justified, remove or amend content about a named person or company on request, once the concern is identified and the sources checked.</li></ul><h2>How to report an error</h2>{CONTACT}<h2>Corrections log</h2>{CLOG}"),
-"standards.html": ("Editorial Standards", f"<h1>Editorial Standards: Sources and Ethics</h1><h2>Sourcing</h2><ul><li>Every factual claim must trace to a named, linkable source (company announcement, regulator or government release, filing, or reputable news outlet) listed at the bottom of the article.</li><li>We prefer primary sources and say when a claim is only a company's own statement (\"according to the company\").</li><li>We do not publish unsourced numbers, dates, or quotes. If we cannot verify something, we leave it out.</li></ul><h2>Original writing</h2><ul><li>Articles are written in our own words. We use only brief, attributed quotations.</li></ul><h2>Fairness</h2><ul><li>We do not state or imply wrongdoing by any person or company unless an authoritative source reports it, and then we attribute it.</li><li>We do not speculate about individuals.</li></ul><h2>Opinion and analysis</h2><ul><li>Analysis and opinion are clearly labelled as such and kept separate from reported facts.</li></ul><h2>Company announcements vs. verified claims</h2><ul><li>Statements, figures and timelines that come from a company's own announcement are attributed to that company, and we say when they have not been independently verified.</li><li>We describe something as confirmed only where an independent source we cite supports it.</li><li>Targets, forecasts and roadmaps stated by companies are reported as their targets, not as outcomes. We do not promise or imply any result for readers, customers or investors.</li></ul><h2>Images</h2><ul><li>Images are AI-generated photorealistic scenes. Each carries a \"Source\" link to the <a href=\"image-policy/\">image policy</a> page. They do not depict real identifiable people or real news events.</li></ul><h2>Not advice</h2><ul><li>Nothing on the site is investment, legal, medical or other professional advice. Articles about funding or listed companies are reports of announcements, not recommendations.</li></ul><h2>Updates</h2><ul><li>Each article shows its published and last-updated dates. See the <a href=\"corrections.html\">corrections policy</a>.</li></ul><p>Independence: {NAME} is not affiliated with the companies it covers unless stated. Ownership details are in our <a href=\"terms.html\">Terms of Use</a>.</p><p><em>Last updated: 24 October 2026.</em></p>"),
+"standards.html": ("Editorial Standards", f"<h1>Editorial Standards: Sources and Ethics</h1><h2>Sourcing</h2><ul><li>Every factual claim must trace to a named, linkable source (company announcement, regulator or government release, filing, or reputable news outlet) listed at the bottom of the article.</li><li>We prefer primary sources and say when a claim is only a company's own statement (\"according to the company\").</li><li>We do not publish unsourced numbers, dates, or quotes. If we cannot verify something, we leave it out.</li></ul><h2>Original writing</h2><ul><li>Articles are written in our own words. We use only brief, attributed quotations.</li></ul><h2>Fairness</h2><ul><li>We do not state or imply wrongdoing by any person or company unless an authoritative source reports it, and then we attribute it.</li><li>We do not speculate about individuals.</li></ul><h2>Opinion and analysis</h2><ul><li>Analysis and opinion are clearly labelled as such and kept separate from reported facts.</li></ul><h2>Company announcements vs. verified claims</h2><ul><li>Statements, figures and timelines that come from a company's own announcement are attributed to that company, and we say when they have not been independently verified.</li><li>We describe something as confirmed only where an independent source we cite supports it.</li><li>Targets, forecasts and roadmaps stated by companies are reported as their targets, not as outcomes. We do not promise or imply any result for readers, customers or investors.</li></ul><h2>Images</h2><ul><li>Images are AI-generated photorealistic scenes. Each is labelled <a href=\"image-policy/\">AI-generated image</a>, and that label links to the image policy. They do not depict real identifiable people or real news events.</li></ul><h2>Not advice</h2><ul><li>Nothing on the site is investment, legal, medical or other professional advice. Articles about funding or listed companies are reports of announcements, not recommendations.</li></ul><h2>Updates</h2><ul><li>Each article shows its published and last-updated dates. See the <a href=\"corrections.html\">corrections policy</a>.</li></ul><p>Independence: {NAME} is not affiliated with the companies it covers unless stated. Ownership details are in our <a href=\"terms.html\">Terms of Use</a>.</p><p><em>Last updated: 20 November 2026.</em></p>"),
 "terms.html": ("Terms of Use", f"<h1>Terms of Use</h1><p>These Terms govern your use of {NAME}, owned and operated by {L} (\"we\"). By using the site you agree to them.</p><h2>Content</h2><p>All original content is © 2026 {LLC}. You may share links and brief quotations with attribution. Third-party trademarks belong to their owners and are used for identification only.</p><h2>No warranty</h2><p>The site is provided \"as is\" without warranties of any kind. To the fullest extent permitted by law, {LLC} is not liable for any damages arising from your use of the site.</p><h2>Governing law</h2><p>These Terms are governed by the laws of the State of Florida, USA, and any dispute shall be resolved in the state or federal courts located in Florida.</p><h2>Changes</h2><p>We may update these Terms; continued use means acceptance.</p>"),
 "privacy.html": ("Privacy Policy", f"<h1>Privacy Policy</h1><p><em>Last updated: 5 November 2026</em></p><p>This policy explains how {L}, operator of {NAME}, handles information.</p><h2>What we collect</h2><p>{analytics}Our hosting provider (GitHub Pages) may log standard technical data (such as IP address and browser type) for security and operations. If you contact us through the contact form, your name, email address and message are sent by email to the site owner via the FormSubmit.co form service, and we keep them only to respond.</p><h2>Cookies and analytics</h2><p>With your consent, we use <strong>Google Analytics 4</strong> (a service of Google LLC) to understand how readers use the site. It collects information such as pages viewed, time on page, referring site, approximate location (country/city, derived from IP address), device, browser and operating system. Google Analytics 4 does not log or store full IP addresses. It sets first-party cookies named <code>_ga</code> and <code>_ga_&lt;container-id&gt;</code>, which last up to 2 years, to distinguish visitors and sessions.</p><p><strong>Consent and opt-out:</strong> Google Analytics is not loaded and sets no cookies unless you click &ldquo;Accept&rdquo; in our cookie banner (we use Google Consent Mode with analytics storage denied by default). Your choice is stored in your browser&rsquo;s local storage. You can change it at any time via the &ldquo;Cookie settings&rdquo; link in the site footer; declining removes Google Analytics cookies set by this site. You can also install the <a href=\"https://tools.google.com/dlpage/gaoptout\" rel=\"noopener\">Google Analytics opt-out browser add-on</a>. For how Google uses this data, see <a href=\"https://policies.google.com/privacy\" rel=\"noopener\">Google&rsquo;s Privacy Policy</a> and <a href=\"https://policies.google.com/technologies/partner-sites\" rel=\"noopener\">How Google uses information from sites that use its services</a>.</p><h2>Advertising</h2><p>We may show advertisements through <strong>Google AdSense</strong>, a service of Google LLC. Google and other third-party vendors may use cookies to serve and measure those ads, including ads based on your visits to this site and other sites. You can opt out of personalized advertising at <a href=\"https://adssettings.google.com\" rel=\"noopener\">https://adssettings.google.com</a>.</p><h2>Sharing</h2><p>We do not sell personal information.</p><h2>Your rights</h2><p>You may request access to or deletion of information you sent us through our <a href=\"contact.html\">contact page</a>.</p><h2>Governing law</h2><p>This policy is governed by the laws of the State of Florida, USA.</p>"),
-"image-policy.html": ("Image Policy", f"<h1>Image Policy</h1><p>Images on {NAME} are AI-generated, photorealistic illustrations unless credited otherwise. They are not photographs and do not show real people, products or the actual events described.</p><p>Each AI-generated illustration carries a \"Source\" link under the image that leads to this page. Where we use a licensed or Creative Commons photograph instead, it is credited under the image with the photographer, the licence and a link to the original.</p>"),
+"image-policy.html": ("Image Policy", f"<h1>Image Policy</h1><p>Images on {NAME} are AI-generated, photorealistic illustrations unless credited otherwise. They are not photographs and do not show real people, products or the actual events described.</p><p>Each AI-generated illustration is labelled <a href=\"image-policy/\">AI-generated image</a>, and that label links to this page. Where we use a licensed or Creative Commons photograph instead, it is credited under the image with the photographer, the licence and a link to the original.</p><p><em>Last updated: 20 November 2026.</em></p>"),
 "disclaimer.html": ("Disclaimer", f"<h1>Disclaimer</h1><p>Content on {NAME} is for general information only and is not investment, legal or professional advice. We work to verify facts against cited sources but cannot guarantee completeness, accuracy or timeliness, and we accept no liability for any loss or damage arising from reliance on the content, to the fullest extent permitted by law. Reports of funding, earnings or company plans are summaries of announcements, not recommendations to buy, sell or hold any security. Images are AI-generated illustrations and not photographs of real events. {NAME} is not affiliated with any company it covers unless stated. Company names, product names and logos are trademarks of their owners. {NAME} is owned and operated by {L}, and this disclaimer is governed by the laws of the State of Florida, USA.</p>"),
 "copyright.html": ("Copyright and DMCA Policy", f"<h1>Copyright and DMCA Policy</h1><p>All original articles, text and AI-generated images on {NAME} are owned by {L} unless otherwise noted. You may link to our articles and quote brief excerpts with attribution and a link back. Republishing full articles or images requires written permission.</p><h2>Reporting infringement (DMCA)</h2><p>If you believe material on {NAME} infringes your copyright, send a notice through our <a href=\"contact.html\">contact form</a> that includes: (1) your physical or electronic signature; (2) identification of the copyrighted work; (3) the URL of the material you claim is infringing; (4) your contact information; (5) a statement that you have a good-faith belief the use is not authorized by the copyright owner, its agent or the law; and (6) a statement, under penalty of perjury, that the information is accurate and that you are the owner or authorized to act on the owner's behalf. We will review valid notices promptly and remove or disable access to infringing material where appropriate.</p><h2>Counter-notice</h2><p>If your material was removed and you believe this was a mistake, you may send a counter-notice through the same form with the details required by 17 U.S.C. § 512(g).</p><h2>Trademarks</h2><p>Company and product names mentioned on the site are trademarks of their respective owners and are used for identification only.</p><h2>Governing law</h2><p>This policy is governed by the laws of the State of Florida, USA.</p>"),
 "disclosure.html": ("Advertising and Affiliate Disclosure", f"<h1>Advertising and Affiliate Disclosure</h1><p>{NAME} is owned and operated by {L}. We currently do not display advertising and do not participate in affiliate programs. No company pays us to cover it, and coverage is never for sale.</p><p>If we add advertising, sponsored content or affiliate links in future, they will be clearly labelled, this page will be updated, and our editorial decisions will remain independent of any commercial relationship. Where we receive compensation, such as a commission when you buy through a link, we will say so near the link, in line with the U.S. Federal Trade Commission's Endorsement Guides.</p><h2>Governing law</h2><p>This disclosure is governed by the laws of the State of Florida, USA.</p>"),
@@ -276,7 +454,7 @@ page("404.html", f"Page not found | {NAME}", "Page not found.", f'<div class="pr
 # sitemap (with image extension), robots, llms, feed, indexnow key
 
 # Image policy (Joshua 9 Nov 2026): /image-policy/ with Source captions
-_img_pol = """<h1>Image policy</h1><p>Most images on PhotonDispatch are AI-generated illustrations. They do not show real events, real photographs or real people as they actually appeared, and they are not photos of the events we report. Each one carries a "Source" link under the image that leads to this page.</p><p>Some articles use Creative Commons photographs. These are credited under the image with the photographer, the licence and a link to the original.</p>"""
+_img_pol = """<h1>Image policy</h1><p>Most images on PhotonDispatch are AI-generated illustrations. They do not show real events, real photographs or real people as they actually appeared, and they are not photos of the events we report. Each one is labelled <a href="/image-policy/">AI-generated image</a>, and that label links to this page.</p><p>Some articles use Creative Commons photographs. These are credited under the image with the photographer, the licence and a link to the original.</p><p><em>Last updated: 20 November 2026.</em></p>"""
 page("image-policy/index.html", f"Image policy | {NAME}", f"Image policy for {NAME}: how AI-generated and Creative Commons images are labelled.", f'<div class="prose page">{_img_pol}</div>', 1)
 
 urls = [("", max(a.get("updated", a["date"]) for a in A), None)] + [(f"news/{a['slug']}.html", a.get("updated", a["date"]), a["_og"]) for a in A] + [(f"category/{c}.html", BUILD_DATE, None) for c, _ in CATS] + [(f, BUILD_DATE, None) for f in legal] + [("image-policy/", BUILD_DATE, None)] + [(p, d, None) for p, d, _, _ in TOPIC_PAGES]
