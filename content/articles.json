@@ -2048,16 +2048,20 @@
  {
   "slug": "ionq-demasi-barrons-darpa-stage-c",
   "date": "2026-11-07",
-  "updated": "2026-11-07",
+  "updated": "2026-11-20",
   "cat": "industry",
   "title": "IonQ CEO DeMasi tells Barron’s the firm is building a Western quantum ecosystem and cites DARPA’s final stage",
-  "summary": "IonQ posted a Barron’s interview quote from CEO Niccolo DeMasi about building a quantum ecosystem for the United States, Five Eyes, and NATO, and said the company has advanced to the final stage of DARPA’s Quantum Benchmarking Initiative.",
+  "summary": "DARPA named IonQ to Stage C of its quantum benchmarking program on 7 October 2026. Later Barron's comments are IonQ's own.",
   "body": [
-   "<strong>Short answer:</strong> IonQ <a href=\"https://x.com/IonQ_Inc/status/2118810569893429453\">wrote on X</a> on 6 November 2026 that CEO Niccolo DeMasi told Barron's the company is building a quantum ecosystem for the Western world — for the United States, the Five Eyes, and NATO — and that IonQ has advanced to the final stage of DARPA's Quantum Benchmarking Initiative.",
-   "IonQ's post quotes DeMasi and adds that the company supplies systems, chips, and atomic clocks to roughly a dozen other quantum firms. A related <a href=\"https://x.com/IonQ_Inc/status/2118777593235230782\">earnings follow-up</a> again cites progress to Stage C of DARPA's Quantum Benchmarking Initiative. Those are company claims.",
-   "<h2>How to read the message</h2>",
-   "This is executive positioning after IonQ's already-covered Q3 results, not a fresh earnings print. DARPA stage language and the \"NVIDIA of quantum\" metaphor come from IonQ's own communications and the Barron's interview it promotes. Independent confirmation of program stage should come from DARPA or primary contracting documents when available.",
-   "Photon Dispatch treats the <a href=\"https://x.com/IonQ_Inc/status/2118810569893429453\">6 November X post</a> as the public quote sheet for DeMasi's ecosystem framing and the company's DARPA-stage assertion."
+   "On 6 November 2026 IonQ <a href=\"https://x.com/IonQ_Inc/status/2118810569893429453\">said on X</a> that chief executive Niccolo de Masi had told Barron's the company is building a quantum ecosystem for the United States, the Five Eyes and NATO, and that IonQ had reached the final stage of DARPA's Quantum Benchmarking Initiative. Those lines are IonQ's. The stage itself was set out a month earlier, by DARPA.",
+   "<h2>What DARPA said on 7 October</h2>",
+   "DARPA's Quantum Benchmarking Initiative is a government test of whether any quantum computing approach can reach what DARPA calls utility-scale operation, meaning the computation is worth more than it costs, by 2033. On 7 October 2026 <a href=\"https://www.darpa.mil/news/2026/four-more-teams-enter-quantum-benchmarking-initiative-final-stage\" rel=\"noopener\">DARPA said</a> four more organizations had entered the final stage, Stage C: Atom Computing of Boulder, Colorado (neutral atoms), Diraq of Sydney (silicon spin qubits), IBM of Yorktown Heights (modular superconducting processors) and IonQ of College Park, Maryland (trapped ions). DARPA said they join Microsoft and PsiQuantum, which had entered Stage C through an earlier pilot, US2QC. Micah Stoutimore, who manages the program, put the change in one sentence: \"Stage C is where we begin moving from plans to proof.\" DARPA says that in this stage its team works with each company to test whether the proposed machine can be built as designed and operated as intended. It also says the program is not a competition to pick a winner. We have separate notes on <a href=\"atom-computing-100-million-chips-rd-award-finalized.html\">Atom Computing</a> and <a href=\"diraq-silicon-spin-quantum-equinix.html\">Diraq</a>. Those stories are not the Stage C announcement.",
+   "<h2>The published ceilings</h2>",
+   "DARPA's <a href=\"https://www.darpa.mil/research/programs/quantum-benchmarking-initiative\" rel=\"noopener\">program page</a>, whose performer list is marked current as of 8 October 2026, says Stage A work can be awarded up to $1 million, Stage B up to $15 million, and Stage C up to $300 million. <a href=\"https://investors.ionq.com/news/news-details/2026/IonQ-Advances-to-Final-Stage-of-DARPAs-Quantum-Benchmarking-Initiative/default.aspx\" rel=\"noopener\">IonQ's release</a> the same week says the company signed a Stage C agreement with a potential value of up to $300 million, and that money beyond the initial obligation depends on future appropriations and later DARPA funding decisions. The release does not state the size of that initial obligation. IonQ says the Stage C work runs through 2029 and will put more than one generation of its Superion systems through DARPA's tests. IonQ labels those statements as forward-looking. They are the company's plan, not a DARPA finding that a Superion machine has passed the test.",
+   "<h2>Who else is on the same list</h2>",
+   "On that 8 October list, <a href=\"../topics/ionq.html\">IonQ</a> is in Stage C and <a href=\"../topics/quantinuum.html\">Quantinuum</a>, the other trapped-ion company readers meet most often here, is in Stage B. <a href=\"../topics/google-quantum-ai.html\">Google Quantum AI</a> is in Stage A, on superconducting transmons. <a href=\"../topics/ibm.html\">IBM</a> is in Stage C with IonQ. The <a href=\"../topics/trapped-ions.html\">trapped-ion topic</a> collects both IonQ and Quantinuum. DARPA notes that a company appears only while it has an active scope of work, and that the list is not updated in real time. Finishing a stage and waiting on the next contract takes a name off the list. Stage A on that date is not a published verdict that Google cannot advance.",
+   "<h2>What the November comments add</h2>",
+   "The 6 November posts do not describe a new award. They point at a Barron's interview and repeat the Stage C claim. This page has not read the Barron's article. The X posts are the source for the ecosystem wording, the Five Eyes and NATO phrasing, and IonQ's line that it supplies systems, chips and atomic clocks to roughly a dozen other quantum firms. That supplier line is IonQ's, from its own post. A second <a href=\"https://x.com/IonQ_Inc/status/2118777593235230782\">X post</a> the same day again cites Stage C. IonQ's 5 November earnings release, <a href=\"ionq-q3-2026-record-revenue-guidance.html\">which we covered separately</a>, had already told investors the company was in Stage C."
   ],
   "sources": [
    {
@@ -2067,6 +2071,21 @@
    {
     "title": "IonQ on X: Q3 earnings follow-up with DARPA Stage C mention",
     "url": "https://x.com/IonQ_Inc/status/2118777593235230782"
+   },
+   {
+    "title": "DARPA: Four more teams enter the Quantum Benchmarking Initiative's final stage (7 October 2026)",
+    "url": "https://www.darpa.mil/news/2026/four-more-teams-enter-quantum-benchmarking-initiative-final-stage",
+    "retrieved": "2026-11-20T16:15:00Z"
+   },
+   {
+    "title": "DARPA: Quantum Benchmarking Initiative program page, performer list current as of 8 October 2026",
+    "url": "https://www.darpa.mil/research/programs/quantum-benchmarking-initiative",
+    "retrieved": "2026-11-20T16:15:00Z"
+   },
+   {
+    "title": "IonQ: IonQ advances to the final stage of DARPA's Quantum Benchmarking Initiative (7 October 2026)",
+    "url": "https://investors.ionq.com/news/news-details/2026/IonQ-Advances-to-Final-Stage-of-DARPAs-Quantum-Benchmarking-Initiative/default.aspx",
+    "retrieved": "2026-11-20T16:15:00Z"
    }
   ],
   "image": {
@@ -2088,7 +2107,10 @@
     "approved_by": "Joshua publish brief 2026-11-07: use bank PNG"
    }
   },
-  "disclaimer": "Figures and roadmaps are from company announcements. This is not investment advice."
+  "disclaimer": "Stage descriptions are from DARPA's 7 October 2026 announcement and its program page. The contract ceiling, the 2029 timing and the Superion plan are IonQ's, and IonQ calls them forward-looking. This is not investment advice.",
+  "analysis": [
+   "A Stage C slot is an agreement to be tested, not a utility-scale computer already running. DARPA's program page says the effort is not built to crown a winner, and that DARPA estimates it is more likely than not that at least one company will have an industrially useful quantum computer by 2033. That estimate is DARPA's, and it is not a result from Stage C. The $300 million figure is a maximum on the program page and a potential contract value in IonQ's release. Later funding, IonQ says, still depends on appropriations. None of these documents reports a new qubit count or a fidelity."
+  ]
  },
  {
   "slug": "psi-aaronson-ambainis-conjecture-proof",
@@ -2802,17 +2824,20 @@
  {
   "slug": "nist-ir-8547-public-key-2030-2035",
   "date": "2026-10-27",
-  "updated": "2026-10-29",
+  "updated": "2026-11-20",
   "publish_at": "2026-10-29T11:00:00+00:00",
   "cat": "policy",
   "title": "NIST says quantum-vulnerable public-key algorithms are deprecated after 2030 and disallowed after 2035",
   "summary": "According to NIST IR 8547, published 27 October 2026, quantum-vulnerable public-key algorithms are deprecated after 2030 and disallowed after 2035.",
   "body": [
    "<strong>Short answer:</strong> On 27 October 2026 the US National Institute of Standards and Technology published NIST IR 8547, Transition to Post-Quantum Cryptography Standards. NIST says it will deprecate quantum-vulnerable public-key cryptography after 2030 and disallow its use under NIST standards and guidelines after 2035.",
-   "The report is dated October 2026. Its publication history says the NIST Editorial Review Board approved it on 21 October 2026, and both NIST's news post and the Computer Security Resource Center list 27 October 2026. It is the agency's plan for moving off public-key methods that a cryptanalytically relevant quantum computer could break, toward the post-quantum standards NIST finished in 2024: FIPS 203 (ML-KEM) for key establishment, and FIPS 204 (ML-DSA) and FIPS 205 (SLH-DSA) for signatures. Dustin Moody, the NIST mathematician who leads the project, said there is \"not one strategy that fits all use cases\".",
+   "The report is dated October 2026. Its publication history says the NIST Editorial Review Board approved it on 21 October 2026, and both NIST's news post and the Computer Security Resource Center list 27 October 2026. It is the agency's plan for moving off public-key methods that a cryptanalytically relevant quantum computer could break, toward the post-quantum standards NIST finished in 2024: FIPS 203 (<a href=\"ml-kem-ml-dsa-slh-dsa-what-they-do.html\">ML-KEM</a>) for key establishment, and FIPS 204 (ML-DSA) and FIPS 205 (SLH-DSA) for signatures. Dustin Moody, the NIST mathematician who leads the project, said there is \"not one strategy that fits all use cases\".",
    "For signatures, NIST's table covers ECDSA, EdDSA and RSA as specified in FIPS 186, at the parameter sets it still treats as approved: at least 112 bits of classical security for ECDSA and RSA, and at least 128 bits for EdDSA. Each is marked deprecated after 2030 and disallowed after 2035. The same window applies to quantum-vulnerable key establishment in Special Publications 800-56A and 800-56B: finite-field and elliptic-curve Diffie-Hellman and MQV, and RSA key establishment, again from 112 bits of classical security upward. NIST says this replaces an older plan, in SP 800-57 Part 1, to disallow public-key schemes offering 112 bits of security on 1 January 2031.",
    "National Security Memorandum 10 still names 2035 as the target for finishing the migration across federal systems, the report says. Executive Order 14412 and OMB Memorandum M-26-15, as the report describes them, pull the most sensitive systems forward: high-value assets and high-impact systems are to adopt post-quantum key establishment by 31 December 2030 and post-quantum digital signatures by 31 December 2031. NIST says the broader 2030-2035 window does not relax those earlier deadlines. The report also says Executive Order 14306 and the same OMB memo require agencies to support TLS 1.3 no later than 2 January 2030.",
-   "NIST says ML-KEM, specified in FIPS 203, is at present the only approved post-quantum key-establishment scheme based on public-key cryptography, and it recommends the ML-KEM-768 parameter set as the default. HQC has been chosen for a future standard; NIST says it becomes an approved scheme after that standard is published. Symmetric cryptography is on a different footing: the report says approved symmetric primitives with at least 128 bits of classical security are believed to meet at least Category 1 on NIST's post-quantum scale, while a few symmetric standards at the 112-bit level are to be disallowed in 2030."
+   "NIST says ML-KEM, specified in FIPS 203, is at present the only approved post-quantum key-establishment scheme based on public-key cryptography, and it recommends the ML-KEM-768 parameter set as the default. <a href=\"what-is-hqc-nist-backup-kem.html\">HQC</a> has been chosen for a future standard; NIST says it becomes an approved scheme after that standard is published. Symmetric cryptography is on a different footing: the report says approved symmetric primitives with at least 128 bits of classical security are believed to meet at least Category 1 on NIST's post-quantum scale, while a few symmetric standards at the 112-bit level are to be disallowed in 2030.",
+   "<h2>Checked again on 20 November 2026</h2>",
+   "The NIST news post, the CSRC publication record and the IR 8547 PDF still give 27 October 2026 as the publication date. The PDF still shows Editorial Review Board approval on 21 October 2026. The deprecate-after-2030 and disallow-after-2035 lines for the quantum-vulnerable public-key algorithms named above are unchanged, as is the replacement of the older plan to disallow 112-bit public-key schemes on 1 January 2031. So are the December 2030 and December 2031 dates for high value assets and high impact systems, the 2 January 2030 date for TLS 1.3, the recommendation of ML-KEM-768 as the default, and the note that HQC is not an approved scheme until its FIPS is published. Approved symmetric primitives of at least 128 bits are still described as believed to meet at least Category 1, and the few symmetric standards at 112 bits are still to be disallowed in 2030.",
+   "NIST's news post, read again the same day, names <a href=\"harvest-now-decrypt-later-explained.html\">harvest now, decrypt later</a> as a reason not to wait for a machine that can break today's public-key encryption. The post also says an organization may combine a conventional algorithm with a post-quantum one. NIST describes that hybrid as the more cautious choice and a heavier one to run. <a href=\"why-pqc-matters-for-tls.html\">Why this matters for TLS</a> is the practical version of that choice. For the unfinished signature standard, see <a href=\"what-is-fn-dsa-fips-206.html\">where FN-DSA stands</a>. A later report on this site covers <a href=\"liquid-c2-graphiant-post-quantum-network-service-africa.html\">a managed post-quantum network service from Liquid C2 and Graphiant</a>, which is a commercial offer, not a change to NIST's dates."
   ],
   "analysis": [
    "In the report's own glossary, a deprecated algorithm may still be used if the data owner accepts the risk, while a disallowed algorithm is no longer allowed for the stated purpose. The December 2030 and December 2031 dates apply to the sensitive federal systems the report names. They are not, on the text of IR 8547, an automatic cutoff for every deployment of RSA."
@@ -2822,17 +2847,17 @@
    {
     "title": "NIST: Report provides guidelines for the transition to post-quantum cryptography standards (27 Oct 2026)",
     "url": "https://www.nist.gov/news-events/news/2026/10/nist-report-provides-guidelines-transition-post-quantum-cryptography",
-    "retrieved": "2026-10-29T08:00:00Z"
+    "retrieved": "2026-11-20T16:20:00Z"
    },
    {
     "title": "NIST CSRC: Transition to Post-Quantum Cryptography Standards, NIST IR 8547 (27 Oct 2026)",
     "url": "https://csrc.nist.gov/News/2026/transition-to-pqc-standards-nist-ir-8547",
-    "retrieved": "2026-10-29T08:00:00Z"
+    "retrieved": "2026-11-20T16:20:00Z"
    },
    {
     "title": "NIST IR 8547 PDF: Transition to Post-Quantum Cryptography Standards (October 2026)",
     "url": "https://nvlpubs.nist.gov/nistpubs/ir/2026/NIST.IR.8547.pdf",
-    "retrieved": "2026-10-29T08:00:00Z"
+    "retrieved": "2026-11-20T16:20:00Z"
    }
   ],
   "image": {
