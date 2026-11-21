@@ -3414,5 +3414,103 @@
     "approved_by": "Joshua 2026-11-04 10:24 EST: 'Of course replace the images with our own images'"
    }
   }
+ },
+ {
+  "slug": "google-ryan-babbush-2027-landauer-bennett-award-quantum-algorithms",
+  "date": "2026-11-21",
+  "updated": "2026-11-21",
+  "cat": "research",
+  "title": "Google's quantum algorithms chief just won one of the field's top prizes, for making chemistry problems cheaper to run",
+  "summary": "The American Physical Society has named Google Quantum AI's Ryan Babbush the 2027 recipient of the Rolf Landauer and Charles H. Bennett Award in Quantum Computing, for work on quantum algorithms and circuit compilation.",
+  "body": [
+   "One of quantum computing's named prizes is going to Google. \"Congratulations to our very own Ryan Babbush on receiving the 2027 Rolf Landauer and Charles H. Bennett Award in Quantum Computing for his vital work in quantum algorithms and circuit compilation!\" <a href=\"https://x.com/GoogleQuantumAI/status/2123855965099344021\">Google Quantum AI posted on X</a> on Friday.",
+   "The American Physical Society, which gives the award, <a href=\"https://x.com/APSphysics/status/2123164942220005519\">announced its spring 2027 prize and award recipients</a> earlier in the week, saying the winners \"were chosen by a panel of their peers for their outstanding contributions in research, education, and public service.\"",
+   "## Who Babbush is",
+   "Babbush leads quantum algorithms research at Google Quantum AI. The APS <a href=\"https://www.aps.org/funding-recognition/award/landauer-bennett\">award page</a> lists him as the 2027 recipient, citing quantum algorithms and circuit compilation that enable efficient simulation of chemistry and physics.",
+   "## Why this work matters",
+   "Simulating molecules and materials is one of the main jobs people expect quantum computers to do better than classical ones. The catch is cost. A useful chemistry simulation needs a huge number of error-corrected operations, and much of the field's progress has come from finding cheaper ways to write those programs: fewer gates, fewer qubits and smarter compilation onto real hardware.",
+   "That is the kind of work the award recognises. Better algorithms move the finish line closer without any change to the hardware, which is why resource estimates for problems such as chemistry have fallen sharply over the past decade.",
+   "## About the prize",
+   "The Landauer-Bennett award is named after two IBM physicists who shaped the physics of information: Rolf Landauer, known for showing that erasing information has an energy cost, and Charles H. Bennett, a co-inventor of quantum cryptography and quantum teleportation. It honours contributions to quantum information science and computing.",
+   "Google's quantum team has had a busy month, including the contextuality results on its Willow chip that we covered in our <a href=\"/news/google-willow-contextuality-magic-square-game-98-percent-105-qubits-science.html\">Willow story</a>."
+  ],
+  "sources": [
+   {
+    "title": "Google Quantum AI on X: Congratulations to Ryan Babbush on receiving the 2027 Rolf Landauer and Charles H. Bennett Award",
+    "url": "https://x.com/GoogleQuantumAI/status/2123855965099344021"
+   },
+   {
+    "title": "APS Physics on X: Congratulations to our spring 2027 prizes and awards recipients",
+    "url": "https://x.com/APSphysics/status/2123164942220005519"
+   },
+   {
+    "title": "APS: Rolf Landauer and Charles H. Bennett Award in Quantum Computing",
+    "url": "https://www.aps.org/funding-recognition/award/landauer-bennett"
+   }
+  ],
+  "image": {
+   "src": "src-img/google-ryan-babbush-2027-landauer-bennett-award-quantum-algorithms-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Dark lecture hall with a projected network diagram and audience silhouettes, no faces, logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 21 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Dark lecture hall with a projected network diagram and silhouettes, no people, logos or readable text",
+    "sha256": "c62ac81c0fb81fd1e7ad2f346fb43460f6190965ef9648ab29df71de99d2676e",
+    "recorded": "2026-11-21",
+    "approved_by": "Daily news brief 2026-11-21: image bank first"
+   }
+  }
+ },
+ {
+  "slug": "ionq-quantum-navigation-gps-denied-optical-clocks-30-days-gravimeters",
+  "date": "2026-11-21",
+  "updated": "2026-11-21",
+  "cat": "industry",
+  "title": "GPS can be jammed in minutes, so IonQ wants ships and planes to navigate with atomic clocks and gravity instead",
+  "summary": "IonQ is pitching quantum sensors as a backup for GPS: optical clocks it says hold GPS-level timing for 30 days without a signal, plus atomic gravimeters and magnetometers for passive navigation. It cites more than 10,000 vessels hit by GNSS disruption in 2025.",
+  "body": [
+   "Ships and planes lean on satellite navigation more than most people realise, and IonQ thinks quantum physics can be the backup. \"When GPS signals drop in contested airspace or sea lanes, conventional inertial navigation drifts hundreds of meters within minutes,\" <a href=\"https://x.com/IonQ_Inc/status/2123868087317344700\">IonQ posted on X</a> on Friday. \"That vulnerability is no longer theoretical.\"",
+   "## The problem, in IonQ's numbers",
+   "IonQ says that \"in 2025 alone, over 10,000 maritime vessels faced GNSS disruptions,\" and that \"commercial airliners are routinely fed spoofed coordinates across European flight corridors.\" Those figures are IonQ's, and the post does not give a source for the vessel count. GNSS is the umbrella term for satellite navigation systems such as GPS.",
+   "## What IonQ is selling",
+   "The company's Sensing division pitches three pieces, according to the post. First, \"tactical optical clocks\" that it says \"maintain GPS-level timing (10 nanoseconds) for 30 continuous days without external sync\". Second, \"passive geophysical navigation\" using atomic gravimeters and magnetometers that measure the Earth's gravitational and magnetic fields, which IonQ calls \"completely passive, RF-silent, and spoof-proof\". Third, hardware that shares engineering with its trapped-ion computers and quantum networking.",
+   "The idea behind the second piece is simple. Gravity and magnetism vary slightly from place to place, so a sensitive enough instrument can match readings to a map without sending or receiving any radio signal, and there is nothing for an enemy to jam.",
+   "## Field tests it points to",
+   "IonQ cites two trials. In 2022, at the RIMPAC naval exercise, it says three autonomous optical clocks spent 21 days at sea and \"accrued < 300 picoseconds of drift per day\", which it calls the best at-sea clock demonstration to date, published in Nature. In 2026, it says a 51-day Navy-sponsored trial put its commercial Evergreen-30 optical clock aboard the training ship TS Patriot State.",
+   "## Read it as a pitch",
+   "The post is marketing, and it ends with a question to potential customers. IonQ did not announce a new contract or price. Quantum navigation is a crowded field: Infleqtion recently showed a cold-atom system too, as we reported in our <a href=\"/news/infleqtion-cold-atom-vacuum-core-purdue-virgin-galactic-quantum-navigation.html\">Infleqtion story</a>. The thing to watch is whether these sensors win defence orders, not just trials."
+  ],
+  "sources": [
+   {
+    "title": "IonQ on X: When GPS signals drop in contested airspace or sea lanes, conventional inertial navigation drifts",
+    "url": "https://x.com/IonQ_Inc/status/2123868087317344700"
+   }
+  ],
+  "image": {
+   "src": "src-img/ionq-quantum-navigation-gps-denied-optical-clocks-30-days-gravimeters-hero.jpg",
+   "crop": [
+    0,
+    0,
+    1.0
+   ],
+   "ai": true,
+   "alt": "Ship deck at sea with a yellow chute and crew seen from behind, no faces, logos or readable text",
+   "note": "Generic AI-generated scene; not a photo of the actual event, product or any named company's hardware.",
+   "licence": "Own AI-generated image (image bank / Grok Bot, 21 Nov 2026); rights held by the site owner",
+   "provenance": {
+    "origin": "ai-generated",
+    "prompt": "Photorealistic photo: Cable-laying ship deck with yellow chute and crew from behind, no people, logos or readable text",
+    "sha256": "ba81278995960417e0b44fd67e72af9ac263c8eed0d74b259171403d5456ef8f",
+    "recorded": "2026-11-21",
+    "approved_by": "Daily news brief 2026-11-21: image bank first"
+   }
+  }
  }
 ]
