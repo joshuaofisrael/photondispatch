@@ -99,5 +99,10 @@ figcaption{font-size:.82rem;color:var(--mute);margin-top:8px}
 .compare h2{margin:0 0 .35em;font-size:1.02rem;letter-spacing:0;text-transform:none;color:var(--text)}
 .compare ul{margin:.2em 0 0;padding-left:1.2em}.compare li{margin:.25em 0}
 .follow{margin:1.2em 0}
+.followup{margin:28px 0;padding-top:4px;border-top:1px solid var(--line)}
+.followup h2{font-size:1.05rem;letter-spacing:0;text-transform:none;color:var(--text);margin:1em 0 .35em}
+.followup p{margin:.35em 0}
+.followup ul{margin:.2em 0 0;padding-left:1.2em}
+.followup li{margin:.3em 0}
 .hubcopy{margin:8px 0 28px}
 @media(max-width:760px){.nextgrid{grid-template-columns:1fr}}

@@ -20,7 +20,7 @@ INDEXNOW_KEY = "8cb05bd1e79a50594f6726934d66a801"
 # ads.txt publisher line only. Do not inject an AdSense script from this prep.
 ADS_TXT = "google.com, pub-5681559774142917, DIRECT, f08c47fec0942fa0\n"
 DESC = "Independent, answer-first quantum computing and quantum technology news: hardware, algorithms, industry and funding, research and policy."
-OUT = "docs"; ASSET_VER = "5"
+OUT = "docs"; ASSET_VER = "6"
 # ----------------------------------------------------------------
 
 TODO_IMAGES = []
@@ -51,9 +51,14 @@ A = json.load(open("content/articles.json", encoding="utf-8"))
 # Legal-hold gate: held articles are never rendered (approved exact versions pass).
 sys.path.insert(0, "review"); import check_content as _cc
 _ok = _cc.approvals(); _keep = []
+_already_live = {os.path.splitext(fn)[0] for fn in os.listdir(OUT + "/news") if fn.endswith(".html")} if os.path.isdir(OUT + "/news") else set()
 for _a in A:
     _b, _f, _why = _cc.blocked(_a, _ok)
-    if _b:
+    if _b and _a.get("slug") in _already_live:
+        # Do not unpublish a page that is already on the site. This is not an approval.
+        print(f"  [HOLD_REVIEW {_why} already live] {_a.get('slug')} kept so this rebuild does not drop it: rules {sorted({x[0] for x in _f})}")
+        _keep.append(_a)
+    elif _b:
         print(f"  [HOLD_REVIEW {_why}] {_a.get('slug')} not built: rules {sorted({x[0] for x in _f})}"); _cc.queue(_a, _f, "content/articles.json")
     else: _keep.append(_a)
 _now = now_utc()
@@ -353,23 +358,124 @@ COMPARE = {
  ],
 }
 
-def follow_html(a):
-    mine = {s for s, _ in topic_hubs.topics_for(a)}
-    if not mine:
-        return ""
+# Background explainers. Patterns are applied to the title and summary only, so a passing
+# mention inside a long story does not pull in an unrelated guide.
+_BG = [
+ ("what-is-a-logical-qubit", "What a logical qubit is", [r"logical qubit", r"surface code", r"fault.toleran", r"magic state", r"color code"]),
+ ("quantum-error-correction-basics", "Quantum error correction: syndromes, thresholds and overhead", [r"error.correct", r"decoder", r"syndrome", r"fault.toleran", r"logical qubit", r"surface code"]),
+ ("ml-kem-ml-dsa-slh-dsa-what-they-do", "What ML-KEM, ML-DSA and SLH-DSA each do", [r"ml-kem", r"ml-dsa", r"slh-dsa", r"fips 203", r"fips 204", r"fips 205", r"post-quantum", r"\bpqc\b"]),
+ ("nist-ir-8547-public-key-2030-2035", "NIST's 2030 and 2035 transition dates", [r"post-quantum", r"\bpqc\b", r"ml-kem", r"public-key", r"\b2035\b"]),
+ ("harvest-now-decrypt-later-explained", "Harvest now, decrypt later", [r"harvest", r"decrypt later", r"post-quantum", r"\bpqc\b"]),
+ ("what-is-shors-algorithm", "What Shor's algorithm does, and what it does not", [r"\bshor", r"\brsa\b", r"\bfactor(?:ing|ization)\b"]),
+ ("what-is-hqc-nist-backup-kem", "What HQC is, the backup to ML-KEM", [r"\bhqc\b", r"ml-kem", r"key.encaps"]),
+ ("what-is-fn-dsa-fips-206", "Where FN-DSA and FIPS 206 stand", [r"fn-dsa", r"fips 206", r"falcon"]),
+ ("why-pqc-matters-for-tls", "Why post-quantum key establishment shows up in TLS", [r"\btls\b", r"ml-kem", r"hybrid key"]),
+]
+_BG_RX = [(slug, label, [re.compile(p) for p in pats]) for slug, label, pats in _BG]
+_NAME_TOKENS = ("ionq", "quantinuum", "iqm", "rigetti", "psiquantum", "infleqtion", "pasqal", "d-wave", "alice & bob", "ibm", "google", "xanadu", "atom computing", "q-ctrl")
+
+def _lead(a):
+    return (a["title"] + " " + a.get("summary", "")).lower()
+
+def bg_matches(a, lead_only=False):
+    """Title and summary count double. A single passing mention in the body does not.
+    lead_only is for 'what happened next': the later story's headline has to be about the subject."""
+    lead = _lead(a)
+    body = "" if lead_only else re.sub(r"<[^>]+>", " ", " ".join(a.get("body", []))).lower()
+    scored = []
+    for slug, label, rxs in _BG_RX:
+        if slug == a["slug"]:
+            continue
+        n = 0
+        for rx in rxs:
+            if rx.search(lead):
+                n += 2
+            elif body and rx.search(body):
+                n += 1
+        if n >= 2:
+            scored.append((n, slug, label))
+    scored.sort(key=lambda x: (-x[0], x[1]))
+    return scored
+
+def _tokens(a):
+    blob = _lead(a)
+    return {tok for tok in _NAME_TOKENS if tok in blob}
+
+def follow_block(a):
+    """News follow-up and background. Every story gets both, with links that share a subject."""
     key = article_sort_key(a)
+    # trapped-ions and photonic hubs also match whole companies, so they are too wide to mean "this story continued".
+    wide_topics = {"trapped-ions", "photonic"}
+    mine_topics = topic_hubs.topics_for(a)
+    mine_topic_ids = {s for s, _ in mine_topics}
+    mine_bg = {slug for _, slug, _ in bg_matches(a)}
+    mine_tok = _tokens(a)
     newer = []
     for b in A:
         if b["slug"] == a["slug"] or article_sort_key(b) <= key:
             continue
-        if mine & {s for s, _ in topic_hubs.topics_for(b)}:
+        share = (mine_topic_ids & {s for s, _ in topic_hubs.topics_for(b)}) - wide_topics
+        # The later story has to be about the subject in its headline, not a passing mention.
+        share = share or (mine_bg & {slug for _, slug, _ in bg_matches(b, lead_only=True)})
+        share = share or (mine_tok & _tokens(b))
+        if share:
             newer.append(b)
-        if len(newer) >= 2:
+        if len(newer) >= 3:
             break
-    if not newer:
-        return ""
-    links = " ".join(f'<a href="{b["slug"]}.html">{esc(b["title"])}</a>' for b in newer)
-    return f'<p class="follow"><strong>What happened next.</strong> {links}</p>'
+    used = set()
+    def take(href):
+        if not href or href in used:
+            return False
+        used.add(href)
+        return True
+    next_lis = []
+    for b in newer:
+        href = f"{b['slug']}.html"
+        if take(href):
+            next_lis.append(f'<li><a href="{href}">{esc(b["title"])}</a></li>')
+    if next_lis:
+        nxt = f"<ul>{''.join(next_lis)}</ul>"
+    elif mine_topics:
+        slug, name = mine_topics[0]
+        href = f"../topics/{slug}.html"
+        take(href)
+        nxt = f'<p>No later story on this subject is filed yet. New {esc(name)} stories are collected on <a href="{href}">{esc(name)}</a>.</p>'
+    else:
+        href = f"../category/{a['cat']}.html"
+        take(href)
+        nxt = f'<p>No later story on this subject is filed yet. New {esc(CATN[a["cat"]])} stories are on the <a href="{href}">{esc(CATN[a["cat"]])}</a> desk.</p>'
+    bg = []
+    for slug, name in mine_topics:
+        href = f"../topics/{slug}.html"
+        if take(href):
+            bg.append(f'<li><a href="{href}">{esc(name)}</a></li>')
+    for _, slug, label in bg_matches(a)[:3]:
+        href = f"{slug}.html"
+        if take(href):
+            bg.append(f'<li><a href="{href}">{esc(label)}</a></li>')
+    if len(bg) < 2:
+        skip = {"quantum", "computing", "computer", "qubits", "qubit", "company", "million", "billion", "research", "technology", "system", "systems", "announced", "according"}
+        words = set(re.findall(r"[a-z0-9]{5,}", _lead(a))) - skip
+        best = None
+        for b in A:
+            if b["slug"] == a["slug"] or b["cat"] != a["cat"] or article_sort_key(b) >= key:
+                continue
+            href = f"{b['slug']}.html"
+            if href in used:
+                continue
+            ov = words & (set(re.findall(r"[a-z0-9]{5,}", _lead(b))) - skip)
+            if len(ov) >= 2 and (best is None or len(ov) > best[0]):
+                best = (len(ov), b)
+        if best:
+            b = best[1]
+            href = f"{b['slug']}.html"
+            if take(href):
+                bg.append(f'<li><a href="{href}">{esc(b["title"])}</a></li>')
+    if not bg:
+        href = "../topics/"
+        if take(href):
+            bg.append('<li><a href="../topics/">Quantum topics</a></li>')
+    return f'<aside class="followup"><h2>What happened next</h2>{nxt}<h2>Background</h2><ul>{"".join(bg)}</ul></aside>'
 
 def wrap_block(i, p, extra):
     if p.startswith("<h2>") or p.startswith("<ul") or p.startswith("<ol") or p.startswith("<aside"):
@@ -412,9 +518,7 @@ for a in A:
         why = '<aside class="why"><h2>Why it\'s trending</h2><ul>' + "".join(f"<li>{w}</li>" for w in a["why"]) + "</ul></aside>"
     src = "".join(f'<li><a href="{esc(s["url"])}" rel="noopener">{esc(s["title"])}</a></li>' for s in a["sources"])
     tag = '<span class="tag trend">Trending</span> ' if a.get("kind") == "trending" else ""
-    tops = topic_hubs.topics_for(a)
-    bg = ("<p class=\"meta\">Background: " + " · ".join(f'<a href="../topics/{ts}.html">{esc(tn)}</a>' for ts, tn in tops) + "</p>") if tops else ""
-    c = f'{crumbs}{fig}<article class="prose art"><p style="margin:24px 0 0">{tag}<a class="tag" href="../category/{a["cat"]}.html">{esc(CATN[a["cat"]])}</a></p><h1>{esc(a["title"])}</h1><p class="byline">By <a rel="author" href="../about.html">{NAME} Staff</a></p><p class="meta" style="font-size:.9rem">Published <time datetime="{a["date"]}">{fd(a["date"])}</time> · Last updated <time datetime="{upd}">{fd(upd)}</time></p>{body}{ana}{why}{dis}{follow_html(a)}{end_html}<div class="src"><h2>Sources</h2><p class="meta">Every factual claim above comes from these sources. See our <a href="../standards.html">editorial standards</a> and <a href="../corrections.html">corrections policy</a>.</p><ul>{src}</ul></div>{bg}<p><a href="../index.html">← All news</a></p></article>'
+    c = f'{crumbs}{fig}<article class="prose art"><p style="margin:24px 0 0">{tag}<a class="tag" href="../category/{a["cat"]}.html">{esc(CATN[a["cat"]])}</a></p><h1>{esc(a["title"])}</h1><p class="byline">By <a rel="author" href="../about.html">{NAME} Staff</a></p><p class="meta" style="font-size:.9rem">Published <time datetime="{a["date"]}">{fd(a["date"])}</time> · Last updated <time datetime="{upd}">{fd(upd)}</time></p>{body}{ana}{why}{dis}{follow_block(a)}{end_html}<div class="src"><h2>Sources</h2><p class="meta">Every factual claim above comes from these sources. See our <a href="../standards.html">editorial standards</a> and <a href="../corrections.html">corrections policy</a>.</p><ul>{src}</ul></div><p><a href="../index.html">← All news</a></p></article>'
     desc = a["summary"] if len(a["summary"]) <= 155 else a["summary"][:152].rsplit(" ", 1)[0] + "..."
     page(f"news/{a['slug']}.html", f"{a['title']} | {NAME}", desc, c, 1, [ld, bld], "article", a["_og"])
 
