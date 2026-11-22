@@ -18,7 +18,7 @@ GA_ID = "G-RSKRTQEZNW"  # GA4, consent-gated (Consent Mode default denied; asset
 GA_HEAD = ("<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});window.GA_ID='" + GA_ID + "';</script>\n<script defer src=\"/assets/consent.js?v=1\"></script>\n")
 INDEXNOW_KEY = "8cb05bd1e79a50594f6726934d66a801"
 # ads.txt publisher line only. Do not inject an AdSense script from this prep.
-ADS_TXT = "google.com, pub-5681559774142917, DIRECT, f08c47fec0942fa0\n"
+ADS_TXT = ""  # AdSense detached 21 Nov 2026 until the account is approved (see seo-central/site-seo-rules.md). Do not re-add.
 DESC = "Independent, answer-first quantum computing and quantum technology news: hardware, algorithms, industry and funding, research and policy."
 OUT = "docs"; ASSET_VER = "6"
 # ----------------------------------------------------------------
@@ -168,7 +168,7 @@ def page(path, title, desc, content, depth=0, ld=None, typ="website", image=None
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{og['url']}"><meta name="twitter:image:alt" content="{esc(og['alt'])}">
 {extra_head}<link rel="icon" href="{r}favicon.svg" type="image/svg+xml"><link rel="icon" href="{r}favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="{r}apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="{NAME}" href="{r}feed.xml"><link rel="stylesheet" href="{r}assets/style.css?v={ASSET_VER}">
-""" + "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in lds) + GA_HEAD + f"""<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5681559774142917" crossorigin="anonymous"></script></head><body>
+""" + "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in lds) + GA_HEAD + f"""</head><body>
 <a class="skip" href="#main">Skip to content</a><div class="progress" aria-hidden="true"></div>
 <header class="site-h"><div class="w"><a class="logo" href="{r}index.html" aria-label="{NAME} home">{MARK}<span>Photon<b>Dispatch</b></span></a><nav aria-label="Main"><a href="{r}index.html">News</a>{catnav}<a href="{r}about.html">About</a><a href="{r}contact.html">Contact</a><a href="{r}feed.xml">RSS</a></nav></div></header>
 <main id="main">{content}</main>
